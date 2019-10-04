@@ -6,8 +6,8 @@
   "issue_tracker": "",
   "release_level": "alpha",
   "language": "nodejs",
-  "repo": "googleapis/workflows",
+  "repo": "googleapis/nodejs-workflows",
   "distribution_name": "@google-cloud/workflows",
-  "api_id": "workflows",
+  "api_id": "workflows.googleapis.com",
   "requires_billing": true
 }

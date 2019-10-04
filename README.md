@@ -2,11 +2,11 @@
 [//]: # "To regenerate it, use `python -m synthtool`."
 <img src="https://avatars2.githubusercontent.com/u/2810941?v=3&s=96" alt="Google Cloud Platform logo" title="Google Cloud Platform" align="right" height="96" width="96"/>
 
-# [Workflows: Node.js Client](https://github.com/googleapis/workflows)
+# [Workflows: Node.js Client](https://github.com/googleapis/nodejs-workflows)
 
 [![release level](https://img.shields.io/badge/release%20level-alpha-orange.svg?style=flat)](https://cloud.google.com/terms/launch-stages)
 [![npm version](https://img.shields.io/npm/v/@google-cloud/workflows.svg)](https://www.npmjs.org/package/@google-cloud/workflows)
-[![codecov](https://img.shields.io/codecov/c/github/googleapis/workflows/master.svg?style=flat)](https://codecov.io/gh/googleapis/workflows)
+[![codecov](https://img.shields.io/codecov/c/github/googleapis/nodejs-workflows/master.svg?style=flat)](https://codecov.io/gh/googleapis/nodejs-workflows)
 
 
 
@@ -16,7 +16,7 @@ Workflows API client for Node.js
 
 * [Workflows Node.js Client API Reference][client-docs]
 * [Workflows Documentation][product-docs]
-* [github.com/googleapis/workflows](https://github.com/googleapis/workflows)
+* [github.com/googleapis/nodejs-workflows](https://github.com/googleapis/nodejs-workflows)
 
 Read more about the client libraries for Cloud APIs, including the older
 Google APIs Client Libraries, in [Client Libraries Explained][explained].
@@ -77,18 +77,18 @@ More Information: [Google Cloud Platform Launch Stages][launch_stages]
 
 ## Contributing
 
-Contributions welcome! See the [Contributing Guide](https://github.com/googleapis/workflows/blob/master/CONTRIBUTING.md).
+Contributions welcome! See the [Contributing Guide](https://github.com/googleapis/nodejs-workflows/blob/master/CONTRIBUTING.md).
 
 ## License
 
 Apache Version 2.0
 
-See [LICENSE](https://github.com/googleapis/workflows/blob/master/LICENSE)
+See [LICENSE](https://github.com/googleapis/nodejs-workflows/blob/master/LICENSE)
 
 [client-docs]: https://googleapis.dev/nodejs/workflows/latest/index.html
 [product-docs]: https://cloud.google.com/workflows/docs/
 [shell_img]: https://gstatic.com/cloudssh/images/open-btn.png
 [projects]: https://console.cloud.google.com/project
 [billing]: https://support.google.com/cloud/answer/6293499#enable-billing
-[enable_api]: https://console.cloud.google.com/flows/enableapi?apiid=workflows
+[enable_api]: https://console.cloud.google.com/flows/enableapi?apiid=workflows.googleapis.com
 [auth]: https://cloud.google.com/docs/authentication/getting-started

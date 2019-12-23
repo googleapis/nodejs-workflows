@@ -38,4 +38,5 @@ s.copy(templates)
 
 # Node.js specific cleanup
 subprocess.run(['npm', 'install'])
+subprocess.run(['npx', 'compileProtos', 'src'])
 subprocess.run(['npm', 'run', 'fix'])

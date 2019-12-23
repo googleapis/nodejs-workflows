@@ -1,10 +1,10 @@
 {
-  "updateTime": "2019-12-23T21:54:27.351062Z",
+  "updateTime": "2019-12-23T22:16:26.178292Z",
   "sources": [
     {
       "git": {
         "name": "googleapis-private",
-        "remote": "https://github.com/googleapis/googleapis-private.git",
+        "remote": "git@github.com:googleapis/googleapis-private.git",
         "sha": "06c5c6e9caf01113977cf4105cb1b6844771f8f9",
         "internalRef": "286483368"
       }
@@ -30,25 +30,46 @@
   ],
   "newFiles": [
     {
-      "path": "CONTRIBUTING.md"
-    },
-    {
-      "path": ".prettierignore"
-    },
-    {
-      "path": ".eslintignore"
-    },
-    {
-      "path": "tslint.json"
-    },
-    {
       "path": "CODE_OF_CONDUCT.md"
+    },
+    {
+      "path": ".eslintrc.yml"
+    },
+    {
+      "path": "LICENSE"
     },
     {
       "path": "codecov.yaml"
     },
     {
+      "path": "renovate.json"
+    },
+    {
       "path": "webpack.config.js"
+    },
+    {
+      "path": ".jsdoc.js"
+    },
+    {
+      "path": ".prettierignore"
+    },
+    {
+      "path": "package.json"
+    },
+    {
+      "path": "tslint.json"
+    },
+    {
+      "path": "CONTRIBUTING.md"
+    },
+    {
+      "path": ".prettierrc"
+    },
+    {
+      "path": "tsconfig.json"
+    },
+    {
+      "path": ".eslintignore"
     },
     {
       "path": ".nycrc"
@@ -57,31 +78,19 @@
       "path": "linkinator.config.json"
     },
     {
-      "path": "LICENSE"
+      "path": "protos/protos.d.ts"
     },
     {
-      "path": ".eslintrc.yml"
+      "path": "protos/protos.json"
     },
     {
-      "path": "renovate.json"
-    },
-    {
-      "path": "package.json"
-    },
-    {
-      "path": ".jsdoc.js"
-    },
-    {
-      "path": "tsconfig.json"
-    },
-    {
-      "path": ".prettierrc"
-    },
-    {
-      "path": "test/gapic-workflows-v1alpha1.ts"
+      "path": "protos/protos.js"
     },
     {
       "path": "protos/google/cloud/workflows/v1alpha1/workflows.proto"
+    },
+    {
+      "path": "test/gapic-workflows-v1alpha1.ts"
     },
     {
       "path": "system-test/.eslintrc.yml"
@@ -96,118 +105,10 @@
       "path": "system-test/fixtures/sample/src/index.ts"
     },
     {
-      "path": ".kokoro/test.sh"
-    },
-    {
-      "path": ".kokoro/system-test.sh"
-    },
-    {
-      "path": ".kokoro/trampoline.sh"
-    },
-    {
-      "path": ".kokoro/publish.sh"
-    },
-    {
-      "path": ".kokoro/test.bat"
-    },
-    {
-      "path": ".kokoro/lint.sh"
-    },
-    {
-      "path": ".kokoro/common.cfg"
-    },
-    {
-      "path": ".kokoro/docs.sh"
-    },
-    {
-      "path": ".kokoro/samples-test.sh"
-    },
-    {
-      "path": ".kokoro/continuous/node8/test.cfg"
-    },
-    {
-      "path": ".kokoro/continuous/node8/common.cfg"
-    },
-    {
-      "path": ".kokoro/continuous/node10/test.cfg"
-    },
-    {
-      "path": ".kokoro/continuous/node10/system-test.cfg"
-    },
-    {
-      "path": ".kokoro/continuous/node10/lint.cfg"
-    },
-    {
-      "path": ".kokoro/continuous/node10/common.cfg"
-    },
-    {
-      "path": ".kokoro/continuous/node10/docs.cfg"
-    },
-    {
-      "path": ".kokoro/continuous/node10/samples-test.cfg"
-    },
-    {
-      "path": ".kokoro/continuous/node12/test.cfg"
-    },
-    {
-      "path": ".kokoro/continuous/node12/common.cfg"
-    },
-    {
-      "path": ".kokoro/presubmit/node8/test.cfg"
-    },
-    {
-      "path": ".kokoro/presubmit/node8/common.cfg"
-    },
-    {
-      "path": ".kokoro/presubmit/node10/test.cfg"
-    },
-    {
-      "path": ".kokoro/presubmit/node10/system-test.cfg"
-    },
-    {
-      "path": ".kokoro/presubmit/node10/lint.cfg"
-    },
-    {
-      "path": ".kokoro/presubmit/node10/common.cfg"
-    },
-    {
-      "path": ".kokoro/presubmit/node10/docs.cfg"
-    },
-    {
-      "path": ".kokoro/presubmit/node10/samples-test.cfg"
-    },
-    {
-      "path": ".kokoro/presubmit/windows/test.cfg"
-    },
-    {
-      "path": ".kokoro/presubmit/windows/common.cfg"
-    },
-    {
-      "path": ".kokoro/presubmit/node12/test.cfg"
-    },
-    {
-      "path": ".kokoro/presubmit/node12/common.cfg"
-    },
-    {
-      "path": ".kokoro/release/publish.cfg"
-    },
-    {
-      "path": ".kokoro/release/docs.cfg"
-    },
-    {
-      "path": ".kokoro/release/docs.sh"
-    },
-    {
-      "path": "__pycache__/synth.cpython-37.pyc"
-    },
-    {
       "path": ".github/PULL_REQUEST_TEMPLATE.md"
     },
     {
       "path": ".github/release-please.yml"
-    },
-    {
-      "path": ".github/ISSUE_TEMPLATE/support_request.md"
     },
     {
       "path": ".github/ISSUE_TEMPLATE/feature_request.md"
@@ -216,19 +117,184 @@
       "path": ".github/ISSUE_TEMPLATE/bug_report.md"
     },
     {
+      "path": ".github/ISSUE_TEMPLATE/support_request.md"
+    },
+    {
+      "path": "build/protos/protos.d.ts"
+    },
+    {
+      "path": "build/protos/protos.json"
+    },
+    {
+      "path": "build/protos/protos.js"
+    },
+    {
+      "path": "build/protos/google/cloud/workflows/v1alpha1/workflows.proto"
+    },
+    {
+      "path": "build/test/gapic-workflows-v1alpha1.js"
+    },
+    {
+      "path": "build/test/gapic-workflows-v1alpha1.d.ts"
+    },
+    {
+      "path": "build/test/gapic-workflows-v1alpha1.js.map"
+    },
+    {
+      "path": "build/system-test/install.js.map"
+    },
+    {
+      "path": "build/system-test/install.js"
+    },
+    {
+      "path": "build/system-test/install.d.ts"
+    },
+    {
+      "path": "build/src/index.js"
+    },
+    {
+      "path": "build/src/index.js.map"
+    },
+    {
+      "path": "build/src/index.d.ts"
+    },
+    {
+      "path": "build/src/v1alpha1/workflows_client.d.ts"
+    },
+    {
+      "path": "build/src/v1alpha1/workflows_client_config.json"
+    },
+    {
+      "path": "build/src/v1alpha1/workflows_client.js.map"
+    },
+    {
+      "path": "build/src/v1alpha1/index.js"
+    },
+    {
+      "path": "build/src/v1alpha1/index.js.map"
+    },
+    {
+      "path": "build/src/v1alpha1/index.d.ts"
+    },
+    {
+      "path": "build/src/v1alpha1/workflows_client.js"
+    },
+    {
+      "path": ".kokoro/test.bat"
+    },
+    {
+      "path": ".kokoro/system-test.sh"
+    },
+    {
+      "path": ".kokoro/trampoline.sh"
+    },
+    {
+      "path": ".kokoro/samples-test.sh"
+    },
+    {
+      "path": ".kokoro/publish.sh"
+    },
+    {
+      "path": ".kokoro/lint.sh"
+    },
+    {
+      "path": ".kokoro/common.cfg"
+    },
+    {
+      "path": ".kokoro/test.sh"
+    },
+    {
+      "path": ".kokoro/docs.sh"
+    },
+    {
+      "path": ".kokoro/release/docs.cfg"
+    },
+    {
+      "path": ".kokoro/release/publish.cfg"
+    },
+    {
+      "path": ".kokoro/release/docs.sh"
+    },
+    {
+      "path": ".kokoro/presubmit/node10/system-test.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node10/samples-test.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node10/test.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node10/docs.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node10/common.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node10/lint.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node8/test.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node8/common.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node12/test.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node12/common.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/windows/test.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/windows/common.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node10/system-test.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node10/samples-test.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node10/test.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node10/docs.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node10/common.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node10/lint.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node8/test.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node8/common.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node12/test.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node12/common.cfg"
+    },
+    {
       "path": "src/index.ts"
     },
     {
       "path": "src/v1alpha1/workflows_client_config.json"
     },
     {
+      "path": "src/v1alpha1/workflows_client.ts"
+    },
+    {
       "path": "src/v1alpha1/index.ts"
     },
     {
       "path": "src/v1alpha1/workflows_proto_list.json"
-    },
-    {
-      "path": "src/v1alpha1/workflows_client.ts"
     }
   ]
 }

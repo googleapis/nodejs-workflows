@@ -33,7 +33,7 @@ import {Transform} from 'stream';
 import * as protosTypes from '../../protos/protos';
 import * as gapicConfig from './workflows_client_config.json';
 
-const version = require('../../../package.json').version;
+const version = require('../../package.json').version;
 
 /**
  *  Manages workflow programs.

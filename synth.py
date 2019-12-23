@@ -20,15 +20,16 @@ import logging
 
 logging.basicConfig(level=logging.DEBUG)
 
-# run the gapic generator
-gapic = gcp.GAPICGenerator()
+# run the microgenerator:
+gapic = gcp.GAPICMicrogenerator()
 versions = ['v1alpha1']
 for version in versions:
-  library = gapic.node_library(
+  library = gapic.typescript_library(
     'workflows',
-    version,
+    version=version,
     private=True)
-  s.copy(library, excludes=[])
+
+s.copy(library, excludes=['README.md'])
 
 # Copy common templates
 common_templates = gcp.CommonTemplates()

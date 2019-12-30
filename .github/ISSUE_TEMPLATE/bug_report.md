@@ -21,7 +21,7 @@ If you are still having issues, please be sure to include as much information as
   - OS:
   - Node.js version:
   - npm version:
-  - `workflows` version:
+  - `@google-cloud/workflows` version:
 
 #### Steps to reproduce
 

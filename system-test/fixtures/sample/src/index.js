@@ -16,11 +16,12 @@
 // ** https://github.com/googleapis/gapic-generator-typescript **
 // ** All changes to this file may be overwritten. **
 
+
 /* eslint-disable node/no-missing-require, no-unused-vars */
-const workflows = require('workflows');
+const executions = require('executions');
 
 function main() {
-  const workflowsClient = new workflows.WorkflowsClient();
+  const executionsClient = new executions.ExecutionsClient();
 }
 
 main();

@@ -6,6 +6,245 @@
           "nested": {
             "workflows": {
               "nested": {
+                "executions": {
+                  "nested": {
+                    "v1beta": {
+                      "options": {
+                        "go_package": "google.golang.org/genproto/googleapis/cloud/workflows/executions/v1beta;executions",
+                        "java_multiple_files": true,
+                        "java_outer_classname": "ExecutionsProto",
+                        "java_package": "com.google.cloud.workflows.executions.v1beta",
+                        "(google.api.resource_definition).type": "workflows.googleapis.com/Workflow",
+                        "(google.api.resource_definition).pattern": "projects/{project}/locations/{location}/workflows/{workflow}"
+                      },
+                      "nested": {
+                        "Executions": {
+                          "options": {
+                            "(google.api.default_host)": "workflowexecutions.googleapis.com",
+                            "(google.api.oauth_scopes)": "https://www.googleapis.com/auth/cloud-platform"
+                          },
+                          "methods": {
+                            "ListExecutions": {
+                              "requestType": "ListExecutionsRequest",
+                              "responseType": "ListExecutionsResponse",
+                              "options": {
+                                "(google.api.http).get": "/v1beta/{parent=projects/*/locations/*/workflows/*}/executions",
+                                "(google.api.method_signature)": "parent"
+                              }
+                            },
+                            "CreateExecution": {
+                              "requestType": "CreateExecutionRequest",
+                              "responseType": "Execution",
+                              "options": {
+                                "(google.api.http).post": "/v1beta/{parent=projects/*/locations/*/workflows/*}/executions",
+                                "(google.api.http).body": "execution",
+                                "(google.api.method_signature)": "parent,execution"
+                              }
+                            },
+                            "GetExecution": {
+                              "requestType": "GetExecutionRequest",
+                              "responseType": "Execution",
+                              "options": {
+                                "(google.api.http).get": "/v1beta/{name=projects/*/locations/*/workflows/*/executions/*}",
+                                "(google.api.method_signature)": "name"
+                              }
+                            },
+                            "CancelExecution": {
+                              "requestType": "CancelExecutionRequest",
+                              "responseType": "Execution",
+                              "options": {
+                                "(google.api.http).post": "/v1beta/{name=projects/*/locations/*/workflows/*/executions/*}:cancel",
+                                "(google.api.http).body": "*",
+                                "(google.api.method_signature)": "name"
+                              }
+                            }
+                          }
+                        },
+                        "Execution": {
+                          "options": {
+                            "(google.api.resource).type": "workflowexecutions.googleapis.com/Execution",
+                            "(google.api.resource).pattern": "projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}"
+                          },
+                          "fields": {
+                            "name": {
+                              "type": "string",
+                              "id": 1,
+                              "options": {
+                                "(google.api.field_behavior)": "OUTPUT_ONLY"
+                              }
+                            },
+                            "startTime": {
+                              "type": "google.protobuf.Timestamp",
+                              "id": 2,
+                              "options": {
+                                "(google.api.field_behavior)": "OUTPUT_ONLY"
+                              }
+                            },
+                            "endTime": {
+                              "type": "google.protobuf.Timestamp",
+                              "id": 3,
+                              "options": {
+                                "(google.api.field_behavior)": "OUTPUT_ONLY"
+                              }
+                            },
+                            "state": {
+                              "type": "State",
+                              "id": 4,
+                              "options": {
+                                "(google.api.field_behavior)": "OUTPUT_ONLY"
+                              }
+                            },
+                            "argument": {
+                              "type": "string",
+                              "id": 5
+                            },
+                            "result": {
+                              "type": "string",
+                              "id": 6,
+                              "options": {
+                                "(google.api.field_behavior)": "OUTPUT_ONLY"
+                              }
+                            },
+                            "error": {
+                              "type": "Error",
+                              "id": 7,
+                              "options": {
+                                "(google.api.field_behavior)": "OUTPUT_ONLY"
+                              }
+                            },
+                            "workflowRevisionId": {
+                              "type": "string",
+                              "id": 8,
+                              "options": {
+                                "(google.api.field_behavior)": "OUTPUT_ONLY"
+                              }
+                            }
+                          },
+                          "nested": {
+                            "Error": {
+                              "fields": {
+                                "payload": {
+                                  "type": "string",
+                                  "id": 1
+                                },
+                                "context": {
+                                  "type": "string",
+                                  "id": 2
+                                }
+                              }
+                            },
+                            "State": {
+                              "values": {
+                                "STATE_UNSPECIFIED": 0,
+                                "ACTIVE": 1,
+                                "SUCCEEDED": 2,
+                                "FAILED": 3,
+                                "CANCELLED": 4
+                              }
+                            }
+                          }
+                        },
+                        "ListExecutionsRequest": {
+                          "fields": {
+                            "parent": {
+                              "type": "string",
+                              "id": 1,
+                              "options": {
+                                "(google.api.field_behavior)": "REQUIRED",
+                                "(google.api.resource_reference).type": "workflows.googleapis.com/Workflow"
+                              }
+                            },
+                            "pageSize": {
+                              "type": "int32",
+                              "id": 2
+                            },
+                            "pageToken": {
+                              "type": "string",
+                              "id": 3
+                            },
+                            "view": {
+                              "type": "ExecutionView",
+                              "id": 4,
+                              "options": {
+                                "(google.api.field_behavior)": "OPTIONAL"
+                              }
+                            }
+                          }
+                        },
+                        "ListExecutionsResponse": {
+                          "fields": {
+                            "executions": {
+                              "rule": "repeated",
+                              "type": "Execution",
+                              "id": 1
+                            },
+                            "nextPageToken": {
+                              "type": "string",
+                              "id": 2
+                            }
+                          }
+                        },
+                        "CreateExecutionRequest": {
+                          "fields": {
+                            "parent": {
+                              "type": "string",
+                              "id": 1,
+                              "options": {
+                                "(google.api.field_behavior)": "REQUIRED",
+                                "(google.api.resource_reference).type": "workflows.googleapis.com/Workflow"
+                              }
+                            },
+                            "execution": {
+                              "type": "Execution",
+                              "id": 2,
+                              "options": {
+                                "(google.api.field_behavior)": "REQUIRED"
+                              }
+                            }
+                          }
+                        },
+                        "GetExecutionRequest": {
+                          "fields": {
+                            "name": {
+                              "type": "string",
+                              "id": 1,
+                              "options": {
+                                "(google.api.field_behavior)": "REQUIRED",
+                                "(google.api.resource_reference).type": "workflowexecutions.googleapis.com/Execution"
+                              }
+                            },
+                            "view": {
+                              "type": "ExecutionView",
+                              "id": 2,
+                              "options": {
+                                "(google.api.field_behavior)": "OPTIONAL"
+                              }
+                            }
+                          }
+                        },
+                        "CancelExecutionRequest": {
+                          "fields": {
+                            "name": {
+                              "type": "string",
+                              "id": 1,
+                              "options": {
+                                "(google.api.field_behavior)": "REQUIRED",
+                                "(google.api.resource_reference).type": "workflowexecutions.googleapis.com/Execution"
+                              }
+                            }
+                          }
+                        },
+                        "ExecutionView": {
+                          "values": {
+                            "EXECUTION_VIEW_UNSPECIFIED": 0,
+                            "BASIC": 1,
+                            "FULL": 2
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
                 "v1beta": {
                   "options": {
                     "go_package": "google.golang.org/genproto/googleapis/cloud/workflows/v1beta;workflows",
@@ -1382,6 +1621,18 @@
                 }
               }
             },
+            "Timestamp": {
+              "fields": {
+                "seconds": {
+                  "type": "int64",
+                  "id": 1
+                },
+                "nanos": {
+                  "type": "int32",
+                  "id": 2
+                }
+              }
+            },
             "Any": {
               "fields": {
                 "type_url": {
@@ -1415,18 +1666,6 @@
                   "rule": "repeated",
                   "type": "string",
                   "id": 1
-                }
-              }
-            },
-            "Timestamp": {
-              "fields": {
-                "seconds": {
-                  "type": "int64",
-                  "id": 1
-                },
-                "nanos": {
-                  "type": "int32",
-                  "id": 2
                 }
               }
             }

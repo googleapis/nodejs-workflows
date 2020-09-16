@@ -28,7 +28,7 @@
     var $Reader = $protobuf.Reader, $Writer = $protobuf.Writer, $util = $protobuf.util;
     
     // Exported root namespace
-    var $root = $protobuf.roots.workflows_protos || ($protobuf.roots.workflows_protos = {});
+    var $root = $protobuf.roots._google_cloud_workflows_protos || ($protobuf.roots._google_cloud_workflows_protos = {});
     
     $root.google = (function() {
     
@@ -56,6 +56,1961 @@
                  * @namespace
                  */
                 var workflows = {};
+    
+                workflows.executions = (function() {
+    
+                    /**
+                     * Namespace executions.
+                     * @memberof google.cloud.workflows
+                     * @namespace
+                     */
+                    var executions = {};
+    
+                    executions.v1beta = (function() {
+    
+                        /**
+                         * Namespace v1beta.
+                         * @memberof google.cloud.workflows.executions
+                         * @namespace
+                         */
+                        var v1beta = {};
+    
+                        v1beta.Executions = (function() {
+    
+                            /**
+                             * Constructs a new Executions service.
+                             * @memberof google.cloud.workflows.executions.v1beta
+                             * @classdesc Represents an Executions
+                             * @extends $protobuf.rpc.Service
+                             * @constructor
+                             * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
+                             * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
+                             * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
+                             */
+                            function Executions(rpcImpl, requestDelimited, responseDelimited) {
+                                $protobuf.rpc.Service.call(this, rpcImpl, requestDelimited, responseDelimited);
+                            }
+    
+                            (Executions.prototype = Object.create($protobuf.rpc.Service.prototype)).constructor = Executions;
+    
+                            /**
+                             * Creates new Executions service using the specified rpc implementation.
+                             * @function create
+                             * @memberof google.cloud.workflows.executions.v1beta.Executions
+                             * @static
+                             * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
+                             * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
+                             * @param {boolean} [responseDelimited=false] Whether responses are length-delimited
+                             * @returns {Executions} RPC service. Useful where requests and/or responses are streamed.
+                             */
+                            Executions.create = function create(rpcImpl, requestDelimited, responseDelimited) {
+                                return new this(rpcImpl, requestDelimited, responseDelimited);
+                            };
+    
+                            /**
+                             * Callback as used by {@link google.cloud.workflows.executions.v1beta.Executions#listExecutions}.
+                             * @memberof google.cloud.workflows.executions.v1beta.Executions
+                             * @typedef ListExecutionsCallback
+                             * @type {function}
+                             * @param {Error|null} error Error, if any
+                             * @param {google.cloud.workflows.executions.v1beta.ListExecutionsResponse} [response] ListExecutionsResponse
+                             */
+    
+                            /**
+                             * Calls ListExecutions.
+                             * @function listExecutions
+                             * @memberof google.cloud.workflows.executions.v1beta.Executions
+                             * @instance
+                             * @param {google.cloud.workflows.executions.v1beta.IListExecutionsRequest} request ListExecutionsRequest message or plain object
+                             * @param {google.cloud.workflows.executions.v1beta.Executions.ListExecutionsCallback} callback Node-style callback called with the error, if any, and ListExecutionsResponse
+                             * @returns {undefined}
+                             * @variation 1
+                             */
+                            Object.defineProperty(Executions.prototype.listExecutions = function listExecutions(request, callback) {
+                                return this.rpcCall(listExecutions, $root.google.cloud.workflows.executions.v1beta.ListExecutionsRequest, $root.google.cloud.workflows.executions.v1beta.ListExecutionsResponse, request, callback);
+                            }, "name", { value: "ListExecutions" });
+    
+                            /**
+                             * Calls ListExecutions.
+                             * @function listExecutions
+                             * @memberof google.cloud.workflows.executions.v1beta.Executions
+                             * @instance
+                             * @param {google.cloud.workflows.executions.v1beta.IListExecutionsRequest} request ListExecutionsRequest message or plain object
+                             * @returns {Promise<google.cloud.workflows.executions.v1beta.ListExecutionsResponse>} Promise
+                             * @variation 2
+                             */
+    
+                            /**
+                             * Callback as used by {@link google.cloud.workflows.executions.v1beta.Executions#createExecution}.
+                             * @memberof google.cloud.workflows.executions.v1beta.Executions
+                             * @typedef CreateExecutionCallback
+                             * @type {function}
+                             * @param {Error|null} error Error, if any
+                             * @param {google.cloud.workflows.executions.v1beta.Execution} [response] Execution
+                             */
+    
+                            /**
+                             * Calls CreateExecution.
+                             * @function createExecution
+                             * @memberof google.cloud.workflows.executions.v1beta.Executions
+                             * @instance
+                             * @param {google.cloud.workflows.executions.v1beta.ICreateExecutionRequest} request CreateExecutionRequest message or plain object
+                             * @param {google.cloud.workflows.executions.v1beta.Executions.CreateExecutionCallback} callback Node-style callback called with the error, if any, and Execution
+                             * @returns {undefined}
+                             * @variation 1
+                             */
+                            Object.defineProperty(Executions.prototype.createExecution = function createExecution(request, callback) {
+                                return this.rpcCall(createExecution, $root.google.cloud.workflows.executions.v1beta.CreateExecutionRequest, $root.google.cloud.workflows.executions.v1beta.Execution, request, callback);
+                            }, "name", { value: "CreateExecution" });
+    
+                            /**
+                             * Calls CreateExecution.
+                             * @function createExecution
+                             * @memberof google.cloud.workflows.executions.v1beta.Executions
+                             * @instance
+                             * @param {google.cloud.workflows.executions.v1beta.ICreateExecutionRequest} request CreateExecutionRequest message or plain object
+                             * @returns {Promise<google.cloud.workflows.executions.v1beta.Execution>} Promise
+                             * @variation 2
+                             */
+    
+                            /**
+                             * Callback as used by {@link google.cloud.workflows.executions.v1beta.Executions#getExecution}.
+                             * @memberof google.cloud.workflows.executions.v1beta.Executions
+                             * @typedef GetExecutionCallback
+                             * @type {function}
+                             * @param {Error|null} error Error, if any
+                             * @param {google.cloud.workflows.executions.v1beta.Execution} [response] Execution
+                             */
+    
+                            /**
+                             * Calls GetExecution.
+                             * @function getExecution
+                             * @memberof google.cloud.workflows.executions.v1beta.Executions
+                             * @instance
+                             * @param {google.cloud.workflows.executions.v1beta.IGetExecutionRequest} request GetExecutionRequest message or plain object
+                             * @param {google.cloud.workflows.executions.v1beta.Executions.GetExecutionCallback} callback Node-style callback called with the error, if any, and Execution
+                             * @returns {undefined}
+                             * @variation 1
+                             */
+                            Object.defineProperty(Executions.prototype.getExecution = function getExecution(request, callback) {
+                                return this.rpcCall(getExecution, $root.google.cloud.workflows.executions.v1beta.GetExecutionRequest, $root.google.cloud.workflows.executions.v1beta.Execution, request, callback);
+                            }, "name", { value: "GetExecution" });
+    
+                            /**
+                             * Calls GetExecution.
+                             * @function getExecution
+                             * @memberof google.cloud.workflows.executions.v1beta.Executions
+                             * @instance
+                             * @param {google.cloud.workflows.executions.v1beta.IGetExecutionRequest} request GetExecutionRequest message or plain object
+                             * @returns {Promise<google.cloud.workflows.executions.v1beta.Execution>} Promise
+                             * @variation 2
+                             */
+    
+                            /**
+                             * Callback as used by {@link google.cloud.workflows.executions.v1beta.Executions#cancelExecution}.
+                             * @memberof google.cloud.workflows.executions.v1beta.Executions
+                             * @typedef CancelExecutionCallback
+                             * @type {function}
+                             * @param {Error|null} error Error, if any
+                             * @param {google.cloud.workflows.executions.v1beta.Execution} [response] Execution
+                             */
+    
+                            /**
+                             * Calls CancelExecution.
+                             * @function cancelExecution
+                             * @memberof google.cloud.workflows.executions.v1beta.Executions
+                             * @instance
+                             * @param {google.cloud.workflows.executions.v1beta.ICancelExecutionRequest} request CancelExecutionRequest message or plain object
+                             * @param {google.cloud.workflows.executions.v1beta.Executions.CancelExecutionCallback} callback Node-style callback called with the error, if any, and Execution
+                             * @returns {undefined}
+                             * @variation 1
+                             */
+                            Object.defineProperty(Executions.prototype.cancelExecution = function cancelExecution(request, callback) {
+                                return this.rpcCall(cancelExecution, $root.google.cloud.workflows.executions.v1beta.CancelExecutionRequest, $root.google.cloud.workflows.executions.v1beta.Execution, request, callback);
+                            }, "name", { value: "CancelExecution" });
+    
+                            /**
+                             * Calls CancelExecution.
+                             * @function cancelExecution
+                             * @memberof google.cloud.workflows.executions.v1beta.Executions
+                             * @instance
+                             * @param {google.cloud.workflows.executions.v1beta.ICancelExecutionRequest} request CancelExecutionRequest message or plain object
+                             * @returns {Promise<google.cloud.workflows.executions.v1beta.Execution>} Promise
+                             * @variation 2
+                             */
+    
+                            return Executions;
+                        })();
+    
+                        v1beta.Execution = (function() {
+    
+                            /**
+                             * Properties of an Execution.
+                             * @memberof google.cloud.workflows.executions.v1beta
+                             * @interface IExecution
+                             * @property {string|null} [name] Execution name
+                             * @property {google.protobuf.ITimestamp|null} [startTime] Execution startTime
+                             * @property {google.protobuf.ITimestamp|null} [endTime] Execution endTime
+                             * @property {google.cloud.workflows.executions.v1beta.Execution.State|null} [state] Execution state
+                             * @property {string|null} [argument] Execution argument
+                             * @property {string|null} [result] Execution result
+                             * @property {google.cloud.workflows.executions.v1beta.Execution.IError|null} [error] Execution error
+                             * @property {string|null} [workflowRevisionId] Execution workflowRevisionId
+                             */
+    
+                            /**
+                             * Constructs a new Execution.
+                             * @memberof google.cloud.workflows.executions.v1beta
+                             * @classdesc Represents an Execution.
+                             * @implements IExecution
+                             * @constructor
+                             * @param {google.cloud.workflows.executions.v1beta.IExecution=} [properties] Properties to set
+                             */
+                            function Execution(properties) {
+                                if (properties)
+                                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                        if (properties[keys[i]] != null)
+                                            this[keys[i]] = properties[keys[i]];
+                            }
+    
+                            /**
+                             * Execution name.
+                             * @member {string} name
+                             * @memberof google.cloud.workflows.executions.v1beta.Execution
+                             * @instance
+                             */
+                            Execution.prototype.name = "";
+    
+                            /**
+                             * Execution startTime.
+                             * @member {google.protobuf.ITimestamp|null|undefined} startTime
+                             * @memberof google.cloud.workflows.executions.v1beta.Execution
+                             * @instance
+                             */
+                            Execution.prototype.startTime = null;
+    
+                            /**
+                             * Execution endTime.
+                             * @member {google.protobuf.ITimestamp|null|undefined} endTime
+                             * @memberof google.cloud.workflows.executions.v1beta.Execution
+                             * @instance
+                             */
+                            Execution.prototype.endTime = null;
+    
+                            /**
+                             * Execution state.
+                             * @member {google.cloud.workflows.executions.v1beta.Execution.State} state
+                             * @memberof google.cloud.workflows.executions.v1beta.Execution
+                             * @instance
+                             */
+                            Execution.prototype.state = 0;
+    
+                            /**
+                             * Execution argument.
+                             * @member {string} argument
+                             * @memberof google.cloud.workflows.executions.v1beta.Execution
+                             * @instance
+                             */
+                            Execution.prototype.argument = "";
+    
+                            /**
+                             * Execution result.
+                             * @member {string} result
+                             * @memberof google.cloud.workflows.executions.v1beta.Execution
+                             * @instance
+                             */
+                            Execution.prototype.result = "";
+    
+                            /**
+                             * Execution error.
+                             * @member {google.cloud.workflows.executions.v1beta.Execution.IError|null|undefined} error
+                             * @memberof google.cloud.workflows.executions.v1beta.Execution
+                             * @instance
+                             */
+                            Execution.prototype.error = null;
+    
+                            /**
+                             * Execution workflowRevisionId.
+                             * @member {string} workflowRevisionId
+                             * @memberof google.cloud.workflows.executions.v1beta.Execution
+                             * @instance
+                             */
+                            Execution.prototype.workflowRevisionId = "";
+    
+                            /**
+                             * Creates a new Execution instance using the specified properties.
+                             * @function create
+                             * @memberof google.cloud.workflows.executions.v1beta.Execution
+                             * @static
+                             * @param {google.cloud.workflows.executions.v1beta.IExecution=} [properties] Properties to set
+                             * @returns {google.cloud.workflows.executions.v1beta.Execution} Execution instance
+                             */
+                            Execution.create = function create(properties) {
+                                return new Execution(properties);
+                            };
+    
+                            /**
+                             * Encodes the specified Execution message. Does not implicitly {@link google.cloud.workflows.executions.v1beta.Execution.verify|verify} messages.
+                             * @function encode
+                             * @memberof google.cloud.workflows.executions.v1beta.Execution
+                             * @static
+                             * @param {google.cloud.workflows.executions.v1beta.IExecution} message Execution message or plain object to encode
+                             * @param {$protobuf.Writer} [writer] Writer to encode to
+                             * @returns {$protobuf.Writer} Writer
+                             */
+                            Execution.encode = function encode(message, writer) {
+                                if (!writer)
+                                    writer = $Writer.create();
+                                if (message.name != null && Object.hasOwnProperty.call(message, "name"))
+                                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
+                                if (message.startTime != null && Object.hasOwnProperty.call(message, "startTime"))
+                                    $root.google.protobuf.Timestamp.encode(message.startTime, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                                if (message.endTime != null && Object.hasOwnProperty.call(message, "endTime"))
+                                    $root.google.protobuf.Timestamp.encode(message.endTime, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+                                if (message.state != null && Object.hasOwnProperty.call(message, "state"))
+                                    writer.uint32(/* id 4, wireType 0 =*/32).int32(message.state);
+                                if (message.argument != null && Object.hasOwnProperty.call(message, "argument"))
+                                    writer.uint32(/* id 5, wireType 2 =*/42).string(message.argument);
+                                if (message.result != null && Object.hasOwnProperty.call(message, "result"))
+                                    writer.uint32(/* id 6, wireType 2 =*/50).string(message.result);
+                                if (message.error != null && Object.hasOwnProperty.call(message, "error"))
+                                    $root.google.cloud.workflows.executions.v1beta.Execution.Error.encode(message.error, writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
+                                if (message.workflowRevisionId != null && Object.hasOwnProperty.call(message, "workflowRevisionId"))
+                                    writer.uint32(/* id 8, wireType 2 =*/66).string(message.workflowRevisionId);
+                                return writer;
+                            };
+    
+                            /**
+                             * Encodes the specified Execution message, length delimited. Does not implicitly {@link google.cloud.workflows.executions.v1beta.Execution.verify|verify} messages.
+                             * @function encodeDelimited
+                             * @memberof google.cloud.workflows.executions.v1beta.Execution
+                             * @static
+                             * @param {google.cloud.workflows.executions.v1beta.IExecution} message Execution message or plain object to encode
+                             * @param {$protobuf.Writer} [writer] Writer to encode to
+                             * @returns {$protobuf.Writer} Writer
+                             */
+                            Execution.encodeDelimited = function encodeDelimited(message, writer) {
+                                return this.encode(message, writer).ldelim();
+                            };
+    
+                            /**
+                             * Decodes an Execution message from the specified reader or buffer.
+                             * @function decode
+                             * @memberof google.cloud.workflows.executions.v1beta.Execution
+                             * @static
+                             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                             * @param {number} [length] Message length if known beforehand
+                             * @returns {google.cloud.workflows.executions.v1beta.Execution} Execution
+                             * @throws {Error} If the payload is not a reader or valid buffer
+                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                             */
+                            Execution.decode = function decode(reader, length) {
+                                if (!(reader instanceof $Reader))
+                                    reader = $Reader.create(reader);
+                                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.cloud.workflows.executions.v1beta.Execution();
+                                while (reader.pos < end) {
+                                    var tag = reader.uint32();
+                                    switch (tag >>> 3) {
+                                    case 1:
+                                        message.name = reader.string();
+                                        break;
+                                    case 2:
+                                        message.startTime = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+                                        break;
+                                    case 3:
+                                        message.endTime = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+                                        break;
+                                    case 4:
+                                        message.state = reader.int32();
+                                        break;
+                                    case 5:
+                                        message.argument = reader.string();
+                                        break;
+                                    case 6:
+                                        message.result = reader.string();
+                                        break;
+                                    case 7:
+                                        message.error = $root.google.cloud.workflows.executions.v1beta.Execution.Error.decode(reader, reader.uint32());
+                                        break;
+                                    case 8:
+                                        message.workflowRevisionId = reader.string();
+                                        break;
+                                    default:
+                                        reader.skipType(tag & 7);
+                                        break;
+                                    }
+                                }
+                                return message;
+                            };
+    
+                            /**
+                             * Decodes an Execution message from the specified reader or buffer, length delimited.
+                             * @function decodeDelimited
+                             * @memberof google.cloud.workflows.executions.v1beta.Execution
+                             * @static
+                             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                             * @returns {google.cloud.workflows.executions.v1beta.Execution} Execution
+                             * @throws {Error} If the payload is not a reader or valid buffer
+                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                             */
+                            Execution.decodeDelimited = function decodeDelimited(reader) {
+                                if (!(reader instanceof $Reader))
+                                    reader = new $Reader(reader);
+                                return this.decode(reader, reader.uint32());
+                            };
+    
+                            /**
+                             * Verifies an Execution message.
+                             * @function verify
+                             * @memberof google.cloud.workflows.executions.v1beta.Execution
+                             * @static
+                             * @param {Object.<string,*>} message Plain object to verify
+                             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                             */
+                            Execution.verify = function verify(message) {
+                                if (typeof message !== "object" || message === null)
+                                    return "object expected";
+                                if (message.name != null && message.hasOwnProperty("name"))
+                                    if (!$util.isString(message.name))
+                                        return "name: string expected";
+                                if (message.startTime != null && message.hasOwnProperty("startTime")) {
+                                    var error = $root.google.protobuf.Timestamp.verify(message.startTime);
+                                    if (error)
+                                        return "startTime." + error;
+                                }
+                                if (message.endTime != null && message.hasOwnProperty("endTime")) {
+                                    var error = $root.google.protobuf.Timestamp.verify(message.endTime);
+                                    if (error)
+                                        return "endTime." + error;
+                                }
+                                if (message.state != null && message.hasOwnProperty("state"))
+                                    switch (message.state) {
+                                    default:
+                                        return "state: enum value expected";
+                                    case 0:
+                                    case 1:
+                                    case 2:
+                                    case 3:
+                                    case 4:
+                                        break;
+                                    }
+                                if (message.argument != null && message.hasOwnProperty("argument"))
+                                    if (!$util.isString(message.argument))
+                                        return "argument: string expected";
+                                if (message.result != null && message.hasOwnProperty("result"))
+                                    if (!$util.isString(message.result))
+                                        return "result: string expected";
+                                if (message.error != null && message.hasOwnProperty("error")) {
+                                    var error = $root.google.cloud.workflows.executions.v1beta.Execution.Error.verify(message.error);
+                                    if (error)
+                                        return "error." + error;
+                                }
+                                if (message.workflowRevisionId != null && message.hasOwnProperty("workflowRevisionId"))
+                                    if (!$util.isString(message.workflowRevisionId))
+                                        return "workflowRevisionId: string expected";
+                                return null;
+                            };
+    
+                            /**
+                             * Creates an Execution message from a plain object. Also converts values to their respective internal types.
+                             * @function fromObject
+                             * @memberof google.cloud.workflows.executions.v1beta.Execution
+                             * @static
+                             * @param {Object.<string,*>} object Plain object
+                             * @returns {google.cloud.workflows.executions.v1beta.Execution} Execution
+                             */
+                            Execution.fromObject = function fromObject(object) {
+                                if (object instanceof $root.google.cloud.workflows.executions.v1beta.Execution)
+                                    return object;
+                                var message = new $root.google.cloud.workflows.executions.v1beta.Execution();
+                                if (object.name != null)
+                                    message.name = String(object.name);
+                                if (object.startTime != null) {
+                                    if (typeof object.startTime !== "object")
+                                        throw TypeError(".google.cloud.workflows.executions.v1beta.Execution.startTime: object expected");
+                                    message.startTime = $root.google.protobuf.Timestamp.fromObject(object.startTime);
+                                }
+                                if (object.endTime != null) {
+                                    if (typeof object.endTime !== "object")
+                                        throw TypeError(".google.cloud.workflows.executions.v1beta.Execution.endTime: object expected");
+                                    message.endTime = $root.google.protobuf.Timestamp.fromObject(object.endTime);
+                                }
+                                switch (object.state) {
+                                case "STATE_UNSPECIFIED":
+                                case 0:
+                                    message.state = 0;
+                                    break;
+                                case "ACTIVE":
+                                case 1:
+                                    message.state = 1;
+                                    break;
+                                case "SUCCEEDED":
+                                case 2:
+                                    message.state = 2;
+                                    break;
+                                case "FAILED":
+                                case 3:
+                                    message.state = 3;
+                                    break;
+                                case "CANCELLED":
+                                case 4:
+                                    message.state = 4;
+                                    break;
+                                }
+                                if (object.argument != null)
+                                    message.argument = String(object.argument);
+                                if (object.result != null)
+                                    message.result = String(object.result);
+                                if (object.error != null) {
+                                    if (typeof object.error !== "object")
+                                        throw TypeError(".google.cloud.workflows.executions.v1beta.Execution.error: object expected");
+                                    message.error = $root.google.cloud.workflows.executions.v1beta.Execution.Error.fromObject(object.error);
+                                }
+                                if (object.workflowRevisionId != null)
+                                    message.workflowRevisionId = String(object.workflowRevisionId);
+                                return message;
+                            };
+    
+                            /**
+                             * Creates a plain object from an Execution message. Also converts values to other types if specified.
+                             * @function toObject
+                             * @memberof google.cloud.workflows.executions.v1beta.Execution
+                             * @static
+                             * @param {google.cloud.workflows.executions.v1beta.Execution} message Execution
+                             * @param {$protobuf.IConversionOptions} [options] Conversion options
+                             * @returns {Object.<string,*>} Plain object
+                             */
+                            Execution.toObject = function toObject(message, options) {
+                                if (!options)
+                                    options = {};
+                                var object = {};
+                                if (options.defaults) {
+                                    object.name = "";
+                                    object.startTime = null;
+                                    object.endTime = null;
+                                    object.state = options.enums === String ? "STATE_UNSPECIFIED" : 0;
+                                    object.argument = "";
+                                    object.result = "";
+                                    object.error = null;
+                                    object.workflowRevisionId = "";
+                                }
+                                if (message.name != null && message.hasOwnProperty("name"))
+                                    object.name = message.name;
+                                if (message.startTime != null && message.hasOwnProperty("startTime"))
+                                    object.startTime = $root.google.protobuf.Timestamp.toObject(message.startTime, options);
+                                if (message.endTime != null && message.hasOwnProperty("endTime"))
+                                    object.endTime = $root.google.protobuf.Timestamp.toObject(message.endTime, options);
+                                if (message.state != null && message.hasOwnProperty("state"))
+                                    object.state = options.enums === String ? $root.google.cloud.workflows.executions.v1beta.Execution.State[message.state] : message.state;
+                                if (message.argument != null && message.hasOwnProperty("argument"))
+                                    object.argument = message.argument;
+                                if (message.result != null && message.hasOwnProperty("result"))
+                                    object.result = message.result;
+                                if (message.error != null && message.hasOwnProperty("error"))
+                                    object.error = $root.google.cloud.workflows.executions.v1beta.Execution.Error.toObject(message.error, options);
+                                if (message.workflowRevisionId != null && message.hasOwnProperty("workflowRevisionId"))
+                                    object.workflowRevisionId = message.workflowRevisionId;
+                                return object;
+                            };
+    
+                            /**
+                             * Converts this Execution to JSON.
+                             * @function toJSON
+                             * @memberof google.cloud.workflows.executions.v1beta.Execution
+                             * @instance
+                             * @returns {Object.<string,*>} JSON object
+                             */
+                            Execution.prototype.toJSON = function toJSON() {
+                                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                            };
+    
+                            Execution.Error = (function() {
+    
+                                /**
+                                 * Properties of an Error.
+                                 * @memberof google.cloud.workflows.executions.v1beta.Execution
+                                 * @interface IError
+                                 * @property {string|null} [payload] Error payload
+                                 * @property {string|null} [context] Error context
+                                 */
+    
+                                /**
+                                 * Constructs a new Error.
+                                 * @memberof google.cloud.workflows.executions.v1beta.Execution
+                                 * @classdesc Represents an Error.
+                                 * @implements IError
+                                 * @constructor
+                                 * @param {google.cloud.workflows.executions.v1beta.Execution.IError=} [properties] Properties to set
+                                 */
+                                function Error(properties) {
+                                    if (properties)
+                                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                            if (properties[keys[i]] != null)
+                                                this[keys[i]] = properties[keys[i]];
+                                }
+    
+                                /**
+                                 * Error payload.
+                                 * @member {string} payload
+                                 * @memberof google.cloud.workflows.executions.v1beta.Execution.Error
+                                 * @instance
+                                 */
+                                Error.prototype.payload = "";
+    
+                                /**
+                                 * Error context.
+                                 * @member {string} context
+                                 * @memberof google.cloud.workflows.executions.v1beta.Execution.Error
+                                 * @instance
+                                 */
+                                Error.prototype.context = "";
+    
+                                /**
+                                 * Creates a new Error instance using the specified properties.
+                                 * @function create
+                                 * @memberof google.cloud.workflows.executions.v1beta.Execution.Error
+                                 * @static
+                                 * @param {google.cloud.workflows.executions.v1beta.Execution.IError=} [properties] Properties to set
+                                 * @returns {google.cloud.workflows.executions.v1beta.Execution.Error} Error instance
+                                 */
+                                Error.create = function create(properties) {
+                                    return new Error(properties);
+                                };
+    
+                                /**
+                                 * Encodes the specified Error message. Does not implicitly {@link google.cloud.workflows.executions.v1beta.Execution.Error.verify|verify} messages.
+                                 * @function encode
+                                 * @memberof google.cloud.workflows.executions.v1beta.Execution.Error
+                                 * @static
+                                 * @param {google.cloud.workflows.executions.v1beta.Execution.IError} message Error message or plain object to encode
+                                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                                 * @returns {$protobuf.Writer} Writer
+                                 */
+                                Error.encode = function encode(message, writer) {
+                                    if (!writer)
+                                        writer = $Writer.create();
+                                    if (message.payload != null && Object.hasOwnProperty.call(message, "payload"))
+                                        writer.uint32(/* id 1, wireType 2 =*/10).string(message.payload);
+                                    if (message.context != null && Object.hasOwnProperty.call(message, "context"))
+                                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.context);
+                                    return writer;
+                                };
+    
+                                /**
+                                 * Encodes the specified Error message, length delimited. Does not implicitly {@link google.cloud.workflows.executions.v1beta.Execution.Error.verify|verify} messages.
+                                 * @function encodeDelimited
+                                 * @memberof google.cloud.workflows.executions.v1beta.Execution.Error
+                                 * @static
+                                 * @param {google.cloud.workflows.executions.v1beta.Execution.IError} message Error message or plain object to encode
+                                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                                 * @returns {$protobuf.Writer} Writer
+                                 */
+                                Error.encodeDelimited = function encodeDelimited(message, writer) {
+                                    return this.encode(message, writer).ldelim();
+                                };
+    
+                                /**
+                                 * Decodes an Error message from the specified reader or buffer.
+                                 * @function decode
+                                 * @memberof google.cloud.workflows.executions.v1beta.Execution.Error
+                                 * @static
+                                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                                 * @param {number} [length] Message length if known beforehand
+                                 * @returns {google.cloud.workflows.executions.v1beta.Execution.Error} Error
+                                 * @throws {Error} If the payload is not a reader or valid buffer
+                                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                                 */
+                                Error.decode = function decode(reader, length) {
+                                    if (!(reader instanceof $Reader))
+                                        reader = $Reader.create(reader);
+                                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.cloud.workflows.executions.v1beta.Execution.Error();
+                                    while (reader.pos < end) {
+                                        var tag = reader.uint32();
+                                        switch (tag >>> 3) {
+                                        case 1:
+                                            message.payload = reader.string();
+                                            break;
+                                        case 2:
+                                            message.context = reader.string();
+                                            break;
+                                        default:
+                                            reader.skipType(tag & 7);
+                                            break;
+                                        }
+                                    }
+                                    return message;
+                                };
+    
+                                /**
+                                 * Decodes an Error message from the specified reader or buffer, length delimited.
+                                 * @function decodeDelimited
+                                 * @memberof google.cloud.workflows.executions.v1beta.Execution.Error
+                                 * @static
+                                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                                 * @returns {google.cloud.workflows.executions.v1beta.Execution.Error} Error
+                                 * @throws {Error} If the payload is not a reader or valid buffer
+                                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                                 */
+                                Error.decodeDelimited = function decodeDelimited(reader) {
+                                    if (!(reader instanceof $Reader))
+                                        reader = new $Reader(reader);
+                                    return this.decode(reader, reader.uint32());
+                                };
+    
+                                /**
+                                 * Verifies an Error message.
+                                 * @function verify
+                                 * @memberof google.cloud.workflows.executions.v1beta.Execution.Error
+                                 * @static
+                                 * @param {Object.<string,*>} message Plain object to verify
+                                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                                 */
+                                Error.verify = function verify(message) {
+                                    if (typeof message !== "object" || message === null)
+                                        return "object expected";
+                                    if (message.payload != null && message.hasOwnProperty("payload"))
+                                        if (!$util.isString(message.payload))
+                                            return "payload: string expected";
+                                    if (message.context != null && message.hasOwnProperty("context"))
+                                        if (!$util.isString(message.context))
+                                            return "context: string expected";
+                                    return null;
+                                };
+    
+                                /**
+                                 * Creates an Error message from a plain object. Also converts values to their respective internal types.
+                                 * @function fromObject
+                                 * @memberof google.cloud.workflows.executions.v1beta.Execution.Error
+                                 * @static
+                                 * @param {Object.<string,*>} object Plain object
+                                 * @returns {google.cloud.workflows.executions.v1beta.Execution.Error} Error
+                                 */
+                                Error.fromObject = function fromObject(object) {
+                                    if (object instanceof $root.google.cloud.workflows.executions.v1beta.Execution.Error)
+                                        return object;
+                                    var message = new $root.google.cloud.workflows.executions.v1beta.Execution.Error();
+                                    if (object.payload != null)
+                                        message.payload = String(object.payload);
+                                    if (object.context != null)
+                                        message.context = String(object.context);
+                                    return message;
+                                };
+    
+                                /**
+                                 * Creates a plain object from an Error message. Also converts values to other types if specified.
+                                 * @function toObject
+                                 * @memberof google.cloud.workflows.executions.v1beta.Execution.Error
+                                 * @static
+                                 * @param {google.cloud.workflows.executions.v1beta.Execution.Error} message Error
+                                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                                 * @returns {Object.<string,*>} Plain object
+                                 */
+                                Error.toObject = function toObject(message, options) {
+                                    if (!options)
+                                        options = {};
+                                    var object = {};
+                                    if (options.defaults) {
+                                        object.payload = "";
+                                        object.context = "";
+                                    }
+                                    if (message.payload != null && message.hasOwnProperty("payload"))
+                                        object.payload = message.payload;
+                                    if (message.context != null && message.hasOwnProperty("context"))
+                                        object.context = message.context;
+                                    return object;
+                                };
+    
+                                /**
+                                 * Converts this Error to JSON.
+                                 * @function toJSON
+                                 * @memberof google.cloud.workflows.executions.v1beta.Execution.Error
+                                 * @instance
+                                 * @returns {Object.<string,*>} JSON object
+                                 */
+                                Error.prototype.toJSON = function toJSON() {
+                                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                                };
+    
+                                return Error;
+                            })();
+    
+                            /**
+                             * State enum.
+                             * @name google.cloud.workflows.executions.v1beta.Execution.State
+                             * @enum {number}
+                             * @property {number} STATE_UNSPECIFIED=0 STATE_UNSPECIFIED value
+                             * @property {number} ACTIVE=1 ACTIVE value
+                             * @property {number} SUCCEEDED=2 SUCCEEDED value
+                             * @property {number} FAILED=3 FAILED value
+                             * @property {number} CANCELLED=4 CANCELLED value
+                             */
+                            Execution.State = (function() {
+                                var valuesById = {}, values = Object.create(valuesById);
+                                values[valuesById[0] = "STATE_UNSPECIFIED"] = 0;
+                                values[valuesById[1] = "ACTIVE"] = 1;
+                                values[valuesById[2] = "SUCCEEDED"] = 2;
+                                values[valuesById[3] = "FAILED"] = 3;
+                                values[valuesById[4] = "CANCELLED"] = 4;
+                                return values;
+                            })();
+    
+                            return Execution;
+                        })();
+    
+                        v1beta.ListExecutionsRequest = (function() {
+    
+                            /**
+                             * Properties of a ListExecutionsRequest.
+                             * @memberof google.cloud.workflows.executions.v1beta
+                             * @interface IListExecutionsRequest
+                             * @property {string|null} [parent] ListExecutionsRequest parent
+                             * @property {number|null} [pageSize] ListExecutionsRequest pageSize
+                             * @property {string|null} [pageToken] ListExecutionsRequest pageToken
+                             * @property {google.cloud.workflows.executions.v1beta.ExecutionView|null} [view] ListExecutionsRequest view
+                             */
+    
+                            /**
+                             * Constructs a new ListExecutionsRequest.
+                             * @memberof google.cloud.workflows.executions.v1beta
+                             * @classdesc Represents a ListExecutionsRequest.
+                             * @implements IListExecutionsRequest
+                             * @constructor
+                             * @param {google.cloud.workflows.executions.v1beta.IListExecutionsRequest=} [properties] Properties to set
+                             */
+                            function ListExecutionsRequest(properties) {
+                                if (properties)
+                                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                        if (properties[keys[i]] != null)
+                                            this[keys[i]] = properties[keys[i]];
+                            }
+    
+                            /**
+                             * ListExecutionsRequest parent.
+                             * @member {string} parent
+                             * @memberof google.cloud.workflows.executions.v1beta.ListExecutionsRequest
+                             * @instance
+                             */
+                            ListExecutionsRequest.prototype.parent = "";
+    
+                            /**
+                             * ListExecutionsRequest pageSize.
+                             * @member {number} pageSize
+                             * @memberof google.cloud.workflows.executions.v1beta.ListExecutionsRequest
+                             * @instance
+                             */
+                            ListExecutionsRequest.prototype.pageSize = 0;
+    
+                            /**
+                             * ListExecutionsRequest pageToken.
+                             * @member {string} pageToken
+                             * @memberof google.cloud.workflows.executions.v1beta.ListExecutionsRequest
+                             * @instance
+                             */
+                            ListExecutionsRequest.prototype.pageToken = "";
+    
+                            /**
+                             * ListExecutionsRequest view.
+                             * @member {google.cloud.workflows.executions.v1beta.ExecutionView} view
+                             * @memberof google.cloud.workflows.executions.v1beta.ListExecutionsRequest
+                             * @instance
+                             */
+                            ListExecutionsRequest.prototype.view = 0;
+    
+                            /**
+                             * Creates a new ListExecutionsRequest instance using the specified properties.
+                             * @function create
+                             * @memberof google.cloud.workflows.executions.v1beta.ListExecutionsRequest
+                             * @static
+                             * @param {google.cloud.workflows.executions.v1beta.IListExecutionsRequest=} [properties] Properties to set
+                             * @returns {google.cloud.workflows.executions.v1beta.ListExecutionsRequest} ListExecutionsRequest instance
+                             */
+                            ListExecutionsRequest.create = function create(properties) {
+                                return new ListExecutionsRequest(properties);
+                            };
+    
+                            /**
+                             * Encodes the specified ListExecutionsRequest message. Does not implicitly {@link google.cloud.workflows.executions.v1beta.ListExecutionsRequest.verify|verify} messages.
+                             * @function encode
+                             * @memberof google.cloud.workflows.executions.v1beta.ListExecutionsRequest
+                             * @static
+                             * @param {google.cloud.workflows.executions.v1beta.IListExecutionsRequest} message ListExecutionsRequest message or plain object to encode
+                             * @param {$protobuf.Writer} [writer] Writer to encode to
+                             * @returns {$protobuf.Writer} Writer
+                             */
+                            ListExecutionsRequest.encode = function encode(message, writer) {
+                                if (!writer)
+                                    writer = $Writer.create();
+                                if (message.parent != null && Object.hasOwnProperty.call(message, "parent"))
+                                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.parent);
+                                if (message.pageSize != null && Object.hasOwnProperty.call(message, "pageSize"))
+                                    writer.uint32(/* id 2, wireType 0 =*/16).int32(message.pageSize);
+                                if (message.pageToken != null && Object.hasOwnProperty.call(message, "pageToken"))
+                                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.pageToken);
+                                if (message.view != null && Object.hasOwnProperty.call(message, "view"))
+                                    writer.uint32(/* id 4, wireType 0 =*/32).int32(message.view);
+                                return writer;
+                            };
+    
+                            /**
+                             * Encodes the specified ListExecutionsRequest message, length delimited. Does not implicitly {@link google.cloud.workflows.executions.v1beta.ListExecutionsRequest.verify|verify} messages.
+                             * @function encodeDelimited
+                             * @memberof google.cloud.workflows.executions.v1beta.ListExecutionsRequest
+                             * @static
+                             * @param {google.cloud.workflows.executions.v1beta.IListExecutionsRequest} message ListExecutionsRequest message or plain object to encode
+                             * @param {$protobuf.Writer} [writer] Writer to encode to
+                             * @returns {$protobuf.Writer} Writer
+                             */
+                            ListExecutionsRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                                return this.encode(message, writer).ldelim();
+                            };
+    
+                            /**
+                             * Decodes a ListExecutionsRequest message from the specified reader or buffer.
+                             * @function decode
+                             * @memberof google.cloud.workflows.executions.v1beta.ListExecutionsRequest
+                             * @static
+                             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                             * @param {number} [length] Message length if known beforehand
+                             * @returns {google.cloud.workflows.executions.v1beta.ListExecutionsRequest} ListExecutionsRequest
+                             * @throws {Error} If the payload is not a reader or valid buffer
+                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                             */
+                            ListExecutionsRequest.decode = function decode(reader, length) {
+                                if (!(reader instanceof $Reader))
+                                    reader = $Reader.create(reader);
+                                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.cloud.workflows.executions.v1beta.ListExecutionsRequest();
+                                while (reader.pos < end) {
+                                    var tag = reader.uint32();
+                                    switch (tag >>> 3) {
+                                    case 1:
+                                        message.parent = reader.string();
+                                        break;
+                                    case 2:
+                                        message.pageSize = reader.int32();
+                                        break;
+                                    case 3:
+                                        message.pageToken = reader.string();
+                                        break;
+                                    case 4:
+                                        message.view = reader.int32();
+                                        break;
+                                    default:
+                                        reader.skipType(tag & 7);
+                                        break;
+                                    }
+                                }
+                                return message;
+                            };
+    
+                            /**
+                             * Decodes a ListExecutionsRequest message from the specified reader or buffer, length delimited.
+                             * @function decodeDelimited
+                             * @memberof google.cloud.workflows.executions.v1beta.ListExecutionsRequest
+                             * @static
+                             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                             * @returns {google.cloud.workflows.executions.v1beta.ListExecutionsRequest} ListExecutionsRequest
+                             * @throws {Error} If the payload is not a reader or valid buffer
+                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                             */
+                            ListExecutionsRequest.decodeDelimited = function decodeDelimited(reader) {
+                                if (!(reader instanceof $Reader))
+                                    reader = new $Reader(reader);
+                                return this.decode(reader, reader.uint32());
+                            };
+    
+                            /**
+                             * Verifies a ListExecutionsRequest message.
+                             * @function verify
+                             * @memberof google.cloud.workflows.executions.v1beta.ListExecutionsRequest
+                             * @static
+                             * @param {Object.<string,*>} message Plain object to verify
+                             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                             */
+                            ListExecutionsRequest.verify = function verify(message) {
+                                if (typeof message !== "object" || message === null)
+                                    return "object expected";
+                                if (message.parent != null && message.hasOwnProperty("parent"))
+                                    if (!$util.isString(message.parent))
+                                        return "parent: string expected";
+                                if (message.pageSize != null && message.hasOwnProperty("pageSize"))
+                                    if (!$util.isInteger(message.pageSize))
+                                        return "pageSize: integer expected";
+                                if (message.pageToken != null && message.hasOwnProperty("pageToken"))
+                                    if (!$util.isString(message.pageToken))
+                                        return "pageToken: string expected";
+                                if (message.view != null && message.hasOwnProperty("view"))
+                                    switch (message.view) {
+                                    default:
+                                        return "view: enum value expected";
+                                    case 0:
+                                    case 1:
+                                    case 2:
+                                        break;
+                                    }
+                                return null;
+                            };
+    
+                            /**
+                             * Creates a ListExecutionsRequest message from a plain object. Also converts values to their respective internal types.
+                             * @function fromObject
+                             * @memberof google.cloud.workflows.executions.v1beta.ListExecutionsRequest
+                             * @static
+                             * @param {Object.<string,*>} object Plain object
+                             * @returns {google.cloud.workflows.executions.v1beta.ListExecutionsRequest} ListExecutionsRequest
+                             */
+                            ListExecutionsRequest.fromObject = function fromObject(object) {
+                                if (object instanceof $root.google.cloud.workflows.executions.v1beta.ListExecutionsRequest)
+                                    return object;
+                                var message = new $root.google.cloud.workflows.executions.v1beta.ListExecutionsRequest();
+                                if (object.parent != null)
+                                    message.parent = String(object.parent);
+                                if (object.pageSize != null)
+                                    message.pageSize = object.pageSize | 0;
+                                if (object.pageToken != null)
+                                    message.pageToken = String(object.pageToken);
+                                switch (object.view) {
+                                case "EXECUTION_VIEW_UNSPECIFIED":
+                                case 0:
+                                    message.view = 0;
+                                    break;
+                                case "BASIC":
+                                case 1:
+                                    message.view = 1;
+                                    break;
+                                case "FULL":
+                                case 2:
+                                    message.view = 2;
+                                    break;
+                                }
+                                return message;
+                            };
+    
+                            /**
+                             * Creates a plain object from a ListExecutionsRequest message. Also converts values to other types if specified.
+                             * @function toObject
+                             * @memberof google.cloud.workflows.executions.v1beta.ListExecutionsRequest
+                             * @static
+                             * @param {google.cloud.workflows.executions.v1beta.ListExecutionsRequest} message ListExecutionsRequest
+                             * @param {$protobuf.IConversionOptions} [options] Conversion options
+                             * @returns {Object.<string,*>} Plain object
+                             */
+                            ListExecutionsRequest.toObject = function toObject(message, options) {
+                                if (!options)
+                                    options = {};
+                                var object = {};
+                                if (options.defaults) {
+                                    object.parent = "";
+                                    object.pageSize = 0;
+                                    object.pageToken = "";
+                                    object.view = options.enums === String ? "EXECUTION_VIEW_UNSPECIFIED" : 0;
+                                }
+                                if (message.parent != null && message.hasOwnProperty("parent"))
+                                    object.parent = message.parent;
+                                if (message.pageSize != null && message.hasOwnProperty("pageSize"))
+                                    object.pageSize = message.pageSize;
+                                if (message.pageToken != null && message.hasOwnProperty("pageToken"))
+                                    object.pageToken = message.pageToken;
+                                if (message.view != null && message.hasOwnProperty("view"))
+                                    object.view = options.enums === String ? $root.google.cloud.workflows.executions.v1beta.ExecutionView[message.view] : message.view;
+                                return object;
+                            };
+    
+                            /**
+                             * Converts this ListExecutionsRequest to JSON.
+                             * @function toJSON
+                             * @memberof google.cloud.workflows.executions.v1beta.ListExecutionsRequest
+                             * @instance
+                             * @returns {Object.<string,*>} JSON object
+                             */
+                            ListExecutionsRequest.prototype.toJSON = function toJSON() {
+                                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                            };
+    
+                            return ListExecutionsRequest;
+                        })();
+    
+                        v1beta.ListExecutionsResponse = (function() {
+    
+                            /**
+                             * Properties of a ListExecutionsResponse.
+                             * @memberof google.cloud.workflows.executions.v1beta
+                             * @interface IListExecutionsResponse
+                             * @property {Array.<google.cloud.workflows.executions.v1beta.IExecution>|null} [executions] ListExecutionsResponse executions
+                             * @property {string|null} [nextPageToken] ListExecutionsResponse nextPageToken
+                             */
+    
+                            /**
+                             * Constructs a new ListExecutionsResponse.
+                             * @memberof google.cloud.workflows.executions.v1beta
+                             * @classdesc Represents a ListExecutionsResponse.
+                             * @implements IListExecutionsResponse
+                             * @constructor
+                             * @param {google.cloud.workflows.executions.v1beta.IListExecutionsResponse=} [properties] Properties to set
+                             */
+                            function ListExecutionsResponse(properties) {
+                                this.executions = [];
+                                if (properties)
+                                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                        if (properties[keys[i]] != null)
+                                            this[keys[i]] = properties[keys[i]];
+                            }
+    
+                            /**
+                             * ListExecutionsResponse executions.
+                             * @member {Array.<google.cloud.workflows.executions.v1beta.IExecution>} executions
+                             * @memberof google.cloud.workflows.executions.v1beta.ListExecutionsResponse
+                             * @instance
+                             */
+                            ListExecutionsResponse.prototype.executions = $util.emptyArray;
+    
+                            /**
+                             * ListExecutionsResponse nextPageToken.
+                             * @member {string} nextPageToken
+                             * @memberof google.cloud.workflows.executions.v1beta.ListExecutionsResponse
+                             * @instance
+                             */
+                            ListExecutionsResponse.prototype.nextPageToken = "";
+    
+                            /**
+                             * Creates a new ListExecutionsResponse instance using the specified properties.
+                             * @function create
+                             * @memberof google.cloud.workflows.executions.v1beta.ListExecutionsResponse
+                             * @static
+                             * @param {google.cloud.workflows.executions.v1beta.IListExecutionsResponse=} [properties] Properties to set
+                             * @returns {google.cloud.workflows.executions.v1beta.ListExecutionsResponse} ListExecutionsResponse instance
+                             */
+                            ListExecutionsResponse.create = function create(properties) {
+                                return new ListExecutionsResponse(properties);
+                            };
+    
+                            /**
+                             * Encodes the specified ListExecutionsResponse message. Does not implicitly {@link google.cloud.workflows.executions.v1beta.ListExecutionsResponse.verify|verify} messages.
+                             * @function encode
+                             * @memberof google.cloud.workflows.executions.v1beta.ListExecutionsResponse
+                             * @static
+                             * @param {google.cloud.workflows.executions.v1beta.IListExecutionsResponse} message ListExecutionsResponse message or plain object to encode
+                             * @param {$protobuf.Writer} [writer] Writer to encode to
+                             * @returns {$protobuf.Writer} Writer
+                             */
+                            ListExecutionsResponse.encode = function encode(message, writer) {
+                                if (!writer)
+                                    writer = $Writer.create();
+                                if (message.executions != null && message.executions.length)
+                                    for (var i = 0; i < message.executions.length; ++i)
+                                        $root.google.cloud.workflows.executions.v1beta.Execution.encode(message.executions[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                                if (message.nextPageToken != null && Object.hasOwnProperty.call(message, "nextPageToken"))
+                                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.nextPageToken);
+                                return writer;
+                            };
+    
+                            /**
+                             * Encodes the specified ListExecutionsResponse message, length delimited. Does not implicitly {@link google.cloud.workflows.executions.v1beta.ListExecutionsResponse.verify|verify} messages.
+                             * @function encodeDelimited
+                             * @memberof google.cloud.workflows.executions.v1beta.ListExecutionsResponse
+                             * @static
+                             * @param {google.cloud.workflows.executions.v1beta.IListExecutionsResponse} message ListExecutionsResponse message or plain object to encode
+                             * @param {$protobuf.Writer} [writer] Writer to encode to
+                             * @returns {$protobuf.Writer} Writer
+                             */
+                            ListExecutionsResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                                return this.encode(message, writer).ldelim();
+                            };
+    
+                            /**
+                             * Decodes a ListExecutionsResponse message from the specified reader or buffer.
+                             * @function decode
+                             * @memberof google.cloud.workflows.executions.v1beta.ListExecutionsResponse
+                             * @static
+                             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                             * @param {number} [length] Message length if known beforehand
+                             * @returns {google.cloud.workflows.executions.v1beta.ListExecutionsResponse} ListExecutionsResponse
+                             * @throws {Error} If the payload is not a reader or valid buffer
+                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                             */
+                            ListExecutionsResponse.decode = function decode(reader, length) {
+                                if (!(reader instanceof $Reader))
+                                    reader = $Reader.create(reader);
+                                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.cloud.workflows.executions.v1beta.ListExecutionsResponse();
+                                while (reader.pos < end) {
+                                    var tag = reader.uint32();
+                                    switch (tag >>> 3) {
+                                    case 1:
+                                        if (!(message.executions && message.executions.length))
+                                            message.executions = [];
+                                        message.executions.push($root.google.cloud.workflows.executions.v1beta.Execution.decode(reader, reader.uint32()));
+                                        break;
+                                    case 2:
+                                        message.nextPageToken = reader.string();
+                                        break;
+                                    default:
+                                        reader.skipType(tag & 7);
+                                        break;
+                                    }
+                                }
+                                return message;
+                            };
+    
+                            /**
+                             * Decodes a ListExecutionsResponse message from the specified reader or buffer, length delimited.
+                             * @function decodeDelimited
+                             * @memberof google.cloud.workflows.executions.v1beta.ListExecutionsResponse
+                             * @static
+                             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                             * @returns {google.cloud.workflows.executions.v1beta.ListExecutionsResponse} ListExecutionsResponse
+                             * @throws {Error} If the payload is not a reader or valid buffer
+                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                             */
+                            ListExecutionsResponse.decodeDelimited = function decodeDelimited(reader) {
+                                if (!(reader instanceof $Reader))
+                                    reader = new $Reader(reader);
+                                return this.decode(reader, reader.uint32());
+                            };
+    
+                            /**
+                             * Verifies a ListExecutionsResponse message.
+                             * @function verify
+                             * @memberof google.cloud.workflows.executions.v1beta.ListExecutionsResponse
+                             * @static
+                             * @param {Object.<string,*>} message Plain object to verify
+                             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                             */
+                            ListExecutionsResponse.verify = function verify(message) {
+                                if (typeof message !== "object" || message === null)
+                                    return "object expected";
+                                if (message.executions != null && message.hasOwnProperty("executions")) {
+                                    if (!Array.isArray(message.executions))
+                                        return "executions: array expected";
+                                    for (var i = 0; i < message.executions.length; ++i) {
+                                        var error = $root.google.cloud.workflows.executions.v1beta.Execution.verify(message.executions[i]);
+                                        if (error)
+                                            return "executions." + error;
+                                    }
+                                }
+                                if (message.nextPageToken != null && message.hasOwnProperty("nextPageToken"))
+                                    if (!$util.isString(message.nextPageToken))
+                                        return "nextPageToken: string expected";
+                                return null;
+                            };
+    
+                            /**
+                             * Creates a ListExecutionsResponse message from a plain object. Also converts values to their respective internal types.
+                             * @function fromObject
+                             * @memberof google.cloud.workflows.executions.v1beta.ListExecutionsResponse
+                             * @static
+                             * @param {Object.<string,*>} object Plain object
+                             * @returns {google.cloud.workflows.executions.v1beta.ListExecutionsResponse} ListExecutionsResponse
+                             */
+                            ListExecutionsResponse.fromObject = function fromObject(object) {
+                                if (object instanceof $root.google.cloud.workflows.executions.v1beta.ListExecutionsResponse)
+                                    return object;
+                                var message = new $root.google.cloud.workflows.executions.v1beta.ListExecutionsResponse();
+                                if (object.executions) {
+                                    if (!Array.isArray(object.executions))
+                                        throw TypeError(".google.cloud.workflows.executions.v1beta.ListExecutionsResponse.executions: array expected");
+                                    message.executions = [];
+                                    for (var i = 0; i < object.executions.length; ++i) {
+                                        if (typeof object.executions[i] !== "object")
+                                            throw TypeError(".google.cloud.workflows.executions.v1beta.ListExecutionsResponse.executions: object expected");
+                                        message.executions[i] = $root.google.cloud.workflows.executions.v1beta.Execution.fromObject(object.executions[i]);
+                                    }
+                                }
+                                if (object.nextPageToken != null)
+                                    message.nextPageToken = String(object.nextPageToken);
+                                return message;
+                            };
+    
+                            /**
+                             * Creates a plain object from a ListExecutionsResponse message. Also converts values to other types if specified.
+                             * @function toObject
+                             * @memberof google.cloud.workflows.executions.v1beta.ListExecutionsResponse
+                             * @static
+                             * @param {google.cloud.workflows.executions.v1beta.ListExecutionsResponse} message ListExecutionsResponse
+                             * @param {$protobuf.IConversionOptions} [options] Conversion options
+                             * @returns {Object.<string,*>} Plain object
+                             */
+                            ListExecutionsResponse.toObject = function toObject(message, options) {
+                                if (!options)
+                                    options = {};
+                                var object = {};
+                                if (options.arrays || options.defaults)
+                                    object.executions = [];
+                                if (options.defaults)
+                                    object.nextPageToken = "";
+                                if (message.executions && message.executions.length) {
+                                    object.executions = [];
+                                    for (var j = 0; j < message.executions.length; ++j)
+                                        object.executions[j] = $root.google.cloud.workflows.executions.v1beta.Execution.toObject(message.executions[j], options);
+                                }
+                                if (message.nextPageToken != null && message.hasOwnProperty("nextPageToken"))
+                                    object.nextPageToken = message.nextPageToken;
+                                return object;
+                            };
+    
+                            /**
+                             * Converts this ListExecutionsResponse to JSON.
+                             * @function toJSON
+                             * @memberof google.cloud.workflows.executions.v1beta.ListExecutionsResponse
+                             * @instance
+                             * @returns {Object.<string,*>} JSON object
+                             */
+                            ListExecutionsResponse.prototype.toJSON = function toJSON() {
+                                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                            };
+    
+                            return ListExecutionsResponse;
+                        })();
+    
+                        v1beta.CreateExecutionRequest = (function() {
+    
+                            /**
+                             * Properties of a CreateExecutionRequest.
+                             * @memberof google.cloud.workflows.executions.v1beta
+                             * @interface ICreateExecutionRequest
+                             * @property {string|null} [parent] CreateExecutionRequest parent
+                             * @property {google.cloud.workflows.executions.v1beta.IExecution|null} [execution] CreateExecutionRequest execution
+                             */
+    
+                            /**
+                             * Constructs a new CreateExecutionRequest.
+                             * @memberof google.cloud.workflows.executions.v1beta
+                             * @classdesc Represents a CreateExecutionRequest.
+                             * @implements ICreateExecutionRequest
+                             * @constructor
+                             * @param {google.cloud.workflows.executions.v1beta.ICreateExecutionRequest=} [properties] Properties to set
+                             */
+                            function CreateExecutionRequest(properties) {
+                                if (properties)
+                                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                        if (properties[keys[i]] != null)
+                                            this[keys[i]] = properties[keys[i]];
+                            }
+    
+                            /**
+                             * CreateExecutionRequest parent.
+                             * @member {string} parent
+                             * @memberof google.cloud.workflows.executions.v1beta.CreateExecutionRequest
+                             * @instance
+                             */
+                            CreateExecutionRequest.prototype.parent = "";
+    
+                            /**
+                             * CreateExecutionRequest execution.
+                             * @member {google.cloud.workflows.executions.v1beta.IExecution|null|undefined} execution
+                             * @memberof google.cloud.workflows.executions.v1beta.CreateExecutionRequest
+                             * @instance
+                             */
+                            CreateExecutionRequest.prototype.execution = null;
+    
+                            /**
+                             * Creates a new CreateExecutionRequest instance using the specified properties.
+                             * @function create
+                             * @memberof google.cloud.workflows.executions.v1beta.CreateExecutionRequest
+                             * @static
+                             * @param {google.cloud.workflows.executions.v1beta.ICreateExecutionRequest=} [properties] Properties to set
+                             * @returns {google.cloud.workflows.executions.v1beta.CreateExecutionRequest} CreateExecutionRequest instance
+                             */
+                            CreateExecutionRequest.create = function create(properties) {
+                                return new CreateExecutionRequest(properties);
+                            };
+    
+                            /**
+                             * Encodes the specified CreateExecutionRequest message. Does not implicitly {@link google.cloud.workflows.executions.v1beta.CreateExecutionRequest.verify|verify} messages.
+                             * @function encode
+                             * @memberof google.cloud.workflows.executions.v1beta.CreateExecutionRequest
+                             * @static
+                             * @param {google.cloud.workflows.executions.v1beta.ICreateExecutionRequest} message CreateExecutionRequest message or plain object to encode
+                             * @param {$protobuf.Writer} [writer] Writer to encode to
+                             * @returns {$protobuf.Writer} Writer
+                             */
+                            CreateExecutionRequest.encode = function encode(message, writer) {
+                                if (!writer)
+                                    writer = $Writer.create();
+                                if (message.parent != null && Object.hasOwnProperty.call(message, "parent"))
+                                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.parent);
+                                if (message.execution != null && Object.hasOwnProperty.call(message, "execution"))
+                                    $root.google.cloud.workflows.executions.v1beta.Execution.encode(message.execution, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                                return writer;
+                            };
+    
+                            /**
+                             * Encodes the specified CreateExecutionRequest message, length delimited. Does not implicitly {@link google.cloud.workflows.executions.v1beta.CreateExecutionRequest.verify|verify} messages.
+                             * @function encodeDelimited
+                             * @memberof google.cloud.workflows.executions.v1beta.CreateExecutionRequest
+                             * @static
+                             * @param {google.cloud.workflows.executions.v1beta.ICreateExecutionRequest} message CreateExecutionRequest message or plain object to encode
+                             * @param {$protobuf.Writer} [writer] Writer to encode to
+                             * @returns {$protobuf.Writer} Writer
+                             */
+                            CreateExecutionRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                                return this.encode(message, writer).ldelim();
+                            };
+    
+                            /**
+                             * Decodes a CreateExecutionRequest message from the specified reader or buffer.
+                             * @function decode
+                             * @memberof google.cloud.workflows.executions.v1beta.CreateExecutionRequest
+                             * @static
+                             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                             * @param {number} [length] Message length if known beforehand
+                             * @returns {google.cloud.workflows.executions.v1beta.CreateExecutionRequest} CreateExecutionRequest
+                             * @throws {Error} If the payload is not a reader or valid buffer
+                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                             */
+                            CreateExecutionRequest.decode = function decode(reader, length) {
+                                if (!(reader instanceof $Reader))
+                                    reader = $Reader.create(reader);
+                                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.cloud.workflows.executions.v1beta.CreateExecutionRequest();
+                                while (reader.pos < end) {
+                                    var tag = reader.uint32();
+                                    switch (tag >>> 3) {
+                                    case 1:
+                                        message.parent = reader.string();
+                                        break;
+                                    case 2:
+                                        message.execution = $root.google.cloud.workflows.executions.v1beta.Execution.decode(reader, reader.uint32());
+                                        break;
+                                    default:
+                                        reader.skipType(tag & 7);
+                                        break;
+                                    }
+                                }
+                                return message;
+                            };
+    
+                            /**
+                             * Decodes a CreateExecutionRequest message from the specified reader or buffer, length delimited.
+                             * @function decodeDelimited
+                             * @memberof google.cloud.workflows.executions.v1beta.CreateExecutionRequest
+                             * @static
+                             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                             * @returns {google.cloud.workflows.executions.v1beta.CreateExecutionRequest} CreateExecutionRequest
+                             * @throws {Error} If the payload is not a reader or valid buffer
+                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                             */
+                            CreateExecutionRequest.decodeDelimited = function decodeDelimited(reader) {
+                                if (!(reader instanceof $Reader))
+                                    reader = new $Reader(reader);
+                                return this.decode(reader, reader.uint32());
+                            };
+    
+                            /**
+                             * Verifies a CreateExecutionRequest message.
+                             * @function verify
+                             * @memberof google.cloud.workflows.executions.v1beta.CreateExecutionRequest
+                             * @static
+                             * @param {Object.<string,*>} message Plain object to verify
+                             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                             */
+                            CreateExecutionRequest.verify = function verify(message) {
+                                if (typeof message !== "object" || message === null)
+                                    return "object expected";
+                                if (message.parent != null && message.hasOwnProperty("parent"))
+                                    if (!$util.isString(message.parent))
+                                        return "parent: string expected";
+                                if (message.execution != null && message.hasOwnProperty("execution")) {
+                                    var error = $root.google.cloud.workflows.executions.v1beta.Execution.verify(message.execution);
+                                    if (error)
+                                        return "execution." + error;
+                                }
+                                return null;
+                            };
+    
+                            /**
+                             * Creates a CreateExecutionRequest message from a plain object. Also converts values to their respective internal types.
+                             * @function fromObject
+                             * @memberof google.cloud.workflows.executions.v1beta.CreateExecutionRequest
+                             * @static
+                             * @param {Object.<string,*>} object Plain object
+                             * @returns {google.cloud.workflows.executions.v1beta.CreateExecutionRequest} CreateExecutionRequest
+                             */
+                            CreateExecutionRequest.fromObject = function fromObject(object) {
+                                if (object instanceof $root.google.cloud.workflows.executions.v1beta.CreateExecutionRequest)
+                                    return object;
+                                var message = new $root.google.cloud.workflows.executions.v1beta.CreateExecutionRequest();
+                                if (object.parent != null)
+                                    message.parent = String(object.parent);
+                                if (object.execution != null) {
+                                    if (typeof object.execution !== "object")
+                                        throw TypeError(".google.cloud.workflows.executions.v1beta.CreateExecutionRequest.execution: object expected");
+                                    message.execution = $root.google.cloud.workflows.executions.v1beta.Execution.fromObject(object.execution);
+                                }
+                                return message;
+                            };
+    
+                            /**
+                             * Creates a plain object from a CreateExecutionRequest message. Also converts values to other types if specified.
+                             * @function toObject
+                             * @memberof google.cloud.workflows.executions.v1beta.CreateExecutionRequest
+                             * @static
+                             * @param {google.cloud.workflows.executions.v1beta.CreateExecutionRequest} message CreateExecutionRequest
+                             * @param {$protobuf.IConversionOptions} [options] Conversion options
+                             * @returns {Object.<string,*>} Plain object
+                             */
+                            CreateExecutionRequest.toObject = function toObject(message, options) {
+                                if (!options)
+                                    options = {};
+                                var object = {};
+                                if (options.defaults) {
+                                    object.parent = "";
+                                    object.execution = null;
+                                }
+                                if (message.parent != null && message.hasOwnProperty("parent"))
+                                    object.parent = message.parent;
+                                if (message.execution != null && message.hasOwnProperty("execution"))
+                                    object.execution = $root.google.cloud.workflows.executions.v1beta.Execution.toObject(message.execution, options);
+                                return object;
+                            };
+    
+                            /**
+                             * Converts this CreateExecutionRequest to JSON.
+                             * @function toJSON
+                             * @memberof google.cloud.workflows.executions.v1beta.CreateExecutionRequest
+                             * @instance
+                             * @returns {Object.<string,*>} JSON object
+                             */
+                            CreateExecutionRequest.prototype.toJSON = function toJSON() {
+                                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                            };
+    
+                            return CreateExecutionRequest;
+                        })();
+    
+                        v1beta.GetExecutionRequest = (function() {
+    
+                            /**
+                             * Properties of a GetExecutionRequest.
+                             * @memberof google.cloud.workflows.executions.v1beta
+                             * @interface IGetExecutionRequest
+                             * @property {string|null} [name] GetExecutionRequest name
+                             * @property {google.cloud.workflows.executions.v1beta.ExecutionView|null} [view] GetExecutionRequest view
+                             */
+    
+                            /**
+                             * Constructs a new GetExecutionRequest.
+                             * @memberof google.cloud.workflows.executions.v1beta
+                             * @classdesc Represents a GetExecutionRequest.
+                             * @implements IGetExecutionRequest
+                             * @constructor
+                             * @param {google.cloud.workflows.executions.v1beta.IGetExecutionRequest=} [properties] Properties to set
+                             */
+                            function GetExecutionRequest(properties) {
+                                if (properties)
+                                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                        if (properties[keys[i]] != null)
+                                            this[keys[i]] = properties[keys[i]];
+                            }
+    
+                            /**
+                             * GetExecutionRequest name.
+                             * @member {string} name
+                             * @memberof google.cloud.workflows.executions.v1beta.GetExecutionRequest
+                             * @instance
+                             */
+                            GetExecutionRequest.prototype.name = "";
+    
+                            /**
+                             * GetExecutionRequest view.
+                             * @member {google.cloud.workflows.executions.v1beta.ExecutionView} view
+                             * @memberof google.cloud.workflows.executions.v1beta.GetExecutionRequest
+                             * @instance
+                             */
+                            GetExecutionRequest.prototype.view = 0;
+    
+                            /**
+                             * Creates a new GetExecutionRequest instance using the specified properties.
+                             * @function create
+                             * @memberof google.cloud.workflows.executions.v1beta.GetExecutionRequest
+                             * @static
+                             * @param {google.cloud.workflows.executions.v1beta.IGetExecutionRequest=} [properties] Properties to set
+                             * @returns {google.cloud.workflows.executions.v1beta.GetExecutionRequest} GetExecutionRequest instance
+                             */
+                            GetExecutionRequest.create = function create(properties) {
+                                return new GetExecutionRequest(properties);
+                            };
+    
+                            /**
+                             * Encodes the specified GetExecutionRequest message. Does not implicitly {@link google.cloud.workflows.executions.v1beta.GetExecutionRequest.verify|verify} messages.
+                             * @function encode
+                             * @memberof google.cloud.workflows.executions.v1beta.GetExecutionRequest
+                             * @static
+                             * @param {google.cloud.workflows.executions.v1beta.IGetExecutionRequest} message GetExecutionRequest message or plain object to encode
+                             * @param {$protobuf.Writer} [writer] Writer to encode to
+                             * @returns {$protobuf.Writer} Writer
+                             */
+                            GetExecutionRequest.encode = function encode(message, writer) {
+                                if (!writer)
+                                    writer = $Writer.create();
+                                if (message.name != null && Object.hasOwnProperty.call(message, "name"))
+                                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
+                                if (message.view != null && Object.hasOwnProperty.call(message, "view"))
+                                    writer.uint32(/* id 2, wireType 0 =*/16).int32(message.view);
+                                return writer;
+                            };
+    
+                            /**
+                             * Encodes the specified GetExecutionRequest message, length delimited. Does not implicitly {@link google.cloud.workflows.executions.v1beta.GetExecutionRequest.verify|verify} messages.
+                             * @function encodeDelimited
+                             * @memberof google.cloud.workflows.executions.v1beta.GetExecutionRequest
+                             * @static
+                             * @param {google.cloud.workflows.executions.v1beta.IGetExecutionRequest} message GetExecutionRequest message or plain object to encode
+                             * @param {$protobuf.Writer} [writer] Writer to encode to
+                             * @returns {$protobuf.Writer} Writer
+                             */
+                            GetExecutionRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                                return this.encode(message, writer).ldelim();
+                            };
+    
+                            /**
+                             * Decodes a GetExecutionRequest message from the specified reader or buffer.
+                             * @function decode
+                             * @memberof google.cloud.workflows.executions.v1beta.GetExecutionRequest
+                             * @static
+                             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                             * @param {number} [length] Message length if known beforehand
+                             * @returns {google.cloud.workflows.executions.v1beta.GetExecutionRequest} GetExecutionRequest
+                             * @throws {Error} If the payload is not a reader or valid buffer
+                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                             */
+                            GetExecutionRequest.decode = function decode(reader, length) {
+                                if (!(reader instanceof $Reader))
+                                    reader = $Reader.create(reader);
+                                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.cloud.workflows.executions.v1beta.GetExecutionRequest();
+                                while (reader.pos < end) {
+                                    var tag = reader.uint32();
+                                    switch (tag >>> 3) {
+                                    case 1:
+                                        message.name = reader.string();
+                                        break;
+                                    case 2:
+                                        message.view = reader.int32();
+                                        break;
+                                    default:
+                                        reader.skipType(tag & 7);
+                                        break;
+                                    }
+                                }
+                                return message;
+                            };
+    
+                            /**
+                             * Decodes a GetExecutionRequest message from the specified reader or buffer, length delimited.
+                             * @function decodeDelimited
+                             * @memberof google.cloud.workflows.executions.v1beta.GetExecutionRequest
+                             * @static
+                             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                             * @returns {google.cloud.workflows.executions.v1beta.GetExecutionRequest} GetExecutionRequest
+                             * @throws {Error} If the payload is not a reader or valid buffer
+                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                             */
+                            GetExecutionRequest.decodeDelimited = function decodeDelimited(reader) {
+                                if (!(reader instanceof $Reader))
+                                    reader = new $Reader(reader);
+                                return this.decode(reader, reader.uint32());
+                            };
+    
+                            /**
+                             * Verifies a GetExecutionRequest message.
+                             * @function verify
+                             * @memberof google.cloud.workflows.executions.v1beta.GetExecutionRequest
+                             * @static
+                             * @param {Object.<string,*>} message Plain object to verify
+                             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                             */
+                            GetExecutionRequest.verify = function verify(message) {
+                                if (typeof message !== "object" || message === null)
+                                    return "object expected";
+                                if (message.name != null && message.hasOwnProperty("name"))
+                                    if (!$util.isString(message.name))
+                                        return "name: string expected";
+                                if (message.view != null && message.hasOwnProperty("view"))
+                                    switch (message.view) {
+                                    default:
+                                        return "view: enum value expected";
+                                    case 0:
+                                    case 1:
+                                    case 2:
+                                        break;
+                                    }
+                                return null;
+                            };
+    
+                            /**
+                             * Creates a GetExecutionRequest message from a plain object. Also converts values to their respective internal types.
+                             * @function fromObject
+                             * @memberof google.cloud.workflows.executions.v1beta.GetExecutionRequest
+                             * @static
+                             * @param {Object.<string,*>} object Plain object
+                             * @returns {google.cloud.workflows.executions.v1beta.GetExecutionRequest} GetExecutionRequest
+                             */
+                            GetExecutionRequest.fromObject = function fromObject(object) {
+                                if (object instanceof $root.google.cloud.workflows.executions.v1beta.GetExecutionRequest)
+                                    return object;
+                                var message = new $root.google.cloud.workflows.executions.v1beta.GetExecutionRequest();
+                                if (object.name != null)
+                                    message.name = String(object.name);
+                                switch (object.view) {
+                                case "EXECUTION_VIEW_UNSPECIFIED":
+                                case 0:
+                                    message.view = 0;
+                                    break;
+                                case "BASIC":
+                                case 1:
+                                    message.view = 1;
+                                    break;
+                                case "FULL":
+                                case 2:
+                                    message.view = 2;
+                                    break;
+                                }
+                                return message;
+                            };
+    
+                            /**
+                             * Creates a plain object from a GetExecutionRequest message. Also converts values to other types if specified.
+                             * @function toObject
+                             * @memberof google.cloud.workflows.executions.v1beta.GetExecutionRequest
+                             * @static
+                             * @param {google.cloud.workflows.executions.v1beta.GetExecutionRequest} message GetExecutionRequest
+                             * @param {$protobuf.IConversionOptions} [options] Conversion options
+                             * @returns {Object.<string,*>} Plain object
+                             */
+                            GetExecutionRequest.toObject = function toObject(message, options) {
+                                if (!options)
+                                    options = {};
+                                var object = {};
+                                if (options.defaults) {
+                                    object.name = "";
+                                    object.view = options.enums === String ? "EXECUTION_VIEW_UNSPECIFIED" : 0;
+                                }
+                                if (message.name != null && message.hasOwnProperty("name"))
+                                    object.name = message.name;
+                                if (message.view != null && message.hasOwnProperty("view"))
+                                    object.view = options.enums === String ? $root.google.cloud.workflows.executions.v1beta.ExecutionView[message.view] : message.view;
+                                return object;
+                            };
+    
+                            /**
+                             * Converts this GetExecutionRequest to JSON.
+                             * @function toJSON
+                             * @memberof google.cloud.workflows.executions.v1beta.GetExecutionRequest
+                             * @instance
+                             * @returns {Object.<string,*>} JSON object
+                             */
+                            GetExecutionRequest.prototype.toJSON = function toJSON() {
+                                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                            };
+    
+                            return GetExecutionRequest;
+                        })();
+    
+                        v1beta.CancelExecutionRequest = (function() {
+    
+                            /**
+                             * Properties of a CancelExecutionRequest.
+                             * @memberof google.cloud.workflows.executions.v1beta
+                             * @interface ICancelExecutionRequest
+                             * @property {string|null} [name] CancelExecutionRequest name
+                             */
+    
+                            /**
+                             * Constructs a new CancelExecutionRequest.
+                             * @memberof google.cloud.workflows.executions.v1beta
+                             * @classdesc Represents a CancelExecutionRequest.
+                             * @implements ICancelExecutionRequest
+                             * @constructor
+                             * @param {google.cloud.workflows.executions.v1beta.ICancelExecutionRequest=} [properties] Properties to set
+                             */
+                            function CancelExecutionRequest(properties) {
+                                if (properties)
+                                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                        if (properties[keys[i]] != null)
+                                            this[keys[i]] = properties[keys[i]];
+                            }
+    
+                            /**
+                             * CancelExecutionRequest name.
+                             * @member {string} name
+                             * @memberof google.cloud.workflows.executions.v1beta.CancelExecutionRequest
+                             * @instance
+                             */
+                            CancelExecutionRequest.prototype.name = "";
+    
+                            /**
+                             * Creates a new CancelExecutionRequest instance using the specified properties.
+                             * @function create
+                             * @memberof google.cloud.workflows.executions.v1beta.CancelExecutionRequest
+                             * @static
+                             * @param {google.cloud.workflows.executions.v1beta.ICancelExecutionRequest=} [properties] Properties to set
+                             * @returns {google.cloud.workflows.executions.v1beta.CancelExecutionRequest} CancelExecutionRequest instance
+                             */
+                            CancelExecutionRequest.create = function create(properties) {
+                                return new CancelExecutionRequest(properties);
+                            };
+    
+                            /**
+                             * Encodes the specified CancelExecutionRequest message. Does not implicitly {@link google.cloud.workflows.executions.v1beta.CancelExecutionRequest.verify|verify} messages.
+                             * @function encode
+                             * @memberof google.cloud.workflows.executions.v1beta.CancelExecutionRequest
+                             * @static
+                             * @param {google.cloud.workflows.executions.v1beta.ICancelExecutionRequest} message CancelExecutionRequest message or plain object to encode
+                             * @param {$protobuf.Writer} [writer] Writer to encode to
+                             * @returns {$protobuf.Writer} Writer
+                             */
+                            CancelExecutionRequest.encode = function encode(message, writer) {
+                                if (!writer)
+                                    writer = $Writer.create();
+                                if (message.name != null && Object.hasOwnProperty.call(message, "name"))
+                                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
+                                return writer;
+                            };
+    
+                            /**
+                             * Encodes the specified CancelExecutionRequest message, length delimited. Does not implicitly {@link google.cloud.workflows.executions.v1beta.CancelExecutionRequest.verify|verify} messages.
+                             * @function encodeDelimited
+                             * @memberof google.cloud.workflows.executions.v1beta.CancelExecutionRequest
+                             * @static
+                             * @param {google.cloud.workflows.executions.v1beta.ICancelExecutionRequest} message CancelExecutionRequest message or plain object to encode
+                             * @param {$protobuf.Writer} [writer] Writer to encode to
+                             * @returns {$protobuf.Writer} Writer
+                             */
+                            CancelExecutionRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                                return this.encode(message, writer).ldelim();
+                            };
+    
+                            /**
+                             * Decodes a CancelExecutionRequest message from the specified reader or buffer.
+                             * @function decode
+                             * @memberof google.cloud.workflows.executions.v1beta.CancelExecutionRequest
+                             * @static
+                             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                             * @param {number} [length] Message length if known beforehand
+                             * @returns {google.cloud.workflows.executions.v1beta.CancelExecutionRequest} CancelExecutionRequest
+                             * @throws {Error} If the payload is not a reader or valid buffer
+                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                             */
+                            CancelExecutionRequest.decode = function decode(reader, length) {
+                                if (!(reader instanceof $Reader))
+                                    reader = $Reader.create(reader);
+                                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.cloud.workflows.executions.v1beta.CancelExecutionRequest();
+                                while (reader.pos < end) {
+                                    var tag = reader.uint32();
+                                    switch (tag >>> 3) {
+                                    case 1:
+                                        message.name = reader.string();
+                                        break;
+                                    default:
+                                        reader.skipType(tag & 7);
+                                        break;
+                                    }
+                                }
+                                return message;
+                            };
+    
+                            /**
+                             * Decodes a CancelExecutionRequest message from the specified reader or buffer, length delimited.
+                             * @function decodeDelimited
+                             * @memberof google.cloud.workflows.executions.v1beta.CancelExecutionRequest
+                             * @static
+                             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                             * @returns {google.cloud.workflows.executions.v1beta.CancelExecutionRequest} CancelExecutionRequest
+                             * @throws {Error} If the payload is not a reader or valid buffer
+                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                             */
+                            CancelExecutionRequest.decodeDelimited = function decodeDelimited(reader) {
+                                if (!(reader instanceof $Reader))
+                                    reader = new $Reader(reader);
+                                return this.decode(reader, reader.uint32());
+                            };
+    
+                            /**
+                             * Verifies a CancelExecutionRequest message.
+                             * @function verify
+                             * @memberof google.cloud.workflows.executions.v1beta.CancelExecutionRequest
+                             * @static
+                             * @param {Object.<string,*>} message Plain object to verify
+                             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                             */
+                            CancelExecutionRequest.verify = function verify(message) {
+                                if (typeof message !== "object" || message === null)
+                                    return "object expected";
+                                if (message.name != null && message.hasOwnProperty("name"))
+                                    if (!$util.isString(message.name))
+                                        return "name: string expected";
+                                return null;
+                            };
+    
+                            /**
+                             * Creates a CancelExecutionRequest message from a plain object. Also converts values to their respective internal types.
+                             * @function fromObject
+                             * @memberof google.cloud.workflows.executions.v1beta.CancelExecutionRequest
+                             * @static
+                             * @param {Object.<string,*>} object Plain object
+                             * @returns {google.cloud.workflows.executions.v1beta.CancelExecutionRequest} CancelExecutionRequest
+                             */
+                            CancelExecutionRequest.fromObject = function fromObject(object) {
+                                if (object instanceof $root.google.cloud.workflows.executions.v1beta.CancelExecutionRequest)
+                                    return object;
+                                var message = new $root.google.cloud.workflows.executions.v1beta.CancelExecutionRequest();
+                                if (object.name != null)
+                                    message.name = String(object.name);
+                                return message;
+                            };
+    
+                            /**
+                             * Creates a plain object from a CancelExecutionRequest message. Also converts values to other types if specified.
+                             * @function toObject
+                             * @memberof google.cloud.workflows.executions.v1beta.CancelExecutionRequest
+                             * @static
+                             * @param {google.cloud.workflows.executions.v1beta.CancelExecutionRequest} message CancelExecutionRequest
+                             * @param {$protobuf.IConversionOptions} [options] Conversion options
+                             * @returns {Object.<string,*>} Plain object
+                             */
+                            CancelExecutionRequest.toObject = function toObject(message, options) {
+                                if (!options)
+                                    options = {};
+                                var object = {};
+                                if (options.defaults)
+                                    object.name = "";
+                                if (message.name != null && message.hasOwnProperty("name"))
+                                    object.name = message.name;
+                                return object;
+                            };
+    
+                            /**
+                             * Converts this CancelExecutionRequest to JSON.
+                             * @function toJSON
+                             * @memberof google.cloud.workflows.executions.v1beta.CancelExecutionRequest
+                             * @instance
+                             * @returns {Object.<string,*>} JSON object
+                             */
+                            CancelExecutionRequest.prototype.toJSON = function toJSON() {
+                                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                            };
+    
+                            return CancelExecutionRequest;
+                        })();
+    
+                        /**
+                         * ExecutionView enum.
+                         * @name google.cloud.workflows.executions.v1beta.ExecutionView
+                         * @enum {number}
+                         * @property {number} EXECUTION_VIEW_UNSPECIFIED=0 EXECUTION_VIEW_UNSPECIFIED value
+                         * @property {number} BASIC=1 BASIC value
+                         * @property {number} FULL=2 FULL value
+                         */
+                        v1beta.ExecutionView = (function() {
+                            var valuesById = {}, values = Object.create(valuesById);
+                            values[valuesById[0] = "EXECUTION_VIEW_UNSPECIFIED"] = 0;
+                            values[valuesById[1] = "BASIC"] = 1;
+                            values[valuesById[2] = "FULL"] = 2;
+                            return values;
+                        })();
+    
+                        return v1beta;
+                    })();
+    
+                    return executions;
+                })();
     
                 workflows.v1beta = (function() {
     
@@ -12629,6 +14584,230 @@
                 return GeneratedCodeInfo;
             })();
     
+            protobuf.Timestamp = (function() {
+    
+                /**
+                 * Properties of a Timestamp.
+                 * @memberof google.protobuf
+                 * @interface ITimestamp
+                 * @property {number|Long|null} [seconds] Timestamp seconds
+                 * @property {number|null} [nanos] Timestamp nanos
+                 */
+    
+                /**
+                 * Constructs a new Timestamp.
+                 * @memberof google.protobuf
+                 * @classdesc Represents a Timestamp.
+                 * @implements ITimestamp
+                 * @constructor
+                 * @param {google.protobuf.ITimestamp=} [properties] Properties to set
+                 */
+                function Timestamp(properties) {
+                    if (properties)
+                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                            if (properties[keys[i]] != null)
+                                this[keys[i]] = properties[keys[i]];
+                }
+    
+                /**
+                 * Timestamp seconds.
+                 * @member {number|Long} seconds
+                 * @memberof google.protobuf.Timestamp
+                 * @instance
+                 */
+                Timestamp.prototype.seconds = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+    
+                /**
+                 * Timestamp nanos.
+                 * @member {number} nanos
+                 * @memberof google.protobuf.Timestamp
+                 * @instance
+                 */
+                Timestamp.prototype.nanos = 0;
+    
+                /**
+                 * Creates a new Timestamp instance using the specified properties.
+                 * @function create
+                 * @memberof google.protobuf.Timestamp
+                 * @static
+                 * @param {google.protobuf.ITimestamp=} [properties] Properties to set
+                 * @returns {google.protobuf.Timestamp} Timestamp instance
+                 */
+                Timestamp.create = function create(properties) {
+                    return new Timestamp(properties);
+                };
+    
+                /**
+                 * Encodes the specified Timestamp message. Does not implicitly {@link google.protobuf.Timestamp.verify|verify} messages.
+                 * @function encode
+                 * @memberof google.protobuf.Timestamp
+                 * @static
+                 * @param {google.protobuf.ITimestamp} message Timestamp message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                Timestamp.encode = function encode(message, writer) {
+                    if (!writer)
+                        writer = $Writer.create();
+                    if (message.seconds != null && Object.hasOwnProperty.call(message, "seconds"))
+                        writer.uint32(/* id 1, wireType 0 =*/8).int64(message.seconds);
+                    if (message.nanos != null && Object.hasOwnProperty.call(message, "nanos"))
+                        writer.uint32(/* id 2, wireType 0 =*/16).int32(message.nanos);
+                    return writer;
+                };
+    
+                /**
+                 * Encodes the specified Timestamp message, length delimited. Does not implicitly {@link google.protobuf.Timestamp.verify|verify} messages.
+                 * @function encodeDelimited
+                 * @memberof google.protobuf.Timestamp
+                 * @static
+                 * @param {google.protobuf.ITimestamp} message Timestamp message or plain object to encode
+                 * @param {$protobuf.Writer} [writer] Writer to encode to
+                 * @returns {$protobuf.Writer} Writer
+                 */
+                Timestamp.encodeDelimited = function encodeDelimited(message, writer) {
+                    return this.encode(message, writer).ldelim();
+                };
+    
+                /**
+                 * Decodes a Timestamp message from the specified reader or buffer.
+                 * @function decode
+                 * @memberof google.protobuf.Timestamp
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @param {number} [length] Message length if known beforehand
+                 * @returns {google.protobuf.Timestamp} Timestamp
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                Timestamp.decode = function decode(reader, length) {
+                    if (!(reader instanceof $Reader))
+                        reader = $Reader.create(reader);
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.protobuf.Timestamp();
+                    while (reader.pos < end) {
+                        var tag = reader.uint32();
+                        switch (tag >>> 3) {
+                        case 1:
+                            message.seconds = reader.int64();
+                            break;
+                        case 2:
+                            message.nanos = reader.int32();
+                            break;
+                        default:
+                            reader.skipType(tag & 7);
+                            break;
+                        }
+                    }
+                    return message;
+                };
+    
+                /**
+                 * Decodes a Timestamp message from the specified reader or buffer, length delimited.
+                 * @function decodeDelimited
+                 * @memberof google.protobuf.Timestamp
+                 * @static
+                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                 * @returns {google.protobuf.Timestamp} Timestamp
+                 * @throws {Error} If the payload is not a reader or valid buffer
+                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                 */
+                Timestamp.decodeDelimited = function decodeDelimited(reader) {
+                    if (!(reader instanceof $Reader))
+                        reader = new $Reader(reader);
+                    return this.decode(reader, reader.uint32());
+                };
+    
+                /**
+                 * Verifies a Timestamp message.
+                 * @function verify
+                 * @memberof google.protobuf.Timestamp
+                 * @static
+                 * @param {Object.<string,*>} message Plain object to verify
+                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                 */
+                Timestamp.verify = function verify(message) {
+                    if (typeof message !== "object" || message === null)
+                        return "object expected";
+                    if (message.seconds != null && message.hasOwnProperty("seconds"))
+                        if (!$util.isInteger(message.seconds) && !(message.seconds && $util.isInteger(message.seconds.low) && $util.isInteger(message.seconds.high)))
+                            return "seconds: integer|Long expected";
+                    if (message.nanos != null && message.hasOwnProperty("nanos"))
+                        if (!$util.isInteger(message.nanos))
+                            return "nanos: integer expected";
+                    return null;
+                };
+    
+                /**
+                 * Creates a Timestamp message from a plain object. Also converts values to their respective internal types.
+                 * @function fromObject
+                 * @memberof google.protobuf.Timestamp
+                 * @static
+                 * @param {Object.<string,*>} object Plain object
+                 * @returns {google.protobuf.Timestamp} Timestamp
+                 */
+                Timestamp.fromObject = function fromObject(object) {
+                    if (object instanceof $root.google.protobuf.Timestamp)
+                        return object;
+                    var message = new $root.google.protobuf.Timestamp();
+                    if (object.seconds != null)
+                        if ($util.Long)
+                            (message.seconds = $util.Long.fromValue(object.seconds)).unsigned = false;
+                        else if (typeof object.seconds === "string")
+                            message.seconds = parseInt(object.seconds, 10);
+                        else if (typeof object.seconds === "number")
+                            message.seconds = object.seconds;
+                        else if (typeof object.seconds === "object")
+                            message.seconds = new $util.LongBits(object.seconds.low >>> 0, object.seconds.high >>> 0).toNumber();
+                    if (object.nanos != null)
+                        message.nanos = object.nanos | 0;
+                    return message;
+                };
+    
+                /**
+                 * Creates a plain object from a Timestamp message. Also converts values to other types if specified.
+                 * @function toObject
+                 * @memberof google.protobuf.Timestamp
+                 * @static
+                 * @param {google.protobuf.Timestamp} message Timestamp
+                 * @param {$protobuf.IConversionOptions} [options] Conversion options
+                 * @returns {Object.<string,*>} Plain object
+                 */
+                Timestamp.toObject = function toObject(message, options) {
+                    if (!options)
+                        options = {};
+                    var object = {};
+                    if (options.defaults) {
+                        if ($util.Long) {
+                            var long = new $util.Long(0, 0, false);
+                            object.seconds = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                        } else
+                            object.seconds = options.longs === String ? "0" : 0;
+                        object.nanos = 0;
+                    }
+                    if (message.seconds != null && message.hasOwnProperty("seconds"))
+                        if (typeof message.seconds === "number")
+                            object.seconds = options.longs === String ? String(message.seconds) : message.seconds;
+                        else
+                            object.seconds = options.longs === String ? $util.Long.prototype.toString.call(message.seconds) : options.longs === Number ? new $util.LongBits(message.seconds.low >>> 0, message.seconds.high >>> 0).toNumber() : message.seconds;
+                    if (message.nanos != null && message.hasOwnProperty("nanos"))
+                        object.nanos = message.nanos;
+                    return object;
+                };
+    
+                /**
+                 * Converts this Timestamp to JSON.
+                 * @function toJSON
+                 * @memberof google.protobuf.Timestamp
+                 * @instance
+                 * @returns {Object.<string,*>} JSON object
+                 */
+                Timestamp.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+    
+                return Timestamp;
+            })();
+    
             protobuf.Any = (function() {
     
                 /**
@@ -13433,230 +15612,6 @@
                 };
     
                 return FieldMask;
-            })();
-    
-            protobuf.Timestamp = (function() {
-    
-                /**
-                 * Properties of a Timestamp.
-                 * @memberof google.protobuf
-                 * @interface ITimestamp
-                 * @property {number|Long|null} [seconds] Timestamp seconds
-                 * @property {number|null} [nanos] Timestamp nanos
-                 */
-    
-                /**
-                 * Constructs a new Timestamp.
-                 * @memberof google.protobuf
-                 * @classdesc Represents a Timestamp.
-                 * @implements ITimestamp
-                 * @constructor
-                 * @param {google.protobuf.ITimestamp=} [properties] Properties to set
-                 */
-                function Timestamp(properties) {
-                    if (properties)
-                        for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                            if (properties[keys[i]] != null)
-                                this[keys[i]] = properties[keys[i]];
-                }
-    
-                /**
-                 * Timestamp seconds.
-                 * @member {number|Long} seconds
-                 * @memberof google.protobuf.Timestamp
-                 * @instance
-                 */
-                Timestamp.prototype.seconds = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
-    
-                /**
-                 * Timestamp nanos.
-                 * @member {number} nanos
-                 * @memberof google.protobuf.Timestamp
-                 * @instance
-                 */
-                Timestamp.prototype.nanos = 0;
-    
-                /**
-                 * Creates a new Timestamp instance using the specified properties.
-                 * @function create
-                 * @memberof google.protobuf.Timestamp
-                 * @static
-                 * @param {google.protobuf.ITimestamp=} [properties] Properties to set
-                 * @returns {google.protobuf.Timestamp} Timestamp instance
-                 */
-                Timestamp.create = function create(properties) {
-                    return new Timestamp(properties);
-                };
-    
-                /**
-                 * Encodes the specified Timestamp message. Does not implicitly {@link google.protobuf.Timestamp.verify|verify} messages.
-                 * @function encode
-                 * @memberof google.protobuf.Timestamp
-                 * @static
-                 * @param {google.protobuf.ITimestamp} message Timestamp message or plain object to encode
-                 * @param {$protobuf.Writer} [writer] Writer to encode to
-                 * @returns {$protobuf.Writer} Writer
-                 */
-                Timestamp.encode = function encode(message, writer) {
-                    if (!writer)
-                        writer = $Writer.create();
-                    if (message.seconds != null && Object.hasOwnProperty.call(message, "seconds"))
-                        writer.uint32(/* id 1, wireType 0 =*/8).int64(message.seconds);
-                    if (message.nanos != null && Object.hasOwnProperty.call(message, "nanos"))
-                        writer.uint32(/* id 2, wireType 0 =*/16).int32(message.nanos);
-                    return writer;
-                };
-    
-                /**
-                 * Encodes the specified Timestamp message, length delimited. Does not implicitly {@link google.protobuf.Timestamp.verify|verify} messages.
-                 * @function encodeDelimited
-                 * @memberof google.protobuf.Timestamp
-                 * @static
-                 * @param {google.protobuf.ITimestamp} message Timestamp message or plain object to encode
-                 * @param {$protobuf.Writer} [writer] Writer to encode to
-                 * @returns {$protobuf.Writer} Writer
-                 */
-                Timestamp.encodeDelimited = function encodeDelimited(message, writer) {
-                    return this.encode(message, writer).ldelim();
-                };
-    
-                /**
-                 * Decodes a Timestamp message from the specified reader or buffer.
-                 * @function decode
-                 * @memberof google.protobuf.Timestamp
-                 * @static
-                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @param {number} [length] Message length if known beforehand
-                 * @returns {google.protobuf.Timestamp} Timestamp
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                Timestamp.decode = function decode(reader, length) {
-                    if (!(reader instanceof $Reader))
-                        reader = $Reader.create(reader);
-                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.protobuf.Timestamp();
-                    while (reader.pos < end) {
-                        var tag = reader.uint32();
-                        switch (tag >>> 3) {
-                        case 1:
-                            message.seconds = reader.int64();
-                            break;
-                        case 2:
-                            message.nanos = reader.int32();
-                            break;
-                        default:
-                            reader.skipType(tag & 7);
-                            break;
-                        }
-                    }
-                    return message;
-                };
-    
-                /**
-                 * Decodes a Timestamp message from the specified reader or buffer, length delimited.
-                 * @function decodeDelimited
-                 * @memberof google.protobuf.Timestamp
-                 * @static
-                 * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {google.protobuf.Timestamp} Timestamp
-                 * @throws {Error} If the payload is not a reader or valid buffer
-                 * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                 */
-                Timestamp.decodeDelimited = function decodeDelimited(reader) {
-                    if (!(reader instanceof $Reader))
-                        reader = new $Reader(reader);
-                    return this.decode(reader, reader.uint32());
-                };
-    
-                /**
-                 * Verifies a Timestamp message.
-                 * @function verify
-                 * @memberof google.protobuf.Timestamp
-                 * @static
-                 * @param {Object.<string,*>} message Plain object to verify
-                 * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                 */
-                Timestamp.verify = function verify(message) {
-                    if (typeof message !== "object" || message === null)
-                        return "object expected";
-                    if (message.seconds != null && message.hasOwnProperty("seconds"))
-                        if (!$util.isInteger(message.seconds) && !(message.seconds && $util.isInteger(message.seconds.low) && $util.isInteger(message.seconds.high)))
-                            return "seconds: integer|Long expected";
-                    if (message.nanos != null && message.hasOwnProperty("nanos"))
-                        if (!$util.isInteger(message.nanos))
-                            return "nanos: integer expected";
-                    return null;
-                };
-    
-                /**
-                 * Creates a Timestamp message from a plain object. Also converts values to their respective internal types.
-                 * @function fromObject
-                 * @memberof google.protobuf.Timestamp
-                 * @static
-                 * @param {Object.<string,*>} object Plain object
-                 * @returns {google.protobuf.Timestamp} Timestamp
-                 */
-                Timestamp.fromObject = function fromObject(object) {
-                    if (object instanceof $root.google.protobuf.Timestamp)
-                        return object;
-                    var message = new $root.google.protobuf.Timestamp();
-                    if (object.seconds != null)
-                        if ($util.Long)
-                            (message.seconds = $util.Long.fromValue(object.seconds)).unsigned = false;
-                        else if (typeof object.seconds === "string")
-                            message.seconds = parseInt(object.seconds, 10);
-                        else if (typeof object.seconds === "number")
-                            message.seconds = object.seconds;
-                        else if (typeof object.seconds === "object")
-                            message.seconds = new $util.LongBits(object.seconds.low >>> 0, object.seconds.high >>> 0).toNumber();
-                    if (object.nanos != null)
-                        message.nanos = object.nanos | 0;
-                    return message;
-                };
-    
-                /**
-                 * Creates a plain object from a Timestamp message. Also converts values to other types if specified.
-                 * @function toObject
-                 * @memberof google.protobuf.Timestamp
-                 * @static
-                 * @param {google.protobuf.Timestamp} message Timestamp
-                 * @param {$protobuf.IConversionOptions} [options] Conversion options
-                 * @returns {Object.<string,*>} Plain object
-                 */
-                Timestamp.toObject = function toObject(message, options) {
-                    if (!options)
-                        options = {};
-                    var object = {};
-                    if (options.defaults) {
-                        if ($util.Long) {
-                            var long = new $util.Long(0, 0, false);
-                            object.seconds = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                        } else
-                            object.seconds = options.longs === String ? "0" : 0;
-                        object.nanos = 0;
-                    }
-                    if (message.seconds != null && message.hasOwnProperty("seconds"))
-                        if (typeof message.seconds === "number")
-                            object.seconds = options.longs === String ? String(message.seconds) : message.seconds;
-                        else
-                            object.seconds = options.longs === String ? $util.Long.prototype.toString.call(message.seconds) : options.longs === Number ? new $util.LongBits(message.seconds.low >>> 0, message.seconds.high >>> 0).toNumber() : message.seconds;
-                    if (message.nanos != null && message.hasOwnProperty("nanos"))
-                        object.nanos = message.nanos;
-                    return object;
-                };
-    
-                /**
-                 * Converts this Timestamp to JSON.
-                 * @function toJSON
-                 * @memberof google.protobuf.Timestamp
-                 * @instance
-                 * @returns {Object.<string,*>} JSON object
-                 */
-                Timestamp.prototype.toJSON = function toJSON() {
-                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                };
-    
-                return Timestamp;
             })();
     
             return protobuf;

@@ -5,7 +5,7 @@
 # [Workflows: Node.js Client](https://github.com/googleapis/nodejs-workflows)
 
 [![release level](https://img.shields.io/badge/release%20level-alpha-orange.svg?style=flat)](https://cloud.google.com/terms/launch-stages)
-[![npm version](https://img.shields.io/npm/v/workflows.svg)](https://www.npmjs.org/package/workflows)
+[![npm version](https://img.shields.io/npm/v/@google-cloud/workflows.svg)](https://www.npmjs.org/package/@google-cloud/workflows)
 [![codecov](https://img.shields.io/codecov/c/github/googleapis/nodejs-workflows/master.svg?style=flat)](https://codecov.io/gh/googleapis/nodejs-workflows)
 
 
@@ -32,8 +32,8 @@ Google APIs Client Libraries, in [Client Libraries Explained][explained].
 * [Quickstart](#quickstart)
   * [Before you begin](#before-you-begin)
   * [Installing the client library](#installing-the-client-library)
-
-
+  * [Using the client library](#using-the-client-library)
+* [Samples](#samples)
 * [Versioning](#versioning)
 * [Contributing](#contributing)
 * [License](#license)
@@ -51,10 +51,45 @@ Google APIs Client Libraries, in [Client Libraries Explained][explained].
 ### Installing the client library
 
 ```bash
-npm install workflows
+npm install @google-cloud/workflows
 ```
 
 
+### Using the client library
+
+```javascript
+/**
+ * TODO(developer): Uncomment these variables before running the sample.
+ */
+// const projectId = 'my-project';
+// const location -= 'us-central1';
+
+// Imports the Google Cloud Some API library
+const {WorkflowsClient} = require('@google-cloud/workflows');
+const client = new WorkflowsClient();
+async function listWorkloads() {
+  console.info(projectId, location);
+  const [workflows] = await client.listWorkflows({
+    parent: client.locationPath(projectId, location),
+  });
+  for (const workflow of workflows) {
+    console.info(`name: ${workflow.name}`);
+  }
+}
+listWorkloads();
+
+```
+
+
+
+## Samples
+
+Samples are in the [`samples/`](https://github.com/googleapis/nodejs-workflows/tree/master/samples) directory. The samples' `README.md`
+has instructions for running the samples.
+
+| Sample                      | Source Code                       | Try it |
+| --------------------------- | --------------------------------- | ------ |
+| Quickstart | [source code](https://github.com/googleapis/nodejs-workflows/blob/master/samples/quickstart.js) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-workflows&page=editor&open_in_editor=samples/quickstart.js,samples/README.md) |
 
 
 

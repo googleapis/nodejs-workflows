@@ -17,8 +17,9 @@
 // ** All changes to this file may be overwritten. **
 
 import * as v1beta from './v1beta';
+const ExecutionsClient = v1beta.ExecutionsClient;
 const WorkflowsClient = v1beta.WorkflowsClient;
-export {v1beta, WorkflowsClient};
-export default {v1beta, WorkflowsClient};
+export {v1beta, ExecutionsClient, WorkflowsClient};
+export default {v1beta, ExecutionsClient, WorkflowsClient};
 import * as protos from '../protos/protos';
-export {protos};
+export {protos}

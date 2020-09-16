@@ -19,7 +19,7 @@
         define(["protobufjs/minimal"], factory);
 
     /* CommonJS */ else if (typeof require === 'function' && typeof module === 'object' && module && module.exports)
-        module.exports = factory(require("protobufjs/minimal"));
+        module.exports = factory(require("google-gax").protobufMinimal);
 
 })(this, function($protobuf) {
     "use strict";
@@ -28,7 +28,7 @@
     var $Reader = $protobuf.Reader, $Writer = $protobuf.Writer, $util = $protobuf.util;
     
     // Exported root namespace
-    var $root = $protobuf.roots["default"] || ($protobuf.roots["default"] = {});
+    var $root = $protobuf.roots.workflows_protos || ($protobuf.roots.workflows_protos = {});
     
     $root.google = (function() {
     
@@ -57,20 +57,20 @@
                  */
                 var workflows = {};
     
-                workflows.v1alpha1 = (function() {
+                workflows.v1beta = (function() {
     
                     /**
-                     * Namespace v1alpha1.
+                     * Namespace v1beta.
                      * @memberof google.cloud.workflows
                      * @namespace
                      */
-                    var v1alpha1 = {};
+                    var v1beta = {};
     
-                    v1alpha1.Workflows = (function() {
+                    v1beta.Workflows = (function() {
     
                         /**
                          * Constructs a new Workflows service.
-                         * @memberof google.cloud.workflows.v1alpha1
+                         * @memberof google.cloud.workflows.v1beta
                          * @classdesc Represents a Workflows
                          * @extends $protobuf.rpc.Service
                          * @constructor
@@ -87,7 +87,7 @@
                         /**
                          * Creates new Workflows service using the specified rpc implementation.
                          * @function create
-                         * @memberof google.cloud.workflows.v1alpha1.Workflows
+                         * @memberof google.cloud.workflows.v1beta.Workflows
                          * @static
                          * @param {$protobuf.RPCImpl} rpcImpl RPC implementation
                          * @param {boolean} [requestDelimited=false] Whether requests are length-delimited
@@ -99,74 +99,74 @@
                         };
     
                         /**
-                         * Callback as used by {@link google.cloud.workflows.v1alpha1.Workflows#listWorkflows}.
-                         * @memberof google.cloud.workflows.v1alpha1.Workflows
+                         * Callback as used by {@link google.cloud.workflows.v1beta.Workflows#listWorkflows}.
+                         * @memberof google.cloud.workflows.v1beta.Workflows
                          * @typedef ListWorkflowsCallback
                          * @type {function}
                          * @param {Error|null} error Error, if any
-                         * @param {google.cloud.workflows.v1alpha1.ListWorkflowsResponse} [response] ListWorkflowsResponse
+                         * @param {google.cloud.workflows.v1beta.ListWorkflowsResponse} [response] ListWorkflowsResponse
                          */
     
                         /**
                          * Calls ListWorkflows.
                          * @function listWorkflows
-                         * @memberof google.cloud.workflows.v1alpha1.Workflows
+                         * @memberof google.cloud.workflows.v1beta.Workflows
                          * @instance
-                         * @param {google.cloud.workflows.v1alpha1.IListWorkflowsRequest} request ListWorkflowsRequest message or plain object
-                         * @param {google.cloud.workflows.v1alpha1.Workflows.ListWorkflowsCallback} callback Node-style callback called with the error, if any, and ListWorkflowsResponse
+                         * @param {google.cloud.workflows.v1beta.IListWorkflowsRequest} request ListWorkflowsRequest message or plain object
+                         * @param {google.cloud.workflows.v1beta.Workflows.ListWorkflowsCallback} callback Node-style callback called with the error, if any, and ListWorkflowsResponse
                          * @returns {undefined}
                          * @variation 1
                          */
                         Object.defineProperty(Workflows.prototype.listWorkflows = function listWorkflows(request, callback) {
-                            return this.rpcCall(listWorkflows, $root.google.cloud.workflows.v1alpha1.ListWorkflowsRequest, $root.google.cloud.workflows.v1alpha1.ListWorkflowsResponse, request, callback);
+                            return this.rpcCall(listWorkflows, $root.google.cloud.workflows.v1beta.ListWorkflowsRequest, $root.google.cloud.workflows.v1beta.ListWorkflowsResponse, request, callback);
                         }, "name", { value: "ListWorkflows" });
     
                         /**
                          * Calls ListWorkflows.
                          * @function listWorkflows
-                         * @memberof google.cloud.workflows.v1alpha1.Workflows
+                         * @memberof google.cloud.workflows.v1beta.Workflows
                          * @instance
-                         * @param {google.cloud.workflows.v1alpha1.IListWorkflowsRequest} request ListWorkflowsRequest message or plain object
-                         * @returns {Promise<google.cloud.workflows.v1alpha1.ListWorkflowsResponse>} Promise
+                         * @param {google.cloud.workflows.v1beta.IListWorkflowsRequest} request ListWorkflowsRequest message or plain object
+                         * @returns {Promise<google.cloud.workflows.v1beta.ListWorkflowsResponse>} Promise
                          * @variation 2
                          */
     
                         /**
-                         * Callback as used by {@link google.cloud.workflows.v1alpha1.Workflows#getWorkflow}.
-                         * @memberof google.cloud.workflows.v1alpha1.Workflows
+                         * Callback as used by {@link google.cloud.workflows.v1beta.Workflows#getWorkflow}.
+                         * @memberof google.cloud.workflows.v1beta.Workflows
                          * @typedef GetWorkflowCallback
                          * @type {function}
                          * @param {Error|null} error Error, if any
-                         * @param {google.cloud.workflows.v1alpha1.Workflow} [response] Workflow
+                         * @param {google.cloud.workflows.v1beta.Workflow} [response] Workflow
                          */
     
                         /**
                          * Calls GetWorkflow.
                          * @function getWorkflow
-                         * @memberof google.cloud.workflows.v1alpha1.Workflows
+                         * @memberof google.cloud.workflows.v1beta.Workflows
                          * @instance
-                         * @param {google.cloud.workflows.v1alpha1.IGetWorkflowRequest} request GetWorkflowRequest message or plain object
-                         * @param {google.cloud.workflows.v1alpha1.Workflows.GetWorkflowCallback} callback Node-style callback called with the error, if any, and Workflow
+                         * @param {google.cloud.workflows.v1beta.IGetWorkflowRequest} request GetWorkflowRequest message or plain object
+                         * @param {google.cloud.workflows.v1beta.Workflows.GetWorkflowCallback} callback Node-style callback called with the error, if any, and Workflow
                          * @returns {undefined}
                          * @variation 1
                          */
                         Object.defineProperty(Workflows.prototype.getWorkflow = function getWorkflow(request, callback) {
-                            return this.rpcCall(getWorkflow, $root.google.cloud.workflows.v1alpha1.GetWorkflowRequest, $root.google.cloud.workflows.v1alpha1.Workflow, request, callback);
+                            return this.rpcCall(getWorkflow, $root.google.cloud.workflows.v1beta.GetWorkflowRequest, $root.google.cloud.workflows.v1beta.Workflow, request, callback);
                         }, "name", { value: "GetWorkflow" });
     
                         /**
                          * Calls GetWorkflow.
                          * @function getWorkflow
-                         * @memberof google.cloud.workflows.v1alpha1.Workflows
+                         * @memberof google.cloud.workflows.v1beta.Workflows
                          * @instance
-                         * @param {google.cloud.workflows.v1alpha1.IGetWorkflowRequest} request GetWorkflowRequest message or plain object
-                         * @returns {Promise<google.cloud.workflows.v1alpha1.Workflow>} Promise
+                         * @param {google.cloud.workflows.v1beta.IGetWorkflowRequest} request GetWorkflowRequest message or plain object
+                         * @returns {Promise<google.cloud.workflows.v1beta.Workflow>} Promise
                          * @variation 2
                          */
     
                         /**
-                         * Callback as used by {@link google.cloud.workflows.v1alpha1.Workflows#createWorkflow}.
-                         * @memberof google.cloud.workflows.v1alpha1.Workflows
+                         * Callback as used by {@link google.cloud.workflows.v1beta.Workflows#createWorkflow}.
+                         * @memberof google.cloud.workflows.v1beta.Workflows
                          * @typedef CreateWorkflowCallback
                          * @type {function}
                          * @param {Error|null} error Error, if any
@@ -176,30 +176,30 @@
                         /**
                          * Calls CreateWorkflow.
                          * @function createWorkflow
-                         * @memberof google.cloud.workflows.v1alpha1.Workflows
+                         * @memberof google.cloud.workflows.v1beta.Workflows
                          * @instance
-                         * @param {google.cloud.workflows.v1alpha1.ICreateWorkflowRequest} request CreateWorkflowRequest message or plain object
-                         * @param {google.cloud.workflows.v1alpha1.Workflows.CreateWorkflowCallback} callback Node-style callback called with the error, if any, and Operation
+                         * @param {google.cloud.workflows.v1beta.ICreateWorkflowRequest} request CreateWorkflowRequest message or plain object
+                         * @param {google.cloud.workflows.v1beta.Workflows.CreateWorkflowCallback} callback Node-style callback called with the error, if any, and Operation
                          * @returns {undefined}
                          * @variation 1
                          */
                         Object.defineProperty(Workflows.prototype.createWorkflow = function createWorkflow(request, callback) {
-                            return this.rpcCall(createWorkflow, $root.google.cloud.workflows.v1alpha1.CreateWorkflowRequest, $root.google.longrunning.Operation, request, callback);
+                            return this.rpcCall(createWorkflow, $root.google.cloud.workflows.v1beta.CreateWorkflowRequest, $root.google.longrunning.Operation, request, callback);
                         }, "name", { value: "CreateWorkflow" });
     
                         /**
                          * Calls CreateWorkflow.
                          * @function createWorkflow
-                         * @memberof google.cloud.workflows.v1alpha1.Workflows
+                         * @memberof google.cloud.workflows.v1beta.Workflows
                          * @instance
-                         * @param {google.cloud.workflows.v1alpha1.ICreateWorkflowRequest} request CreateWorkflowRequest message or plain object
+                         * @param {google.cloud.workflows.v1beta.ICreateWorkflowRequest} request CreateWorkflowRequest message or plain object
                          * @returns {Promise<google.longrunning.Operation>} Promise
                          * @variation 2
                          */
     
                         /**
-                         * Callback as used by {@link google.cloud.workflows.v1alpha1.Workflows#deleteWorkflow}.
-                         * @memberof google.cloud.workflows.v1alpha1.Workflows
+                         * Callback as used by {@link google.cloud.workflows.v1beta.Workflows#deleteWorkflow}.
+                         * @memberof google.cloud.workflows.v1beta.Workflows
                          * @typedef DeleteWorkflowCallback
                          * @type {function}
                          * @param {Error|null} error Error, if any
@@ -209,30 +209,30 @@
                         /**
                          * Calls DeleteWorkflow.
                          * @function deleteWorkflow
-                         * @memberof google.cloud.workflows.v1alpha1.Workflows
+                         * @memberof google.cloud.workflows.v1beta.Workflows
                          * @instance
-                         * @param {google.cloud.workflows.v1alpha1.IDeleteWorkflowRequest} request DeleteWorkflowRequest message or plain object
-                         * @param {google.cloud.workflows.v1alpha1.Workflows.DeleteWorkflowCallback} callback Node-style callback called with the error, if any, and Operation
+                         * @param {google.cloud.workflows.v1beta.IDeleteWorkflowRequest} request DeleteWorkflowRequest message or plain object
+                         * @param {google.cloud.workflows.v1beta.Workflows.DeleteWorkflowCallback} callback Node-style callback called with the error, if any, and Operation
                          * @returns {undefined}
                          * @variation 1
                          */
                         Object.defineProperty(Workflows.prototype.deleteWorkflow = function deleteWorkflow(request, callback) {
-                            return this.rpcCall(deleteWorkflow, $root.google.cloud.workflows.v1alpha1.DeleteWorkflowRequest, $root.google.longrunning.Operation, request, callback);
+                            return this.rpcCall(deleteWorkflow, $root.google.cloud.workflows.v1beta.DeleteWorkflowRequest, $root.google.longrunning.Operation, request, callback);
                         }, "name", { value: "DeleteWorkflow" });
     
                         /**
                          * Calls DeleteWorkflow.
                          * @function deleteWorkflow
-                         * @memberof google.cloud.workflows.v1alpha1.Workflows
+                         * @memberof google.cloud.workflows.v1beta.Workflows
                          * @instance
-                         * @param {google.cloud.workflows.v1alpha1.IDeleteWorkflowRequest} request DeleteWorkflowRequest message or plain object
+                         * @param {google.cloud.workflows.v1beta.IDeleteWorkflowRequest} request DeleteWorkflowRequest message or plain object
                          * @returns {Promise<google.longrunning.Operation>} Promise
                          * @variation 2
                          */
     
                         /**
-                         * Callback as used by {@link google.cloud.workflows.v1alpha1.Workflows#updateWorkflow}.
-                         * @memberof google.cloud.workflows.v1alpha1.Workflows
+                         * Callback as used by {@link google.cloud.workflows.v1beta.Workflows#updateWorkflow}.
+                         * @memberof google.cloud.workflows.v1beta.Workflows
                          * @typedef UpdateWorkflowCallback
                          * @type {function}
                          * @param {Error|null} error Error, if any
@@ -242,23 +242,23 @@
                         /**
                          * Calls UpdateWorkflow.
                          * @function updateWorkflow
-                         * @memberof google.cloud.workflows.v1alpha1.Workflows
+                         * @memberof google.cloud.workflows.v1beta.Workflows
                          * @instance
-                         * @param {google.cloud.workflows.v1alpha1.IUpdateWorkflowRequest} request UpdateWorkflowRequest message or plain object
-                         * @param {google.cloud.workflows.v1alpha1.Workflows.UpdateWorkflowCallback} callback Node-style callback called with the error, if any, and Operation
+                         * @param {google.cloud.workflows.v1beta.IUpdateWorkflowRequest} request UpdateWorkflowRequest message or plain object
+                         * @param {google.cloud.workflows.v1beta.Workflows.UpdateWorkflowCallback} callback Node-style callback called with the error, if any, and Operation
                          * @returns {undefined}
                          * @variation 1
                          */
                         Object.defineProperty(Workflows.prototype.updateWorkflow = function updateWorkflow(request, callback) {
-                            return this.rpcCall(updateWorkflow, $root.google.cloud.workflows.v1alpha1.UpdateWorkflowRequest, $root.google.longrunning.Operation, request, callback);
+                            return this.rpcCall(updateWorkflow, $root.google.cloud.workflows.v1beta.UpdateWorkflowRequest, $root.google.longrunning.Operation, request, callback);
                         }, "name", { value: "UpdateWorkflow" });
     
                         /**
                          * Calls UpdateWorkflow.
                          * @function updateWorkflow
-                         * @memberof google.cloud.workflows.v1alpha1.Workflows
+                         * @memberof google.cloud.workflows.v1beta.Workflows
                          * @instance
-                         * @param {google.cloud.workflows.v1alpha1.IUpdateWorkflowRequest} request UpdateWorkflowRequest message or plain object
+                         * @param {google.cloud.workflows.v1beta.IUpdateWorkflowRequest} request UpdateWorkflowRequest message or plain object
                          * @returns {Promise<google.longrunning.Operation>} Promise
                          * @variation 2
                          */
@@ -266,30 +266,31 @@
                         return Workflows;
                     })();
     
-                    v1alpha1.Workflow = (function() {
+                    v1beta.Workflow = (function() {
     
                         /**
                          * Properties of a Workflow.
-                         * @memberof google.cloud.workflows.v1alpha1
+                         * @memberof google.cloud.workflows.v1beta
                          * @interface IWorkflow
                          * @property {string|null} [name] Workflow name
                          * @property {string|null} [description] Workflow description
-                         * @property {string|null} [sourceContents] Workflow sourceContents
-                         * @property {google.cloud.workflows.v1alpha1.Workflow.State|null} [state] Workflow state
-                         * @property {number|Long|null} [versionId] Workflow versionId
+                         * @property {google.cloud.workflows.v1beta.Workflow.State|null} [state] Workflow state
+                         * @property {string|null} [revisionId] Workflow revisionId
                          * @property {google.protobuf.ITimestamp|null} [createTime] Workflow createTime
                          * @property {google.protobuf.ITimestamp|null} [updateTime] Workflow updateTime
+                         * @property {google.protobuf.ITimestamp|null} [revisionCreateTime] Workflow revisionCreateTime
                          * @property {Object.<string,string>|null} [labels] Workflow labels
                          * @property {string|null} [serviceAccount] Workflow serviceAccount
+                         * @property {string|null} [sourceContents] Workflow sourceContents
                          */
     
                         /**
                          * Constructs a new Workflow.
-                         * @memberof google.cloud.workflows.v1alpha1
+                         * @memberof google.cloud.workflows.v1beta
                          * @classdesc Represents a Workflow.
                          * @implements IWorkflow
                          * @constructor
-                         * @param {google.cloud.workflows.v1alpha1.IWorkflow=} [properties] Properties to set
+                         * @param {google.cloud.workflows.v1beta.IWorkflow=} [properties] Properties to set
                          */
                         function Workflow(properties) {
                             this.labels = {};
@@ -302,7 +303,7 @@
                         /**
                          * Workflow name.
                          * @member {string} name
-                         * @memberof google.cloud.workflows.v1alpha1.Workflow
+                         * @memberof google.cloud.workflows.v1beta.Workflow
                          * @instance
                          */
                         Workflow.prototype.name = "";
@@ -310,39 +311,31 @@
                         /**
                          * Workflow description.
                          * @member {string} description
-                         * @memberof google.cloud.workflows.v1alpha1.Workflow
+                         * @memberof google.cloud.workflows.v1beta.Workflow
                          * @instance
                          */
                         Workflow.prototype.description = "";
     
                         /**
-                         * Workflow sourceContents.
-                         * @member {string} sourceContents
-                         * @memberof google.cloud.workflows.v1alpha1.Workflow
-                         * @instance
-                         */
-                        Workflow.prototype.sourceContents = "";
-    
-                        /**
                          * Workflow state.
-                         * @member {google.cloud.workflows.v1alpha1.Workflow.State} state
-                         * @memberof google.cloud.workflows.v1alpha1.Workflow
+                         * @member {google.cloud.workflows.v1beta.Workflow.State} state
+                         * @memberof google.cloud.workflows.v1beta.Workflow
                          * @instance
                          */
                         Workflow.prototype.state = 0;
     
                         /**
-                         * Workflow versionId.
-                         * @member {number|Long} versionId
-                         * @memberof google.cloud.workflows.v1alpha1.Workflow
+                         * Workflow revisionId.
+                         * @member {string} revisionId
+                         * @memberof google.cloud.workflows.v1beta.Workflow
                          * @instance
                          */
-                        Workflow.prototype.versionId = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+                        Workflow.prototype.revisionId = "";
     
                         /**
                          * Workflow createTime.
                          * @member {google.protobuf.ITimestamp|null|undefined} createTime
-                         * @memberof google.cloud.workflows.v1alpha1.Workflow
+                         * @memberof google.cloud.workflows.v1beta.Workflow
                          * @instance
                          */
                         Workflow.prototype.createTime = null;
@@ -350,15 +343,23 @@
                         /**
                          * Workflow updateTime.
                          * @member {google.protobuf.ITimestamp|null|undefined} updateTime
-                         * @memberof google.cloud.workflows.v1alpha1.Workflow
+                         * @memberof google.cloud.workflows.v1beta.Workflow
                          * @instance
                          */
                         Workflow.prototype.updateTime = null;
     
                         /**
+                         * Workflow revisionCreateTime.
+                         * @member {google.protobuf.ITimestamp|null|undefined} revisionCreateTime
+                         * @memberof google.cloud.workflows.v1beta.Workflow
+                         * @instance
+                         */
+                        Workflow.prototype.revisionCreateTime = null;
+    
+                        /**
                          * Workflow labels.
                          * @member {Object.<string,string>} labels
-                         * @memberof google.cloud.workflows.v1alpha1.Workflow
+                         * @memberof google.cloud.workflows.v1beta.Workflow
                          * @instance
                          */
                         Workflow.prototype.labels = $util.emptyObject;
@@ -366,10 +367,18 @@
                         /**
                          * Workflow serviceAccount.
                          * @member {string} serviceAccount
-                         * @memberof google.cloud.workflows.v1alpha1.Workflow
+                         * @memberof google.cloud.workflows.v1beta.Workflow
                          * @instance
                          */
                         Workflow.prototype.serviceAccount = "";
+    
+                        /**
+                         * Workflow sourceContents.
+                         * @member {string} sourceContents
+                         * @memberof google.cloud.workflows.v1beta.Workflow
+                         * @instance
+                         */
+                        Workflow.prototype.sourceContents = "";
     
                         // OneOf field names bound to virtual getters and setters
                         var $oneOfFields;
@@ -377,7 +386,7 @@
                         /**
                          * Workflow sourceCode.
                          * @member {"sourceContents"|undefined} sourceCode
-                         * @memberof google.cloud.workflows.v1alpha1.Workflow
+                         * @memberof google.cloud.workflows.v1beta.Workflow
                          * @instance
                          */
                         Object.defineProperty(Workflow.prototype, "sourceCode", {
@@ -388,55 +397,57 @@
                         /**
                          * Creates a new Workflow instance using the specified properties.
                          * @function create
-                         * @memberof google.cloud.workflows.v1alpha1.Workflow
+                         * @memberof google.cloud.workflows.v1beta.Workflow
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.IWorkflow=} [properties] Properties to set
-                         * @returns {google.cloud.workflows.v1alpha1.Workflow} Workflow instance
+                         * @param {google.cloud.workflows.v1beta.IWorkflow=} [properties] Properties to set
+                         * @returns {google.cloud.workflows.v1beta.Workflow} Workflow instance
                          */
                         Workflow.create = function create(properties) {
                             return new Workflow(properties);
                         };
     
                         /**
-                         * Encodes the specified Workflow message. Does not implicitly {@link google.cloud.workflows.v1alpha1.Workflow.verify|verify} messages.
+                         * Encodes the specified Workflow message. Does not implicitly {@link google.cloud.workflows.v1beta.Workflow.verify|verify} messages.
                          * @function encode
-                         * @memberof google.cloud.workflows.v1alpha1.Workflow
+                         * @memberof google.cloud.workflows.v1beta.Workflow
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.IWorkflow} message Workflow message or plain object to encode
+                         * @param {google.cloud.workflows.v1beta.IWorkflow} message Workflow message or plain object to encode
                          * @param {$protobuf.Writer} [writer] Writer to encode to
                          * @returns {$protobuf.Writer} Writer
                          */
                         Workflow.encode = function encode(message, writer) {
                             if (!writer)
                                 writer = $Writer.create();
-                            if (message.name != null && message.hasOwnProperty("name"))
+                            if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
-                            if (message.description != null && message.hasOwnProperty("description"))
+                            if (message.description != null && Object.hasOwnProperty.call(message, "description"))
                                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.description);
-                            if (message.sourceContents != null && message.hasOwnProperty("sourceContents"))
-                                writer.uint32(/* id 3, wireType 2 =*/26).string(message.sourceContents);
-                            if (message.state != null && message.hasOwnProperty("state"))
-                                writer.uint32(/* id 4, wireType 0 =*/32).int32(message.state);
-                            if (message.versionId != null && message.hasOwnProperty("versionId"))
-                                writer.uint32(/* id 5, wireType 0 =*/40).int64(message.versionId);
-                            if (message.createTime != null && message.hasOwnProperty("createTime"))
-                                $root.google.protobuf.Timestamp.encode(message.createTime, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
-                            if (message.updateTime != null && message.hasOwnProperty("updateTime"))
-                                $root.google.protobuf.Timestamp.encode(message.updateTime, writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
-                            if (message.labels != null && message.hasOwnProperty("labels"))
+                            if (message.state != null && Object.hasOwnProperty.call(message, "state"))
+                                writer.uint32(/* id 3, wireType 0 =*/24).int32(message.state);
+                            if (message.revisionId != null && Object.hasOwnProperty.call(message, "revisionId"))
+                                writer.uint32(/* id 4, wireType 2 =*/34).string(message.revisionId);
+                            if (message.createTime != null && Object.hasOwnProperty.call(message, "createTime"))
+                                $root.google.protobuf.Timestamp.encode(message.createTime, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
+                            if (message.updateTime != null && Object.hasOwnProperty.call(message, "updateTime"))
+                                $root.google.protobuf.Timestamp.encode(message.updateTime, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
+                            if (message.revisionCreateTime != null && Object.hasOwnProperty.call(message, "revisionCreateTime"))
+                                $root.google.protobuf.Timestamp.encode(message.revisionCreateTime, writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
+                            if (message.labels != null && Object.hasOwnProperty.call(message, "labels"))
                                 for (var keys = Object.keys(message.labels), i = 0; i < keys.length; ++i)
                                     writer.uint32(/* id 8, wireType 2 =*/66).fork().uint32(/* id 1, wireType 2 =*/10).string(keys[i]).uint32(/* id 2, wireType 2 =*/18).string(message.labels[keys[i]]).ldelim();
-                            if (message.serviceAccount != null && message.hasOwnProperty("serviceAccount"))
+                            if (message.serviceAccount != null && Object.hasOwnProperty.call(message, "serviceAccount"))
                                 writer.uint32(/* id 9, wireType 2 =*/74).string(message.serviceAccount);
+                            if (message.sourceContents != null && Object.hasOwnProperty.call(message, "sourceContents"))
+                                writer.uint32(/* id 10, wireType 2 =*/82).string(message.sourceContents);
                             return writer;
                         };
     
                         /**
-                         * Encodes the specified Workflow message, length delimited. Does not implicitly {@link google.cloud.workflows.v1alpha1.Workflow.verify|verify} messages.
+                         * Encodes the specified Workflow message, length delimited. Does not implicitly {@link google.cloud.workflows.v1beta.Workflow.verify|verify} messages.
                          * @function encodeDelimited
-                         * @memberof google.cloud.workflows.v1alpha1.Workflow
+                         * @memberof google.cloud.workflows.v1beta.Workflow
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.IWorkflow} message Workflow message or plain object to encode
+                         * @param {google.cloud.workflows.v1beta.IWorkflow} message Workflow message or plain object to encode
                          * @param {$protobuf.Writer} [writer] Writer to encode to
                          * @returns {$protobuf.Writer} Writer
                          */
@@ -447,18 +458,18 @@
                         /**
                          * Decodes a Workflow message from the specified reader or buffer.
                          * @function decode
-                         * @memberof google.cloud.workflows.v1alpha1.Workflow
+                         * @memberof google.cloud.workflows.v1beta.Workflow
                          * @static
                          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                          * @param {number} [length] Message length if known beforehand
-                         * @returns {google.cloud.workflows.v1alpha1.Workflow} Workflow
+                         * @returns {google.cloud.workflows.v1beta.Workflow} Workflow
                          * @throws {Error} If the payload is not a reader or valid buffer
                          * @throws {$protobuf.util.ProtocolError} If required fields are missing
                          */
                         Workflow.decode = function decode(reader, length) {
                             if (!(reader instanceof $Reader))
                                 reader = $Reader.create(reader);
-                            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.cloud.workflows.v1alpha1.Workflow(), key;
+                            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.cloud.workflows.v1beta.Workflow(), key, value;
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
@@ -469,30 +480,47 @@
                                     message.description = reader.string();
                                     break;
                                 case 3:
-                                    message.sourceContents = reader.string();
-                                    break;
-                                case 4:
                                     message.state = reader.int32();
                                     break;
-                                case 5:
-                                    message.versionId = reader.int64();
+                                case 4:
+                                    message.revisionId = reader.string();
                                     break;
-                                case 6:
+                                case 5:
                                     message.createTime = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
                                     break;
-                                case 7:
+                                case 6:
                                     message.updateTime = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
                                     break;
+                                case 7:
+                                    message.revisionCreateTime = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+                                    break;
                                 case 8:
-                                    reader.skip().pos++;
                                     if (message.labels === $util.emptyObject)
                                         message.labels = {};
-                                    key = reader.string();
-                                    reader.pos++;
-                                    message.labels[key] = reader.string();
+                                    var end2 = reader.uint32() + reader.pos;
+                                    key = "";
+                                    value = "";
+                                    while (reader.pos < end2) {
+                                        var tag2 = reader.uint32();
+                                        switch (tag2 >>> 3) {
+                                        case 1:
+                                            key = reader.string();
+                                            break;
+                                        case 2:
+                                            value = reader.string();
+                                            break;
+                                        default:
+                                            reader.skipType(tag2 & 7);
+                                            break;
+                                        }
+                                    }
+                                    message.labels[key] = value;
                                     break;
                                 case 9:
                                     message.serviceAccount = reader.string();
+                                    break;
+                                case 10:
+                                    message.sourceContents = reader.string();
                                     break;
                                 default:
                                     reader.skipType(tag & 7);
@@ -505,10 +533,10 @@
                         /**
                          * Decodes a Workflow message from the specified reader or buffer, length delimited.
                          * @function decodeDelimited
-                         * @memberof google.cloud.workflows.v1alpha1.Workflow
+                         * @memberof google.cloud.workflows.v1beta.Workflow
                          * @static
                          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                         * @returns {google.cloud.workflows.v1alpha1.Workflow} Workflow
+                         * @returns {google.cloud.workflows.v1beta.Workflow} Workflow
                          * @throws {Error} If the payload is not a reader or valid buffer
                          * @throws {$protobuf.util.ProtocolError} If required fields are missing
                          */
@@ -521,7 +549,7 @@
                         /**
                          * Verifies a Workflow message.
                          * @function verify
-                         * @memberof google.cloud.workflows.v1alpha1.Workflow
+                         * @memberof google.cloud.workflows.v1beta.Workflow
                          * @static
                          * @param {Object.<string,*>} message Plain object to verify
                          * @returns {string|null} `null` if valid, otherwise the reason why it is not
@@ -536,25 +564,17 @@
                             if (message.description != null && message.hasOwnProperty("description"))
                                 if (!$util.isString(message.description))
                                     return "description: string expected";
-                            if (message.sourceContents != null && message.hasOwnProperty("sourceContents")) {
-                                properties.sourceCode = 1;
-                                if (!$util.isString(message.sourceContents))
-                                    return "sourceContents: string expected";
-                            }
                             if (message.state != null && message.hasOwnProperty("state"))
                                 switch (message.state) {
                                 default:
                                     return "state: enum value expected";
                                 case 0:
                                 case 1:
-                                case 2:
-                                case 3:
-                                case 4:
                                     break;
                                 }
-                            if (message.versionId != null && message.hasOwnProperty("versionId"))
-                                if (!$util.isInteger(message.versionId) && !(message.versionId && $util.isInteger(message.versionId.low) && $util.isInteger(message.versionId.high)))
-                                    return "versionId: integer|Long expected";
+                            if (message.revisionId != null && message.hasOwnProperty("revisionId"))
+                                if (!$util.isString(message.revisionId))
+                                    return "revisionId: string expected";
                             if (message.createTime != null && message.hasOwnProperty("createTime")) {
                                 var error = $root.google.protobuf.Timestamp.verify(message.createTime);
                                 if (error)
@@ -564,6 +584,11 @@
                                 var error = $root.google.protobuf.Timestamp.verify(message.updateTime);
                                 if (error)
                                     return "updateTime." + error;
+                            }
+                            if (message.revisionCreateTime != null && message.hasOwnProperty("revisionCreateTime")) {
+                                var error = $root.google.protobuf.Timestamp.verify(message.revisionCreateTime);
+                                if (error)
+                                    return "revisionCreateTime." + error;
                             }
                             if (message.labels != null && message.hasOwnProperty("labels")) {
                                 if (!$util.isObject(message.labels))
@@ -576,27 +601,30 @@
                             if (message.serviceAccount != null && message.hasOwnProperty("serviceAccount"))
                                 if (!$util.isString(message.serviceAccount))
                                     return "serviceAccount: string expected";
+                            if (message.sourceContents != null && message.hasOwnProperty("sourceContents")) {
+                                properties.sourceCode = 1;
+                                if (!$util.isString(message.sourceContents))
+                                    return "sourceContents: string expected";
+                            }
                             return null;
                         };
     
                         /**
                          * Creates a Workflow message from a plain object. Also converts values to their respective internal types.
                          * @function fromObject
-                         * @memberof google.cloud.workflows.v1alpha1.Workflow
+                         * @memberof google.cloud.workflows.v1beta.Workflow
                          * @static
                          * @param {Object.<string,*>} object Plain object
-                         * @returns {google.cloud.workflows.v1alpha1.Workflow} Workflow
+                         * @returns {google.cloud.workflows.v1beta.Workflow} Workflow
                          */
                         Workflow.fromObject = function fromObject(object) {
-                            if (object instanceof $root.google.cloud.workflows.v1alpha1.Workflow)
+                            if (object instanceof $root.google.cloud.workflows.v1beta.Workflow)
                                 return object;
-                            var message = new $root.google.cloud.workflows.v1alpha1.Workflow();
+                            var message = new $root.google.cloud.workflows.v1beta.Workflow();
                             if (object.name != null)
                                 message.name = String(object.name);
                             if (object.description != null)
                                 message.description = String(object.description);
-                            if (object.sourceContents != null)
-                                message.sourceContents = String(object.sourceContents);
                             switch (object.state) {
                             case "STATE_UNSPECIFIED":
                             case 0:
@@ -606,56 +634,44 @@
                             case 1:
                                 message.state = 1;
                                 break;
-                            case "FAILED":
-                            case 2:
-                                message.state = 2;
-                                break;
-                            case "DEPLOYING":
-                            case 3:
-                                message.state = 3;
-                                break;
-                            case "DELETING":
-                            case 4:
-                                message.state = 4;
-                                break;
                             }
-                            if (object.versionId != null)
-                                if ($util.Long)
-                                    (message.versionId = $util.Long.fromValue(object.versionId)).unsigned = false;
-                                else if (typeof object.versionId === "string")
-                                    message.versionId = parseInt(object.versionId, 10);
-                                else if (typeof object.versionId === "number")
-                                    message.versionId = object.versionId;
-                                else if (typeof object.versionId === "object")
-                                    message.versionId = new $util.LongBits(object.versionId.low >>> 0, object.versionId.high >>> 0).toNumber();
+                            if (object.revisionId != null)
+                                message.revisionId = String(object.revisionId);
                             if (object.createTime != null) {
                                 if (typeof object.createTime !== "object")
-                                    throw TypeError(".google.cloud.workflows.v1alpha1.Workflow.createTime: object expected");
+                                    throw TypeError(".google.cloud.workflows.v1beta.Workflow.createTime: object expected");
                                 message.createTime = $root.google.protobuf.Timestamp.fromObject(object.createTime);
                             }
                             if (object.updateTime != null) {
                                 if (typeof object.updateTime !== "object")
-                                    throw TypeError(".google.cloud.workflows.v1alpha1.Workflow.updateTime: object expected");
+                                    throw TypeError(".google.cloud.workflows.v1beta.Workflow.updateTime: object expected");
                                 message.updateTime = $root.google.protobuf.Timestamp.fromObject(object.updateTime);
+                            }
+                            if (object.revisionCreateTime != null) {
+                                if (typeof object.revisionCreateTime !== "object")
+                                    throw TypeError(".google.cloud.workflows.v1beta.Workflow.revisionCreateTime: object expected");
+                                message.revisionCreateTime = $root.google.protobuf.Timestamp.fromObject(object.revisionCreateTime);
                             }
                             if (object.labels) {
                                 if (typeof object.labels !== "object")
-                                    throw TypeError(".google.cloud.workflows.v1alpha1.Workflow.labels: object expected");
+                                    throw TypeError(".google.cloud.workflows.v1beta.Workflow.labels: object expected");
                                 message.labels = {};
                                 for (var keys = Object.keys(object.labels), i = 0; i < keys.length; ++i)
                                     message.labels[keys[i]] = String(object.labels[keys[i]]);
                             }
                             if (object.serviceAccount != null)
                                 message.serviceAccount = String(object.serviceAccount);
+                            if (object.sourceContents != null)
+                                message.sourceContents = String(object.sourceContents);
                             return message;
                         };
     
                         /**
                          * Creates a plain object from a Workflow message. Also converts values to other types if specified.
                          * @function toObject
-                         * @memberof google.cloud.workflows.v1alpha1.Workflow
+                         * @memberof google.cloud.workflows.v1beta.Workflow
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.Workflow} message Workflow
+                         * @param {google.cloud.workflows.v1beta.Workflow} message Workflow
                          * @param {$protobuf.IConversionOptions} [options] Conversion options
                          * @returns {Object.<string,*>} Plain object
                          */
@@ -669,35 +685,26 @@
                                 object.name = "";
                                 object.description = "";
                                 object.state = options.enums === String ? "STATE_UNSPECIFIED" : 0;
-                                if ($util.Long) {
-                                    var long = new $util.Long(0, 0, false);
-                                    object.versionId = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                                } else
-                                    object.versionId = options.longs === String ? "0" : 0;
+                                object.revisionId = "";
                                 object.createTime = null;
                                 object.updateTime = null;
+                                object.revisionCreateTime = null;
                                 object.serviceAccount = "";
                             }
                             if (message.name != null && message.hasOwnProperty("name"))
                                 object.name = message.name;
                             if (message.description != null && message.hasOwnProperty("description"))
                                 object.description = message.description;
-                            if (message.sourceContents != null && message.hasOwnProperty("sourceContents")) {
-                                object.sourceContents = message.sourceContents;
-                                if (options.oneofs)
-                                    object.sourceCode = "sourceContents";
-                            }
                             if (message.state != null && message.hasOwnProperty("state"))
-                                object.state = options.enums === String ? $root.google.cloud.workflows.v1alpha1.Workflow.State[message.state] : message.state;
-                            if (message.versionId != null && message.hasOwnProperty("versionId"))
-                                if (typeof message.versionId === "number")
-                                    object.versionId = options.longs === String ? String(message.versionId) : message.versionId;
-                                else
-                                    object.versionId = options.longs === String ? $util.Long.prototype.toString.call(message.versionId) : options.longs === Number ? new $util.LongBits(message.versionId.low >>> 0, message.versionId.high >>> 0).toNumber() : message.versionId;
+                                object.state = options.enums === String ? $root.google.cloud.workflows.v1beta.Workflow.State[message.state] : message.state;
+                            if (message.revisionId != null && message.hasOwnProperty("revisionId"))
+                                object.revisionId = message.revisionId;
                             if (message.createTime != null && message.hasOwnProperty("createTime"))
                                 object.createTime = $root.google.protobuf.Timestamp.toObject(message.createTime, options);
                             if (message.updateTime != null && message.hasOwnProperty("updateTime"))
                                 object.updateTime = $root.google.protobuf.Timestamp.toObject(message.updateTime, options);
+                            if (message.revisionCreateTime != null && message.hasOwnProperty("revisionCreateTime"))
+                                object.revisionCreateTime = $root.google.protobuf.Timestamp.toObject(message.revisionCreateTime, options);
                             var keys2;
                             if (message.labels && (keys2 = Object.keys(message.labels)).length) {
                                 object.labels = {};
@@ -706,13 +713,18 @@
                             }
                             if (message.serviceAccount != null && message.hasOwnProperty("serviceAccount"))
                                 object.serviceAccount = message.serviceAccount;
+                            if (message.sourceContents != null && message.hasOwnProperty("sourceContents")) {
+                                object.sourceContents = message.sourceContents;
+                                if (options.oneofs)
+                                    object.sourceCode = "sourceContents";
+                            }
                             return object;
                         };
     
                         /**
                          * Converts this Workflow to JSON.
                          * @function toJSON
-                         * @memberof google.cloud.workflows.v1alpha1.Workflow
+                         * @memberof google.cloud.workflows.v1beta.Workflow
                          * @instance
                          * @returns {Object.<string,*>} JSON object
                          */
@@ -722,32 +734,26 @@
     
                         /**
                          * State enum.
-                         * @name google.cloud.workflows.v1alpha1.Workflow.State
-                         * @enum {string}
+                         * @name google.cloud.workflows.v1beta.Workflow.State
+                         * @enum {number}
                          * @property {number} STATE_UNSPECIFIED=0 STATE_UNSPECIFIED value
                          * @property {number} ACTIVE=1 ACTIVE value
-                         * @property {number} FAILED=2 FAILED value
-                         * @property {number} DEPLOYING=3 DEPLOYING value
-                         * @property {number} DELETING=4 DELETING value
                          */
                         Workflow.State = (function() {
                             var valuesById = {}, values = Object.create(valuesById);
                             values[valuesById[0] = "STATE_UNSPECIFIED"] = 0;
                             values[valuesById[1] = "ACTIVE"] = 1;
-                            values[valuesById[2] = "FAILED"] = 2;
-                            values[valuesById[3] = "DEPLOYING"] = 3;
-                            values[valuesById[4] = "DELETING"] = 4;
                             return values;
                         })();
     
                         return Workflow;
                     })();
     
-                    v1alpha1.ListWorkflowsRequest = (function() {
+                    v1beta.ListWorkflowsRequest = (function() {
     
                         /**
                          * Properties of a ListWorkflowsRequest.
-                         * @memberof google.cloud.workflows.v1alpha1
+                         * @memberof google.cloud.workflows.v1beta
                          * @interface IListWorkflowsRequest
                          * @property {string|null} [parent] ListWorkflowsRequest parent
                          * @property {number|null} [pageSize] ListWorkflowsRequest pageSize
@@ -758,11 +764,11 @@
     
                         /**
                          * Constructs a new ListWorkflowsRequest.
-                         * @memberof google.cloud.workflows.v1alpha1
+                         * @memberof google.cloud.workflows.v1beta
                          * @classdesc Represents a ListWorkflowsRequest.
                          * @implements IListWorkflowsRequest
                          * @constructor
-                         * @param {google.cloud.workflows.v1alpha1.IListWorkflowsRequest=} [properties] Properties to set
+                         * @param {google.cloud.workflows.v1beta.IListWorkflowsRequest=} [properties] Properties to set
                          */
                         function ListWorkflowsRequest(properties) {
                             if (properties)
@@ -774,7 +780,7 @@
                         /**
                          * ListWorkflowsRequest parent.
                          * @member {string} parent
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsRequest
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsRequest
                          * @instance
                          */
                         ListWorkflowsRequest.prototype.parent = "";
@@ -782,7 +788,7 @@
                         /**
                          * ListWorkflowsRequest pageSize.
                          * @member {number} pageSize
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsRequest
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsRequest
                          * @instance
                          */
                         ListWorkflowsRequest.prototype.pageSize = 0;
@@ -790,7 +796,7 @@
                         /**
                          * ListWorkflowsRequest pageToken.
                          * @member {string} pageToken
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsRequest
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsRequest
                          * @instance
                          */
                         ListWorkflowsRequest.prototype.pageToken = "";
@@ -798,7 +804,7 @@
                         /**
                          * ListWorkflowsRequest filter.
                          * @member {string} filter
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsRequest
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsRequest
                          * @instance
                          */
                         ListWorkflowsRequest.prototype.filter = "";
@@ -806,7 +812,7 @@
                         /**
                          * ListWorkflowsRequest orderBy.
                          * @member {string} orderBy
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsRequest
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsRequest
                          * @instance
                          */
                         ListWorkflowsRequest.prototype.orderBy = "";
@@ -814,46 +820,46 @@
                         /**
                          * Creates a new ListWorkflowsRequest instance using the specified properties.
                          * @function create
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsRequest
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsRequest
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.IListWorkflowsRequest=} [properties] Properties to set
-                         * @returns {google.cloud.workflows.v1alpha1.ListWorkflowsRequest} ListWorkflowsRequest instance
+                         * @param {google.cloud.workflows.v1beta.IListWorkflowsRequest=} [properties] Properties to set
+                         * @returns {google.cloud.workflows.v1beta.ListWorkflowsRequest} ListWorkflowsRequest instance
                          */
                         ListWorkflowsRequest.create = function create(properties) {
                             return new ListWorkflowsRequest(properties);
                         };
     
                         /**
-                         * Encodes the specified ListWorkflowsRequest message. Does not implicitly {@link google.cloud.workflows.v1alpha1.ListWorkflowsRequest.verify|verify} messages.
+                         * Encodes the specified ListWorkflowsRequest message. Does not implicitly {@link google.cloud.workflows.v1beta.ListWorkflowsRequest.verify|verify} messages.
                          * @function encode
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsRequest
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsRequest
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.IListWorkflowsRequest} message ListWorkflowsRequest message or plain object to encode
+                         * @param {google.cloud.workflows.v1beta.IListWorkflowsRequest} message ListWorkflowsRequest message or plain object to encode
                          * @param {$protobuf.Writer} [writer] Writer to encode to
                          * @returns {$protobuf.Writer} Writer
                          */
                         ListWorkflowsRequest.encode = function encode(message, writer) {
                             if (!writer)
                                 writer = $Writer.create();
-                            if (message.parent != null && message.hasOwnProperty("parent"))
+                            if (message.parent != null && Object.hasOwnProperty.call(message, "parent"))
                                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.parent);
-                            if (message.pageSize != null && message.hasOwnProperty("pageSize"))
+                            if (message.pageSize != null && Object.hasOwnProperty.call(message, "pageSize"))
                                 writer.uint32(/* id 2, wireType 0 =*/16).int32(message.pageSize);
-                            if (message.pageToken != null && message.hasOwnProperty("pageToken"))
+                            if (message.pageToken != null && Object.hasOwnProperty.call(message, "pageToken"))
                                 writer.uint32(/* id 3, wireType 2 =*/26).string(message.pageToken);
-                            if (message.filter != null && message.hasOwnProperty("filter"))
+                            if (message.filter != null && Object.hasOwnProperty.call(message, "filter"))
                                 writer.uint32(/* id 4, wireType 2 =*/34).string(message.filter);
-                            if (message.orderBy != null && message.hasOwnProperty("orderBy"))
+                            if (message.orderBy != null && Object.hasOwnProperty.call(message, "orderBy"))
                                 writer.uint32(/* id 5, wireType 2 =*/42).string(message.orderBy);
                             return writer;
                         };
     
                         /**
-                         * Encodes the specified ListWorkflowsRequest message, length delimited. Does not implicitly {@link google.cloud.workflows.v1alpha1.ListWorkflowsRequest.verify|verify} messages.
+                         * Encodes the specified ListWorkflowsRequest message, length delimited. Does not implicitly {@link google.cloud.workflows.v1beta.ListWorkflowsRequest.verify|verify} messages.
                          * @function encodeDelimited
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsRequest
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsRequest
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.IListWorkflowsRequest} message ListWorkflowsRequest message or plain object to encode
+                         * @param {google.cloud.workflows.v1beta.IListWorkflowsRequest} message ListWorkflowsRequest message or plain object to encode
                          * @param {$protobuf.Writer} [writer] Writer to encode to
                          * @returns {$protobuf.Writer} Writer
                          */
@@ -864,18 +870,18 @@
                         /**
                          * Decodes a ListWorkflowsRequest message from the specified reader or buffer.
                          * @function decode
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsRequest
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsRequest
                          * @static
                          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                          * @param {number} [length] Message length if known beforehand
-                         * @returns {google.cloud.workflows.v1alpha1.ListWorkflowsRequest} ListWorkflowsRequest
+                         * @returns {google.cloud.workflows.v1beta.ListWorkflowsRequest} ListWorkflowsRequest
                          * @throws {Error} If the payload is not a reader or valid buffer
                          * @throws {$protobuf.util.ProtocolError} If required fields are missing
                          */
                         ListWorkflowsRequest.decode = function decode(reader, length) {
                             if (!(reader instanceof $Reader))
                                 reader = $Reader.create(reader);
-                            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.cloud.workflows.v1alpha1.ListWorkflowsRequest();
+                            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.cloud.workflows.v1beta.ListWorkflowsRequest();
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
@@ -905,10 +911,10 @@
                         /**
                          * Decodes a ListWorkflowsRequest message from the specified reader or buffer, length delimited.
                          * @function decodeDelimited
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsRequest
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsRequest
                          * @static
                          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                         * @returns {google.cloud.workflows.v1alpha1.ListWorkflowsRequest} ListWorkflowsRequest
+                         * @returns {google.cloud.workflows.v1beta.ListWorkflowsRequest} ListWorkflowsRequest
                          * @throws {Error} If the payload is not a reader or valid buffer
                          * @throws {$protobuf.util.ProtocolError} If required fields are missing
                          */
@@ -921,7 +927,7 @@
                         /**
                          * Verifies a ListWorkflowsRequest message.
                          * @function verify
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsRequest
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsRequest
                          * @static
                          * @param {Object.<string,*>} message Plain object to verify
                          * @returns {string|null} `null` if valid, otherwise the reason why it is not
@@ -950,15 +956,15 @@
                         /**
                          * Creates a ListWorkflowsRequest message from a plain object. Also converts values to their respective internal types.
                          * @function fromObject
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsRequest
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsRequest
                          * @static
                          * @param {Object.<string,*>} object Plain object
-                         * @returns {google.cloud.workflows.v1alpha1.ListWorkflowsRequest} ListWorkflowsRequest
+                         * @returns {google.cloud.workflows.v1beta.ListWorkflowsRequest} ListWorkflowsRequest
                          */
                         ListWorkflowsRequest.fromObject = function fromObject(object) {
-                            if (object instanceof $root.google.cloud.workflows.v1alpha1.ListWorkflowsRequest)
+                            if (object instanceof $root.google.cloud.workflows.v1beta.ListWorkflowsRequest)
                                 return object;
-                            var message = new $root.google.cloud.workflows.v1alpha1.ListWorkflowsRequest();
+                            var message = new $root.google.cloud.workflows.v1beta.ListWorkflowsRequest();
                             if (object.parent != null)
                                 message.parent = String(object.parent);
                             if (object.pageSize != null)
@@ -975,9 +981,9 @@
                         /**
                          * Creates a plain object from a ListWorkflowsRequest message. Also converts values to other types if specified.
                          * @function toObject
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsRequest
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsRequest
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.ListWorkflowsRequest} message ListWorkflowsRequest
+                         * @param {google.cloud.workflows.v1beta.ListWorkflowsRequest} message ListWorkflowsRequest
                          * @param {$protobuf.IConversionOptions} [options] Conversion options
                          * @returns {Object.<string,*>} Plain object
                          */
@@ -1008,7 +1014,7 @@
                         /**
                          * Converts this ListWorkflowsRequest to JSON.
                          * @function toJSON
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsRequest
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsRequest
                          * @instance
                          * @returns {Object.<string,*>} JSON object
                          */
@@ -1019,24 +1025,24 @@
                         return ListWorkflowsRequest;
                     })();
     
-                    v1alpha1.ListWorkflowsResponse = (function() {
+                    v1beta.ListWorkflowsResponse = (function() {
     
                         /**
                          * Properties of a ListWorkflowsResponse.
-                         * @memberof google.cloud.workflows.v1alpha1
+                         * @memberof google.cloud.workflows.v1beta
                          * @interface IListWorkflowsResponse
-                         * @property {Array.<google.cloud.workflows.v1alpha1.IWorkflow>|null} [workflows] ListWorkflowsResponse workflows
+                         * @property {Array.<google.cloud.workflows.v1beta.IWorkflow>|null} [workflows] ListWorkflowsResponse workflows
                          * @property {string|null} [nextPageToken] ListWorkflowsResponse nextPageToken
                          * @property {Array.<string>|null} [unreachable] ListWorkflowsResponse unreachable
                          */
     
                         /**
                          * Constructs a new ListWorkflowsResponse.
-                         * @memberof google.cloud.workflows.v1alpha1
+                         * @memberof google.cloud.workflows.v1beta
                          * @classdesc Represents a ListWorkflowsResponse.
                          * @implements IListWorkflowsResponse
                          * @constructor
-                         * @param {google.cloud.workflows.v1alpha1.IListWorkflowsResponse=} [properties] Properties to set
+                         * @param {google.cloud.workflows.v1beta.IListWorkflowsResponse=} [properties] Properties to set
                          */
                         function ListWorkflowsResponse(properties) {
                             this.workflows = [];
@@ -1049,8 +1055,8 @@
     
                         /**
                          * ListWorkflowsResponse workflows.
-                         * @member {Array.<google.cloud.workflows.v1alpha1.IWorkflow>} workflows
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsResponse
+                         * @member {Array.<google.cloud.workflows.v1beta.IWorkflow>} workflows
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsResponse
                          * @instance
                          */
                         ListWorkflowsResponse.prototype.workflows = $util.emptyArray;
@@ -1058,7 +1064,7 @@
                         /**
                          * ListWorkflowsResponse nextPageToken.
                          * @member {string} nextPageToken
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsResponse
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsResponse
                          * @instance
                          */
                         ListWorkflowsResponse.prototype.nextPageToken = "";
@@ -1066,7 +1072,7 @@
                         /**
                          * ListWorkflowsResponse unreachable.
                          * @member {Array.<string>} unreachable
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsResponse
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsResponse
                          * @instance
                          */
                         ListWorkflowsResponse.prototype.unreachable = $util.emptyArray;
@@ -1074,21 +1080,21 @@
                         /**
                          * Creates a new ListWorkflowsResponse instance using the specified properties.
                          * @function create
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsResponse
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsResponse
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.IListWorkflowsResponse=} [properties] Properties to set
-                         * @returns {google.cloud.workflows.v1alpha1.ListWorkflowsResponse} ListWorkflowsResponse instance
+                         * @param {google.cloud.workflows.v1beta.IListWorkflowsResponse=} [properties] Properties to set
+                         * @returns {google.cloud.workflows.v1beta.ListWorkflowsResponse} ListWorkflowsResponse instance
                          */
                         ListWorkflowsResponse.create = function create(properties) {
                             return new ListWorkflowsResponse(properties);
                         };
     
                         /**
-                         * Encodes the specified ListWorkflowsResponse message. Does not implicitly {@link google.cloud.workflows.v1alpha1.ListWorkflowsResponse.verify|verify} messages.
+                         * Encodes the specified ListWorkflowsResponse message. Does not implicitly {@link google.cloud.workflows.v1beta.ListWorkflowsResponse.verify|verify} messages.
                          * @function encode
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsResponse
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsResponse
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.IListWorkflowsResponse} message ListWorkflowsResponse message or plain object to encode
+                         * @param {google.cloud.workflows.v1beta.IListWorkflowsResponse} message ListWorkflowsResponse message or plain object to encode
                          * @param {$protobuf.Writer} [writer] Writer to encode to
                          * @returns {$protobuf.Writer} Writer
                          */
@@ -1097,8 +1103,8 @@
                                 writer = $Writer.create();
                             if (message.workflows != null && message.workflows.length)
                                 for (var i = 0; i < message.workflows.length; ++i)
-                                    $root.google.cloud.workflows.v1alpha1.Workflow.encode(message.workflows[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                            if (message.nextPageToken != null && message.hasOwnProperty("nextPageToken"))
+                                    $root.google.cloud.workflows.v1beta.Workflow.encode(message.workflows[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                            if (message.nextPageToken != null && Object.hasOwnProperty.call(message, "nextPageToken"))
                                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.nextPageToken);
                             if (message.unreachable != null && message.unreachable.length)
                                 for (var i = 0; i < message.unreachable.length; ++i)
@@ -1107,11 +1113,11 @@
                         };
     
                         /**
-                         * Encodes the specified ListWorkflowsResponse message, length delimited. Does not implicitly {@link google.cloud.workflows.v1alpha1.ListWorkflowsResponse.verify|verify} messages.
+                         * Encodes the specified ListWorkflowsResponse message, length delimited. Does not implicitly {@link google.cloud.workflows.v1beta.ListWorkflowsResponse.verify|verify} messages.
                          * @function encodeDelimited
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsResponse
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsResponse
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.IListWorkflowsResponse} message ListWorkflowsResponse message or plain object to encode
+                         * @param {google.cloud.workflows.v1beta.IListWorkflowsResponse} message ListWorkflowsResponse message or plain object to encode
                          * @param {$protobuf.Writer} [writer] Writer to encode to
                          * @returns {$protobuf.Writer} Writer
                          */
@@ -1122,25 +1128,25 @@
                         /**
                          * Decodes a ListWorkflowsResponse message from the specified reader or buffer.
                          * @function decode
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsResponse
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsResponse
                          * @static
                          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                          * @param {number} [length] Message length if known beforehand
-                         * @returns {google.cloud.workflows.v1alpha1.ListWorkflowsResponse} ListWorkflowsResponse
+                         * @returns {google.cloud.workflows.v1beta.ListWorkflowsResponse} ListWorkflowsResponse
                          * @throws {Error} If the payload is not a reader or valid buffer
                          * @throws {$protobuf.util.ProtocolError} If required fields are missing
                          */
                         ListWorkflowsResponse.decode = function decode(reader, length) {
                             if (!(reader instanceof $Reader))
                                 reader = $Reader.create(reader);
-                            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.cloud.workflows.v1alpha1.ListWorkflowsResponse();
+                            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.cloud.workflows.v1beta.ListWorkflowsResponse();
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
                                 case 1:
                                     if (!(message.workflows && message.workflows.length))
                                         message.workflows = [];
-                                    message.workflows.push($root.google.cloud.workflows.v1alpha1.Workflow.decode(reader, reader.uint32()));
+                                    message.workflows.push($root.google.cloud.workflows.v1beta.Workflow.decode(reader, reader.uint32()));
                                     break;
                                 case 2:
                                     message.nextPageToken = reader.string();
@@ -1161,10 +1167,10 @@
                         /**
                          * Decodes a ListWorkflowsResponse message from the specified reader or buffer, length delimited.
                          * @function decodeDelimited
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsResponse
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsResponse
                          * @static
                          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                         * @returns {google.cloud.workflows.v1alpha1.ListWorkflowsResponse} ListWorkflowsResponse
+                         * @returns {google.cloud.workflows.v1beta.ListWorkflowsResponse} ListWorkflowsResponse
                          * @throws {Error} If the payload is not a reader or valid buffer
                          * @throws {$protobuf.util.ProtocolError} If required fields are missing
                          */
@@ -1177,7 +1183,7 @@
                         /**
                          * Verifies a ListWorkflowsResponse message.
                          * @function verify
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsResponse
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsResponse
                          * @static
                          * @param {Object.<string,*>} message Plain object to verify
                          * @returns {string|null} `null` if valid, otherwise the reason why it is not
@@ -1189,7 +1195,7 @@
                                 if (!Array.isArray(message.workflows))
                                     return "workflows: array expected";
                                 for (var i = 0; i < message.workflows.length; ++i) {
-                                    var error = $root.google.cloud.workflows.v1alpha1.Workflow.verify(message.workflows[i]);
+                                    var error = $root.google.cloud.workflows.v1beta.Workflow.verify(message.workflows[i]);
                                     if (error)
                                         return "workflows." + error;
                                 }
@@ -1210,30 +1216,30 @@
                         /**
                          * Creates a ListWorkflowsResponse message from a plain object. Also converts values to their respective internal types.
                          * @function fromObject
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsResponse
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsResponse
                          * @static
                          * @param {Object.<string,*>} object Plain object
-                         * @returns {google.cloud.workflows.v1alpha1.ListWorkflowsResponse} ListWorkflowsResponse
+                         * @returns {google.cloud.workflows.v1beta.ListWorkflowsResponse} ListWorkflowsResponse
                          */
                         ListWorkflowsResponse.fromObject = function fromObject(object) {
-                            if (object instanceof $root.google.cloud.workflows.v1alpha1.ListWorkflowsResponse)
+                            if (object instanceof $root.google.cloud.workflows.v1beta.ListWorkflowsResponse)
                                 return object;
-                            var message = new $root.google.cloud.workflows.v1alpha1.ListWorkflowsResponse();
+                            var message = new $root.google.cloud.workflows.v1beta.ListWorkflowsResponse();
                             if (object.workflows) {
                                 if (!Array.isArray(object.workflows))
-                                    throw TypeError(".google.cloud.workflows.v1alpha1.ListWorkflowsResponse.workflows: array expected");
+                                    throw TypeError(".google.cloud.workflows.v1beta.ListWorkflowsResponse.workflows: array expected");
                                 message.workflows = [];
                                 for (var i = 0; i < object.workflows.length; ++i) {
                                     if (typeof object.workflows[i] !== "object")
-                                        throw TypeError(".google.cloud.workflows.v1alpha1.ListWorkflowsResponse.workflows: object expected");
-                                    message.workflows[i] = $root.google.cloud.workflows.v1alpha1.Workflow.fromObject(object.workflows[i]);
+                                        throw TypeError(".google.cloud.workflows.v1beta.ListWorkflowsResponse.workflows: object expected");
+                                    message.workflows[i] = $root.google.cloud.workflows.v1beta.Workflow.fromObject(object.workflows[i]);
                                 }
                             }
                             if (object.nextPageToken != null)
                                 message.nextPageToken = String(object.nextPageToken);
                             if (object.unreachable) {
                                 if (!Array.isArray(object.unreachable))
-                                    throw TypeError(".google.cloud.workflows.v1alpha1.ListWorkflowsResponse.unreachable: array expected");
+                                    throw TypeError(".google.cloud.workflows.v1beta.ListWorkflowsResponse.unreachable: array expected");
                                 message.unreachable = [];
                                 for (var i = 0; i < object.unreachable.length; ++i)
                                     message.unreachable[i] = String(object.unreachable[i]);
@@ -1244,9 +1250,9 @@
                         /**
                          * Creates a plain object from a ListWorkflowsResponse message. Also converts values to other types if specified.
                          * @function toObject
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsResponse
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsResponse
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.ListWorkflowsResponse} message ListWorkflowsResponse
+                         * @param {google.cloud.workflows.v1beta.ListWorkflowsResponse} message ListWorkflowsResponse
                          * @param {$protobuf.IConversionOptions} [options] Conversion options
                          * @returns {Object.<string,*>} Plain object
                          */
@@ -1263,7 +1269,7 @@
                             if (message.workflows && message.workflows.length) {
                                 object.workflows = [];
                                 for (var j = 0; j < message.workflows.length; ++j)
-                                    object.workflows[j] = $root.google.cloud.workflows.v1alpha1.Workflow.toObject(message.workflows[j], options);
+                                    object.workflows[j] = $root.google.cloud.workflows.v1beta.Workflow.toObject(message.workflows[j], options);
                             }
                             if (message.nextPageToken != null && message.hasOwnProperty("nextPageToken"))
                                 object.nextPageToken = message.nextPageToken;
@@ -1278,7 +1284,7 @@
                         /**
                          * Converts this ListWorkflowsResponse to JSON.
                          * @function toJSON
-                         * @memberof google.cloud.workflows.v1alpha1.ListWorkflowsResponse
+                         * @memberof google.cloud.workflows.v1beta.ListWorkflowsResponse
                          * @instance
                          * @returns {Object.<string,*>} JSON object
                          */
@@ -1289,22 +1295,22 @@
                         return ListWorkflowsResponse;
                     })();
     
-                    v1alpha1.GetWorkflowRequest = (function() {
+                    v1beta.GetWorkflowRequest = (function() {
     
                         /**
                          * Properties of a GetWorkflowRequest.
-                         * @memberof google.cloud.workflows.v1alpha1
+                         * @memberof google.cloud.workflows.v1beta
                          * @interface IGetWorkflowRequest
                          * @property {string|null} [name] GetWorkflowRequest name
                          */
     
                         /**
                          * Constructs a new GetWorkflowRequest.
-                         * @memberof google.cloud.workflows.v1alpha1
+                         * @memberof google.cloud.workflows.v1beta
                          * @classdesc Represents a GetWorkflowRequest.
                          * @implements IGetWorkflowRequest
                          * @constructor
-                         * @param {google.cloud.workflows.v1alpha1.IGetWorkflowRequest=} [properties] Properties to set
+                         * @param {google.cloud.workflows.v1beta.IGetWorkflowRequest=} [properties] Properties to set
                          */
                         function GetWorkflowRequest(properties) {
                             if (properties)
@@ -1316,7 +1322,7 @@
                         /**
                          * GetWorkflowRequest name.
                          * @member {string} name
-                         * @memberof google.cloud.workflows.v1alpha1.GetWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.GetWorkflowRequest
                          * @instance
                          */
                         GetWorkflowRequest.prototype.name = "";
@@ -1324,38 +1330,38 @@
                         /**
                          * Creates a new GetWorkflowRequest instance using the specified properties.
                          * @function create
-                         * @memberof google.cloud.workflows.v1alpha1.GetWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.GetWorkflowRequest
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.IGetWorkflowRequest=} [properties] Properties to set
-                         * @returns {google.cloud.workflows.v1alpha1.GetWorkflowRequest} GetWorkflowRequest instance
+                         * @param {google.cloud.workflows.v1beta.IGetWorkflowRequest=} [properties] Properties to set
+                         * @returns {google.cloud.workflows.v1beta.GetWorkflowRequest} GetWorkflowRequest instance
                          */
                         GetWorkflowRequest.create = function create(properties) {
                             return new GetWorkflowRequest(properties);
                         };
     
                         /**
-                         * Encodes the specified GetWorkflowRequest message. Does not implicitly {@link google.cloud.workflows.v1alpha1.GetWorkflowRequest.verify|verify} messages.
+                         * Encodes the specified GetWorkflowRequest message. Does not implicitly {@link google.cloud.workflows.v1beta.GetWorkflowRequest.verify|verify} messages.
                          * @function encode
-                         * @memberof google.cloud.workflows.v1alpha1.GetWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.GetWorkflowRequest
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.IGetWorkflowRequest} message GetWorkflowRequest message or plain object to encode
+                         * @param {google.cloud.workflows.v1beta.IGetWorkflowRequest} message GetWorkflowRequest message or plain object to encode
                          * @param {$protobuf.Writer} [writer] Writer to encode to
                          * @returns {$protobuf.Writer} Writer
                          */
                         GetWorkflowRequest.encode = function encode(message, writer) {
                             if (!writer)
                                 writer = $Writer.create();
-                            if (message.name != null && message.hasOwnProperty("name"))
+                            if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
                             return writer;
                         };
     
                         /**
-                         * Encodes the specified GetWorkflowRequest message, length delimited. Does not implicitly {@link google.cloud.workflows.v1alpha1.GetWorkflowRequest.verify|verify} messages.
+                         * Encodes the specified GetWorkflowRequest message, length delimited. Does not implicitly {@link google.cloud.workflows.v1beta.GetWorkflowRequest.verify|verify} messages.
                          * @function encodeDelimited
-                         * @memberof google.cloud.workflows.v1alpha1.GetWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.GetWorkflowRequest
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.IGetWorkflowRequest} message GetWorkflowRequest message or plain object to encode
+                         * @param {google.cloud.workflows.v1beta.IGetWorkflowRequest} message GetWorkflowRequest message or plain object to encode
                          * @param {$protobuf.Writer} [writer] Writer to encode to
                          * @returns {$protobuf.Writer} Writer
                          */
@@ -1366,18 +1372,18 @@
                         /**
                          * Decodes a GetWorkflowRequest message from the specified reader or buffer.
                          * @function decode
-                         * @memberof google.cloud.workflows.v1alpha1.GetWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.GetWorkflowRequest
                          * @static
                          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                          * @param {number} [length] Message length if known beforehand
-                         * @returns {google.cloud.workflows.v1alpha1.GetWorkflowRequest} GetWorkflowRequest
+                         * @returns {google.cloud.workflows.v1beta.GetWorkflowRequest} GetWorkflowRequest
                          * @throws {Error} If the payload is not a reader or valid buffer
                          * @throws {$protobuf.util.ProtocolError} If required fields are missing
                          */
                         GetWorkflowRequest.decode = function decode(reader, length) {
                             if (!(reader instanceof $Reader))
                                 reader = $Reader.create(reader);
-                            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.cloud.workflows.v1alpha1.GetWorkflowRequest();
+                            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.cloud.workflows.v1beta.GetWorkflowRequest();
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
@@ -1395,10 +1401,10 @@
                         /**
                          * Decodes a GetWorkflowRequest message from the specified reader or buffer, length delimited.
                          * @function decodeDelimited
-                         * @memberof google.cloud.workflows.v1alpha1.GetWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.GetWorkflowRequest
                          * @static
                          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                         * @returns {google.cloud.workflows.v1alpha1.GetWorkflowRequest} GetWorkflowRequest
+                         * @returns {google.cloud.workflows.v1beta.GetWorkflowRequest} GetWorkflowRequest
                          * @throws {Error} If the payload is not a reader or valid buffer
                          * @throws {$protobuf.util.ProtocolError} If required fields are missing
                          */
@@ -1411,7 +1417,7 @@
                         /**
                          * Verifies a GetWorkflowRequest message.
                          * @function verify
-                         * @memberof google.cloud.workflows.v1alpha1.GetWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.GetWorkflowRequest
                          * @static
                          * @param {Object.<string,*>} message Plain object to verify
                          * @returns {string|null} `null` if valid, otherwise the reason why it is not
@@ -1428,15 +1434,15 @@
                         /**
                          * Creates a GetWorkflowRequest message from a plain object. Also converts values to their respective internal types.
                          * @function fromObject
-                         * @memberof google.cloud.workflows.v1alpha1.GetWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.GetWorkflowRequest
                          * @static
                          * @param {Object.<string,*>} object Plain object
-                         * @returns {google.cloud.workflows.v1alpha1.GetWorkflowRequest} GetWorkflowRequest
+                         * @returns {google.cloud.workflows.v1beta.GetWorkflowRequest} GetWorkflowRequest
                          */
                         GetWorkflowRequest.fromObject = function fromObject(object) {
-                            if (object instanceof $root.google.cloud.workflows.v1alpha1.GetWorkflowRequest)
+                            if (object instanceof $root.google.cloud.workflows.v1beta.GetWorkflowRequest)
                                 return object;
-                            var message = new $root.google.cloud.workflows.v1alpha1.GetWorkflowRequest();
+                            var message = new $root.google.cloud.workflows.v1beta.GetWorkflowRequest();
                             if (object.name != null)
                                 message.name = String(object.name);
                             return message;
@@ -1445,9 +1451,9 @@
                         /**
                          * Creates a plain object from a GetWorkflowRequest message. Also converts values to other types if specified.
                          * @function toObject
-                         * @memberof google.cloud.workflows.v1alpha1.GetWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.GetWorkflowRequest
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.GetWorkflowRequest} message GetWorkflowRequest
+                         * @param {google.cloud.workflows.v1beta.GetWorkflowRequest} message GetWorkflowRequest
                          * @param {$protobuf.IConversionOptions} [options] Conversion options
                          * @returns {Object.<string,*>} Plain object
                          */
@@ -1465,7 +1471,7 @@
                         /**
                          * Converts this GetWorkflowRequest to JSON.
                          * @function toJSON
-                         * @memberof google.cloud.workflows.v1alpha1.GetWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.GetWorkflowRequest
                          * @instance
                          * @returns {Object.<string,*>} JSON object
                          */
@@ -1476,24 +1482,24 @@
                         return GetWorkflowRequest;
                     })();
     
-                    v1alpha1.CreateWorkflowRequest = (function() {
+                    v1beta.CreateWorkflowRequest = (function() {
     
                         /**
                          * Properties of a CreateWorkflowRequest.
-                         * @memberof google.cloud.workflows.v1alpha1
+                         * @memberof google.cloud.workflows.v1beta
                          * @interface ICreateWorkflowRequest
                          * @property {string|null} [parent] CreateWorkflowRequest parent
-                         * @property {google.cloud.workflows.v1alpha1.IWorkflow|null} [workflow] CreateWorkflowRequest workflow
+                         * @property {google.cloud.workflows.v1beta.IWorkflow|null} [workflow] CreateWorkflowRequest workflow
                          * @property {string|null} [workflowId] CreateWorkflowRequest workflowId
                          */
     
                         /**
                          * Constructs a new CreateWorkflowRequest.
-                         * @memberof google.cloud.workflows.v1alpha1
+                         * @memberof google.cloud.workflows.v1beta
                          * @classdesc Represents a CreateWorkflowRequest.
                          * @implements ICreateWorkflowRequest
                          * @constructor
-                         * @param {google.cloud.workflows.v1alpha1.ICreateWorkflowRequest=} [properties] Properties to set
+                         * @param {google.cloud.workflows.v1beta.ICreateWorkflowRequest=} [properties] Properties to set
                          */
                         function CreateWorkflowRequest(properties) {
                             if (properties)
@@ -1505,15 +1511,15 @@
                         /**
                          * CreateWorkflowRequest parent.
                          * @member {string} parent
-                         * @memberof google.cloud.workflows.v1alpha1.CreateWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.CreateWorkflowRequest
                          * @instance
                          */
                         CreateWorkflowRequest.prototype.parent = "";
     
                         /**
                          * CreateWorkflowRequest workflow.
-                         * @member {google.cloud.workflows.v1alpha1.IWorkflow|null|undefined} workflow
-                         * @memberof google.cloud.workflows.v1alpha1.CreateWorkflowRequest
+                         * @member {google.cloud.workflows.v1beta.IWorkflow|null|undefined} workflow
+                         * @memberof google.cloud.workflows.v1beta.CreateWorkflowRequest
                          * @instance
                          */
                         CreateWorkflowRequest.prototype.workflow = null;
@@ -1521,7 +1527,7 @@
                         /**
                          * CreateWorkflowRequest workflowId.
                          * @member {string} workflowId
-                         * @memberof google.cloud.workflows.v1alpha1.CreateWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.CreateWorkflowRequest
                          * @instance
                          */
                         CreateWorkflowRequest.prototype.workflowId = "";
@@ -1529,42 +1535,42 @@
                         /**
                          * Creates a new CreateWorkflowRequest instance using the specified properties.
                          * @function create
-                         * @memberof google.cloud.workflows.v1alpha1.CreateWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.CreateWorkflowRequest
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.ICreateWorkflowRequest=} [properties] Properties to set
-                         * @returns {google.cloud.workflows.v1alpha1.CreateWorkflowRequest} CreateWorkflowRequest instance
+                         * @param {google.cloud.workflows.v1beta.ICreateWorkflowRequest=} [properties] Properties to set
+                         * @returns {google.cloud.workflows.v1beta.CreateWorkflowRequest} CreateWorkflowRequest instance
                          */
                         CreateWorkflowRequest.create = function create(properties) {
                             return new CreateWorkflowRequest(properties);
                         };
     
                         /**
-                         * Encodes the specified CreateWorkflowRequest message. Does not implicitly {@link google.cloud.workflows.v1alpha1.CreateWorkflowRequest.verify|verify} messages.
+                         * Encodes the specified CreateWorkflowRequest message. Does not implicitly {@link google.cloud.workflows.v1beta.CreateWorkflowRequest.verify|verify} messages.
                          * @function encode
-                         * @memberof google.cloud.workflows.v1alpha1.CreateWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.CreateWorkflowRequest
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.ICreateWorkflowRequest} message CreateWorkflowRequest message or plain object to encode
+                         * @param {google.cloud.workflows.v1beta.ICreateWorkflowRequest} message CreateWorkflowRequest message or plain object to encode
                          * @param {$protobuf.Writer} [writer] Writer to encode to
                          * @returns {$protobuf.Writer} Writer
                          */
                         CreateWorkflowRequest.encode = function encode(message, writer) {
                             if (!writer)
                                 writer = $Writer.create();
-                            if (message.parent != null && message.hasOwnProperty("parent"))
+                            if (message.parent != null && Object.hasOwnProperty.call(message, "parent"))
                                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.parent);
-                            if (message.workflow != null && message.hasOwnProperty("workflow"))
-                                $root.google.cloud.workflows.v1alpha1.Workflow.encode(message.workflow, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-                            if (message.workflowId != null && message.hasOwnProperty("workflowId"))
+                            if (message.workflow != null && Object.hasOwnProperty.call(message, "workflow"))
+                                $root.google.cloud.workflows.v1beta.Workflow.encode(message.workflow, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                            if (message.workflowId != null && Object.hasOwnProperty.call(message, "workflowId"))
                                 writer.uint32(/* id 3, wireType 2 =*/26).string(message.workflowId);
                             return writer;
                         };
     
                         /**
-                         * Encodes the specified CreateWorkflowRequest message, length delimited. Does not implicitly {@link google.cloud.workflows.v1alpha1.CreateWorkflowRequest.verify|verify} messages.
+                         * Encodes the specified CreateWorkflowRequest message, length delimited. Does not implicitly {@link google.cloud.workflows.v1beta.CreateWorkflowRequest.verify|verify} messages.
                          * @function encodeDelimited
-                         * @memberof google.cloud.workflows.v1alpha1.CreateWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.CreateWorkflowRequest
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.ICreateWorkflowRequest} message CreateWorkflowRequest message or plain object to encode
+                         * @param {google.cloud.workflows.v1beta.ICreateWorkflowRequest} message CreateWorkflowRequest message or plain object to encode
                          * @param {$protobuf.Writer} [writer] Writer to encode to
                          * @returns {$protobuf.Writer} Writer
                          */
@@ -1575,18 +1581,18 @@
                         /**
                          * Decodes a CreateWorkflowRequest message from the specified reader or buffer.
                          * @function decode
-                         * @memberof google.cloud.workflows.v1alpha1.CreateWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.CreateWorkflowRequest
                          * @static
                          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                          * @param {number} [length] Message length if known beforehand
-                         * @returns {google.cloud.workflows.v1alpha1.CreateWorkflowRequest} CreateWorkflowRequest
+                         * @returns {google.cloud.workflows.v1beta.CreateWorkflowRequest} CreateWorkflowRequest
                          * @throws {Error} If the payload is not a reader or valid buffer
                          * @throws {$protobuf.util.ProtocolError} If required fields are missing
                          */
                         CreateWorkflowRequest.decode = function decode(reader, length) {
                             if (!(reader instanceof $Reader))
                                 reader = $Reader.create(reader);
-                            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.cloud.workflows.v1alpha1.CreateWorkflowRequest();
+                            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.cloud.workflows.v1beta.CreateWorkflowRequest();
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
@@ -1594,7 +1600,7 @@
                                     message.parent = reader.string();
                                     break;
                                 case 2:
-                                    message.workflow = $root.google.cloud.workflows.v1alpha1.Workflow.decode(reader, reader.uint32());
+                                    message.workflow = $root.google.cloud.workflows.v1beta.Workflow.decode(reader, reader.uint32());
                                     break;
                                 case 3:
                                     message.workflowId = reader.string();
@@ -1610,10 +1616,10 @@
                         /**
                          * Decodes a CreateWorkflowRequest message from the specified reader or buffer, length delimited.
                          * @function decodeDelimited
-                         * @memberof google.cloud.workflows.v1alpha1.CreateWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.CreateWorkflowRequest
                          * @static
                          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                         * @returns {google.cloud.workflows.v1alpha1.CreateWorkflowRequest} CreateWorkflowRequest
+                         * @returns {google.cloud.workflows.v1beta.CreateWorkflowRequest} CreateWorkflowRequest
                          * @throws {Error} If the payload is not a reader or valid buffer
                          * @throws {$protobuf.util.ProtocolError} If required fields are missing
                          */
@@ -1626,7 +1632,7 @@
                         /**
                          * Verifies a CreateWorkflowRequest message.
                          * @function verify
-                         * @memberof google.cloud.workflows.v1alpha1.CreateWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.CreateWorkflowRequest
                          * @static
                          * @param {Object.<string,*>} message Plain object to verify
                          * @returns {string|null} `null` if valid, otherwise the reason why it is not
@@ -1638,7 +1644,7 @@
                                 if (!$util.isString(message.parent))
                                     return "parent: string expected";
                             if (message.workflow != null && message.hasOwnProperty("workflow")) {
-                                var error = $root.google.cloud.workflows.v1alpha1.Workflow.verify(message.workflow);
+                                var error = $root.google.cloud.workflows.v1beta.Workflow.verify(message.workflow);
                                 if (error)
                                     return "workflow." + error;
                             }
@@ -1651,21 +1657,21 @@
                         /**
                          * Creates a CreateWorkflowRequest message from a plain object. Also converts values to their respective internal types.
                          * @function fromObject
-                         * @memberof google.cloud.workflows.v1alpha1.CreateWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.CreateWorkflowRequest
                          * @static
                          * @param {Object.<string,*>} object Plain object
-                         * @returns {google.cloud.workflows.v1alpha1.CreateWorkflowRequest} CreateWorkflowRequest
+                         * @returns {google.cloud.workflows.v1beta.CreateWorkflowRequest} CreateWorkflowRequest
                          */
                         CreateWorkflowRequest.fromObject = function fromObject(object) {
-                            if (object instanceof $root.google.cloud.workflows.v1alpha1.CreateWorkflowRequest)
+                            if (object instanceof $root.google.cloud.workflows.v1beta.CreateWorkflowRequest)
                                 return object;
-                            var message = new $root.google.cloud.workflows.v1alpha1.CreateWorkflowRequest();
+                            var message = new $root.google.cloud.workflows.v1beta.CreateWorkflowRequest();
                             if (object.parent != null)
                                 message.parent = String(object.parent);
                             if (object.workflow != null) {
                                 if (typeof object.workflow !== "object")
-                                    throw TypeError(".google.cloud.workflows.v1alpha1.CreateWorkflowRequest.workflow: object expected");
-                                message.workflow = $root.google.cloud.workflows.v1alpha1.Workflow.fromObject(object.workflow);
+                                    throw TypeError(".google.cloud.workflows.v1beta.CreateWorkflowRequest.workflow: object expected");
+                                message.workflow = $root.google.cloud.workflows.v1beta.Workflow.fromObject(object.workflow);
                             }
                             if (object.workflowId != null)
                                 message.workflowId = String(object.workflowId);
@@ -1675,9 +1681,9 @@
                         /**
                          * Creates a plain object from a CreateWorkflowRequest message. Also converts values to other types if specified.
                          * @function toObject
-                         * @memberof google.cloud.workflows.v1alpha1.CreateWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.CreateWorkflowRequest
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.CreateWorkflowRequest} message CreateWorkflowRequest
+                         * @param {google.cloud.workflows.v1beta.CreateWorkflowRequest} message CreateWorkflowRequest
                          * @param {$protobuf.IConversionOptions} [options] Conversion options
                          * @returns {Object.<string,*>} Plain object
                          */
@@ -1693,7 +1699,7 @@
                             if (message.parent != null && message.hasOwnProperty("parent"))
                                 object.parent = message.parent;
                             if (message.workflow != null && message.hasOwnProperty("workflow"))
-                                object.workflow = $root.google.cloud.workflows.v1alpha1.Workflow.toObject(message.workflow, options);
+                                object.workflow = $root.google.cloud.workflows.v1beta.Workflow.toObject(message.workflow, options);
                             if (message.workflowId != null && message.hasOwnProperty("workflowId"))
                                 object.workflowId = message.workflowId;
                             return object;
@@ -1702,7 +1708,7 @@
                         /**
                          * Converts this CreateWorkflowRequest to JSON.
                          * @function toJSON
-                         * @memberof google.cloud.workflows.v1alpha1.CreateWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.CreateWorkflowRequest
                          * @instance
                          * @returns {Object.<string,*>} JSON object
                          */
@@ -1713,22 +1719,22 @@
                         return CreateWorkflowRequest;
                     })();
     
-                    v1alpha1.DeleteWorkflowRequest = (function() {
+                    v1beta.DeleteWorkflowRequest = (function() {
     
                         /**
                          * Properties of a DeleteWorkflowRequest.
-                         * @memberof google.cloud.workflows.v1alpha1
+                         * @memberof google.cloud.workflows.v1beta
                          * @interface IDeleteWorkflowRequest
                          * @property {string|null} [name] DeleteWorkflowRequest name
                          */
     
                         /**
                          * Constructs a new DeleteWorkflowRequest.
-                         * @memberof google.cloud.workflows.v1alpha1
+                         * @memberof google.cloud.workflows.v1beta
                          * @classdesc Represents a DeleteWorkflowRequest.
                          * @implements IDeleteWorkflowRequest
                          * @constructor
-                         * @param {google.cloud.workflows.v1alpha1.IDeleteWorkflowRequest=} [properties] Properties to set
+                         * @param {google.cloud.workflows.v1beta.IDeleteWorkflowRequest=} [properties] Properties to set
                          */
                         function DeleteWorkflowRequest(properties) {
                             if (properties)
@@ -1740,7 +1746,7 @@
                         /**
                          * DeleteWorkflowRequest name.
                          * @member {string} name
-                         * @memberof google.cloud.workflows.v1alpha1.DeleteWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.DeleteWorkflowRequest
                          * @instance
                          */
                         DeleteWorkflowRequest.prototype.name = "";
@@ -1748,38 +1754,38 @@
                         /**
                          * Creates a new DeleteWorkflowRequest instance using the specified properties.
                          * @function create
-                         * @memberof google.cloud.workflows.v1alpha1.DeleteWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.DeleteWorkflowRequest
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.IDeleteWorkflowRequest=} [properties] Properties to set
-                         * @returns {google.cloud.workflows.v1alpha1.DeleteWorkflowRequest} DeleteWorkflowRequest instance
+                         * @param {google.cloud.workflows.v1beta.IDeleteWorkflowRequest=} [properties] Properties to set
+                         * @returns {google.cloud.workflows.v1beta.DeleteWorkflowRequest} DeleteWorkflowRequest instance
                          */
                         DeleteWorkflowRequest.create = function create(properties) {
                             return new DeleteWorkflowRequest(properties);
                         };
     
                         /**
-                         * Encodes the specified DeleteWorkflowRequest message. Does not implicitly {@link google.cloud.workflows.v1alpha1.DeleteWorkflowRequest.verify|verify} messages.
+                         * Encodes the specified DeleteWorkflowRequest message. Does not implicitly {@link google.cloud.workflows.v1beta.DeleteWorkflowRequest.verify|verify} messages.
                          * @function encode
-                         * @memberof google.cloud.workflows.v1alpha1.DeleteWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.DeleteWorkflowRequest
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.IDeleteWorkflowRequest} message DeleteWorkflowRequest message or plain object to encode
+                         * @param {google.cloud.workflows.v1beta.IDeleteWorkflowRequest} message DeleteWorkflowRequest message or plain object to encode
                          * @param {$protobuf.Writer} [writer] Writer to encode to
                          * @returns {$protobuf.Writer} Writer
                          */
                         DeleteWorkflowRequest.encode = function encode(message, writer) {
                             if (!writer)
                                 writer = $Writer.create();
-                            if (message.name != null && message.hasOwnProperty("name"))
+                            if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
                             return writer;
                         };
     
                         /**
-                         * Encodes the specified DeleteWorkflowRequest message, length delimited. Does not implicitly {@link google.cloud.workflows.v1alpha1.DeleteWorkflowRequest.verify|verify} messages.
+                         * Encodes the specified DeleteWorkflowRequest message, length delimited. Does not implicitly {@link google.cloud.workflows.v1beta.DeleteWorkflowRequest.verify|verify} messages.
                          * @function encodeDelimited
-                         * @memberof google.cloud.workflows.v1alpha1.DeleteWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.DeleteWorkflowRequest
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.IDeleteWorkflowRequest} message DeleteWorkflowRequest message or plain object to encode
+                         * @param {google.cloud.workflows.v1beta.IDeleteWorkflowRequest} message DeleteWorkflowRequest message or plain object to encode
                          * @param {$protobuf.Writer} [writer] Writer to encode to
                          * @returns {$protobuf.Writer} Writer
                          */
@@ -1790,18 +1796,18 @@
                         /**
                          * Decodes a DeleteWorkflowRequest message from the specified reader or buffer.
                          * @function decode
-                         * @memberof google.cloud.workflows.v1alpha1.DeleteWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.DeleteWorkflowRequest
                          * @static
                          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                          * @param {number} [length] Message length if known beforehand
-                         * @returns {google.cloud.workflows.v1alpha1.DeleteWorkflowRequest} DeleteWorkflowRequest
+                         * @returns {google.cloud.workflows.v1beta.DeleteWorkflowRequest} DeleteWorkflowRequest
                          * @throws {Error} If the payload is not a reader or valid buffer
                          * @throws {$protobuf.util.ProtocolError} If required fields are missing
                          */
                         DeleteWorkflowRequest.decode = function decode(reader, length) {
                             if (!(reader instanceof $Reader))
                                 reader = $Reader.create(reader);
-                            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.cloud.workflows.v1alpha1.DeleteWorkflowRequest();
+                            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.cloud.workflows.v1beta.DeleteWorkflowRequest();
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
@@ -1819,10 +1825,10 @@
                         /**
                          * Decodes a DeleteWorkflowRequest message from the specified reader or buffer, length delimited.
                          * @function decodeDelimited
-                         * @memberof google.cloud.workflows.v1alpha1.DeleteWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.DeleteWorkflowRequest
                          * @static
                          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                         * @returns {google.cloud.workflows.v1alpha1.DeleteWorkflowRequest} DeleteWorkflowRequest
+                         * @returns {google.cloud.workflows.v1beta.DeleteWorkflowRequest} DeleteWorkflowRequest
                          * @throws {Error} If the payload is not a reader or valid buffer
                          * @throws {$protobuf.util.ProtocolError} If required fields are missing
                          */
@@ -1835,7 +1841,7 @@
                         /**
                          * Verifies a DeleteWorkflowRequest message.
                          * @function verify
-                         * @memberof google.cloud.workflows.v1alpha1.DeleteWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.DeleteWorkflowRequest
                          * @static
                          * @param {Object.<string,*>} message Plain object to verify
                          * @returns {string|null} `null` if valid, otherwise the reason why it is not
@@ -1852,15 +1858,15 @@
                         /**
                          * Creates a DeleteWorkflowRequest message from a plain object. Also converts values to their respective internal types.
                          * @function fromObject
-                         * @memberof google.cloud.workflows.v1alpha1.DeleteWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.DeleteWorkflowRequest
                          * @static
                          * @param {Object.<string,*>} object Plain object
-                         * @returns {google.cloud.workflows.v1alpha1.DeleteWorkflowRequest} DeleteWorkflowRequest
+                         * @returns {google.cloud.workflows.v1beta.DeleteWorkflowRequest} DeleteWorkflowRequest
                          */
                         DeleteWorkflowRequest.fromObject = function fromObject(object) {
-                            if (object instanceof $root.google.cloud.workflows.v1alpha1.DeleteWorkflowRequest)
+                            if (object instanceof $root.google.cloud.workflows.v1beta.DeleteWorkflowRequest)
                                 return object;
-                            var message = new $root.google.cloud.workflows.v1alpha1.DeleteWorkflowRequest();
+                            var message = new $root.google.cloud.workflows.v1beta.DeleteWorkflowRequest();
                             if (object.name != null)
                                 message.name = String(object.name);
                             return message;
@@ -1869,9 +1875,9 @@
                         /**
                          * Creates a plain object from a DeleteWorkflowRequest message. Also converts values to other types if specified.
                          * @function toObject
-                         * @memberof google.cloud.workflows.v1alpha1.DeleteWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.DeleteWorkflowRequest
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.DeleteWorkflowRequest} message DeleteWorkflowRequest
+                         * @param {google.cloud.workflows.v1beta.DeleteWorkflowRequest} message DeleteWorkflowRequest
                          * @param {$protobuf.IConversionOptions} [options] Conversion options
                          * @returns {Object.<string,*>} Plain object
                          */
@@ -1889,7 +1895,7 @@
                         /**
                          * Converts this DeleteWorkflowRequest to JSON.
                          * @function toJSON
-                         * @memberof google.cloud.workflows.v1alpha1.DeleteWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.DeleteWorkflowRequest
                          * @instance
                          * @returns {Object.<string,*>} JSON object
                          */
@@ -1900,23 +1906,23 @@
                         return DeleteWorkflowRequest;
                     })();
     
-                    v1alpha1.UpdateWorkflowRequest = (function() {
+                    v1beta.UpdateWorkflowRequest = (function() {
     
                         /**
                          * Properties of an UpdateWorkflowRequest.
-                         * @memberof google.cloud.workflows.v1alpha1
+                         * @memberof google.cloud.workflows.v1beta
                          * @interface IUpdateWorkflowRequest
-                         * @property {google.cloud.workflows.v1alpha1.IWorkflow|null} [workflow] UpdateWorkflowRequest workflow
+                         * @property {google.cloud.workflows.v1beta.IWorkflow|null} [workflow] UpdateWorkflowRequest workflow
                          * @property {google.protobuf.IFieldMask|null} [updateMask] UpdateWorkflowRequest updateMask
                          */
     
                         /**
                          * Constructs a new UpdateWorkflowRequest.
-                         * @memberof google.cloud.workflows.v1alpha1
+                         * @memberof google.cloud.workflows.v1beta
                          * @classdesc Represents an UpdateWorkflowRequest.
                          * @implements IUpdateWorkflowRequest
                          * @constructor
-                         * @param {google.cloud.workflows.v1alpha1.IUpdateWorkflowRequest=} [properties] Properties to set
+                         * @param {google.cloud.workflows.v1beta.IUpdateWorkflowRequest=} [properties] Properties to set
                          */
                         function UpdateWorkflowRequest(properties) {
                             if (properties)
@@ -1927,8 +1933,8 @@
     
                         /**
                          * UpdateWorkflowRequest workflow.
-                         * @member {google.cloud.workflows.v1alpha1.IWorkflow|null|undefined} workflow
-                         * @memberof google.cloud.workflows.v1alpha1.UpdateWorkflowRequest
+                         * @member {google.cloud.workflows.v1beta.IWorkflow|null|undefined} workflow
+                         * @memberof google.cloud.workflows.v1beta.UpdateWorkflowRequest
                          * @instance
                          */
                         UpdateWorkflowRequest.prototype.workflow = null;
@@ -1936,7 +1942,7 @@
                         /**
                          * UpdateWorkflowRequest updateMask.
                          * @member {google.protobuf.IFieldMask|null|undefined} updateMask
-                         * @memberof google.cloud.workflows.v1alpha1.UpdateWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.UpdateWorkflowRequest
                          * @instance
                          */
                         UpdateWorkflowRequest.prototype.updateMask = null;
@@ -1944,40 +1950,40 @@
                         /**
                          * Creates a new UpdateWorkflowRequest instance using the specified properties.
                          * @function create
-                         * @memberof google.cloud.workflows.v1alpha1.UpdateWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.UpdateWorkflowRequest
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.IUpdateWorkflowRequest=} [properties] Properties to set
-                         * @returns {google.cloud.workflows.v1alpha1.UpdateWorkflowRequest} UpdateWorkflowRequest instance
+                         * @param {google.cloud.workflows.v1beta.IUpdateWorkflowRequest=} [properties] Properties to set
+                         * @returns {google.cloud.workflows.v1beta.UpdateWorkflowRequest} UpdateWorkflowRequest instance
                          */
                         UpdateWorkflowRequest.create = function create(properties) {
                             return new UpdateWorkflowRequest(properties);
                         };
     
                         /**
-                         * Encodes the specified UpdateWorkflowRequest message. Does not implicitly {@link google.cloud.workflows.v1alpha1.UpdateWorkflowRequest.verify|verify} messages.
+                         * Encodes the specified UpdateWorkflowRequest message. Does not implicitly {@link google.cloud.workflows.v1beta.UpdateWorkflowRequest.verify|verify} messages.
                          * @function encode
-                         * @memberof google.cloud.workflows.v1alpha1.UpdateWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.UpdateWorkflowRequest
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.IUpdateWorkflowRequest} message UpdateWorkflowRequest message or plain object to encode
+                         * @param {google.cloud.workflows.v1beta.IUpdateWorkflowRequest} message UpdateWorkflowRequest message or plain object to encode
                          * @param {$protobuf.Writer} [writer] Writer to encode to
                          * @returns {$protobuf.Writer} Writer
                          */
                         UpdateWorkflowRequest.encode = function encode(message, writer) {
                             if (!writer)
                                 writer = $Writer.create();
-                            if (message.workflow != null && message.hasOwnProperty("workflow"))
-                                $root.google.cloud.workflows.v1alpha1.Workflow.encode(message.workflow, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                            if (message.updateMask != null && message.hasOwnProperty("updateMask"))
+                            if (message.workflow != null && Object.hasOwnProperty.call(message, "workflow"))
+                                $root.google.cloud.workflows.v1beta.Workflow.encode(message.workflow, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                            if (message.updateMask != null && Object.hasOwnProperty.call(message, "updateMask"))
                                 $root.google.protobuf.FieldMask.encode(message.updateMask, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
                             return writer;
                         };
     
                         /**
-                         * Encodes the specified UpdateWorkflowRequest message, length delimited. Does not implicitly {@link google.cloud.workflows.v1alpha1.UpdateWorkflowRequest.verify|verify} messages.
+                         * Encodes the specified UpdateWorkflowRequest message, length delimited. Does not implicitly {@link google.cloud.workflows.v1beta.UpdateWorkflowRequest.verify|verify} messages.
                          * @function encodeDelimited
-                         * @memberof google.cloud.workflows.v1alpha1.UpdateWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.UpdateWorkflowRequest
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.IUpdateWorkflowRequest} message UpdateWorkflowRequest message or plain object to encode
+                         * @param {google.cloud.workflows.v1beta.IUpdateWorkflowRequest} message UpdateWorkflowRequest message or plain object to encode
                          * @param {$protobuf.Writer} [writer] Writer to encode to
                          * @returns {$protobuf.Writer} Writer
                          */
@@ -1988,23 +1994,23 @@
                         /**
                          * Decodes an UpdateWorkflowRequest message from the specified reader or buffer.
                          * @function decode
-                         * @memberof google.cloud.workflows.v1alpha1.UpdateWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.UpdateWorkflowRequest
                          * @static
                          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                          * @param {number} [length] Message length if known beforehand
-                         * @returns {google.cloud.workflows.v1alpha1.UpdateWorkflowRequest} UpdateWorkflowRequest
+                         * @returns {google.cloud.workflows.v1beta.UpdateWorkflowRequest} UpdateWorkflowRequest
                          * @throws {Error} If the payload is not a reader or valid buffer
                          * @throws {$protobuf.util.ProtocolError} If required fields are missing
                          */
                         UpdateWorkflowRequest.decode = function decode(reader, length) {
                             if (!(reader instanceof $Reader))
                                 reader = $Reader.create(reader);
-                            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.cloud.workflows.v1alpha1.UpdateWorkflowRequest();
+                            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.cloud.workflows.v1beta.UpdateWorkflowRequest();
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
                                 case 1:
-                                    message.workflow = $root.google.cloud.workflows.v1alpha1.Workflow.decode(reader, reader.uint32());
+                                    message.workflow = $root.google.cloud.workflows.v1beta.Workflow.decode(reader, reader.uint32());
                                     break;
                                 case 2:
                                     message.updateMask = $root.google.protobuf.FieldMask.decode(reader, reader.uint32());
@@ -2020,10 +2026,10 @@
                         /**
                          * Decodes an UpdateWorkflowRequest message from the specified reader or buffer, length delimited.
                          * @function decodeDelimited
-                         * @memberof google.cloud.workflows.v1alpha1.UpdateWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.UpdateWorkflowRequest
                          * @static
                          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                         * @returns {google.cloud.workflows.v1alpha1.UpdateWorkflowRequest} UpdateWorkflowRequest
+                         * @returns {google.cloud.workflows.v1beta.UpdateWorkflowRequest} UpdateWorkflowRequest
                          * @throws {Error} If the payload is not a reader or valid buffer
                          * @throws {$protobuf.util.ProtocolError} If required fields are missing
                          */
@@ -2036,7 +2042,7 @@
                         /**
                          * Verifies an UpdateWorkflowRequest message.
                          * @function verify
-                         * @memberof google.cloud.workflows.v1alpha1.UpdateWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.UpdateWorkflowRequest
                          * @static
                          * @param {Object.<string,*>} message Plain object to verify
                          * @returns {string|null} `null` if valid, otherwise the reason why it is not
@@ -2045,7 +2051,7 @@
                             if (typeof message !== "object" || message === null)
                                 return "object expected";
                             if (message.workflow != null && message.hasOwnProperty("workflow")) {
-                                var error = $root.google.cloud.workflows.v1alpha1.Workflow.verify(message.workflow);
+                                var error = $root.google.cloud.workflows.v1beta.Workflow.verify(message.workflow);
                                 if (error)
                                     return "workflow." + error;
                             }
@@ -2060,23 +2066,23 @@
                         /**
                          * Creates an UpdateWorkflowRequest message from a plain object. Also converts values to their respective internal types.
                          * @function fromObject
-                         * @memberof google.cloud.workflows.v1alpha1.UpdateWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.UpdateWorkflowRequest
                          * @static
                          * @param {Object.<string,*>} object Plain object
-                         * @returns {google.cloud.workflows.v1alpha1.UpdateWorkflowRequest} UpdateWorkflowRequest
+                         * @returns {google.cloud.workflows.v1beta.UpdateWorkflowRequest} UpdateWorkflowRequest
                          */
                         UpdateWorkflowRequest.fromObject = function fromObject(object) {
-                            if (object instanceof $root.google.cloud.workflows.v1alpha1.UpdateWorkflowRequest)
+                            if (object instanceof $root.google.cloud.workflows.v1beta.UpdateWorkflowRequest)
                                 return object;
-                            var message = new $root.google.cloud.workflows.v1alpha1.UpdateWorkflowRequest();
+                            var message = new $root.google.cloud.workflows.v1beta.UpdateWorkflowRequest();
                             if (object.workflow != null) {
                                 if (typeof object.workflow !== "object")
-                                    throw TypeError(".google.cloud.workflows.v1alpha1.UpdateWorkflowRequest.workflow: object expected");
-                                message.workflow = $root.google.cloud.workflows.v1alpha1.Workflow.fromObject(object.workflow);
+                                    throw TypeError(".google.cloud.workflows.v1beta.UpdateWorkflowRequest.workflow: object expected");
+                                message.workflow = $root.google.cloud.workflows.v1beta.Workflow.fromObject(object.workflow);
                             }
                             if (object.updateMask != null) {
                                 if (typeof object.updateMask !== "object")
-                                    throw TypeError(".google.cloud.workflows.v1alpha1.UpdateWorkflowRequest.updateMask: object expected");
+                                    throw TypeError(".google.cloud.workflows.v1beta.UpdateWorkflowRequest.updateMask: object expected");
                                 message.updateMask = $root.google.protobuf.FieldMask.fromObject(object.updateMask);
                             }
                             return message;
@@ -2085,9 +2091,9 @@
                         /**
                          * Creates a plain object from an UpdateWorkflowRequest message. Also converts values to other types if specified.
                          * @function toObject
-                         * @memberof google.cloud.workflows.v1alpha1.UpdateWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.UpdateWorkflowRequest
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.UpdateWorkflowRequest} message UpdateWorkflowRequest
+                         * @param {google.cloud.workflows.v1beta.UpdateWorkflowRequest} message UpdateWorkflowRequest
                          * @param {$protobuf.IConversionOptions} [options] Conversion options
                          * @returns {Object.<string,*>} Plain object
                          */
@@ -2100,7 +2106,7 @@
                                 object.updateMask = null;
                             }
                             if (message.workflow != null && message.hasOwnProperty("workflow"))
-                                object.workflow = $root.google.cloud.workflows.v1alpha1.Workflow.toObject(message.workflow, options);
+                                object.workflow = $root.google.cloud.workflows.v1beta.Workflow.toObject(message.workflow, options);
                             if (message.updateMask != null && message.hasOwnProperty("updateMask"))
                                 object.updateMask = $root.google.protobuf.FieldMask.toObject(message.updateMask, options);
                             return object;
@@ -2109,7 +2115,7 @@
                         /**
                          * Converts this UpdateWorkflowRequest to JSON.
                          * @function toJSON
-                         * @memberof google.cloud.workflows.v1alpha1.UpdateWorkflowRequest
+                         * @memberof google.cloud.workflows.v1beta.UpdateWorkflowRequest
                          * @instance
                          * @returns {Object.<string,*>} JSON object
                          */
@@ -2120,28 +2126,26 @@
                         return UpdateWorkflowRequest;
                     })();
     
-                    v1alpha1.OperationMetadata = (function() {
+                    v1beta.OperationMetadata = (function() {
     
                         /**
                          * Properties of an OperationMetadata.
-                         * @memberof google.cloud.workflows.v1alpha1
+                         * @memberof google.cloud.workflows.v1beta
                          * @interface IOperationMetadata
                          * @property {google.protobuf.ITimestamp|null} [createTime] OperationMetadata createTime
                          * @property {google.protobuf.ITimestamp|null} [endTime] OperationMetadata endTime
                          * @property {string|null} [target] OperationMetadata target
                          * @property {string|null} [verb] OperationMetadata verb
-                         * @property {string|null} [statusDetail] OperationMetadata statusDetail
-                         * @property {boolean|null} [cancelRequested] OperationMetadata cancelRequested
                          * @property {string|null} [apiVersion] OperationMetadata apiVersion
                          */
     
                         /**
                          * Constructs a new OperationMetadata.
-                         * @memberof google.cloud.workflows.v1alpha1
+                         * @memberof google.cloud.workflows.v1beta
                          * @classdesc Represents an OperationMetadata.
                          * @implements IOperationMetadata
                          * @constructor
-                         * @param {google.cloud.workflows.v1alpha1.IOperationMetadata=} [properties] Properties to set
+                         * @param {google.cloud.workflows.v1beta.IOperationMetadata=} [properties] Properties to set
                          */
                         function OperationMetadata(properties) {
                             if (properties)
@@ -2153,7 +2157,7 @@
                         /**
                          * OperationMetadata createTime.
                          * @member {google.protobuf.ITimestamp|null|undefined} createTime
-                         * @memberof google.cloud.workflows.v1alpha1.OperationMetadata
+                         * @memberof google.cloud.workflows.v1beta.OperationMetadata
                          * @instance
                          */
                         OperationMetadata.prototype.createTime = null;
@@ -2161,7 +2165,7 @@
                         /**
                          * OperationMetadata endTime.
                          * @member {google.protobuf.ITimestamp|null|undefined} endTime
-                         * @memberof google.cloud.workflows.v1alpha1.OperationMetadata
+                         * @memberof google.cloud.workflows.v1beta.OperationMetadata
                          * @instance
                          */
                         OperationMetadata.prototype.endTime = null;
@@ -2169,7 +2173,7 @@
                         /**
                          * OperationMetadata target.
                          * @member {string} target
-                         * @memberof google.cloud.workflows.v1alpha1.OperationMetadata
+                         * @memberof google.cloud.workflows.v1beta.OperationMetadata
                          * @instance
                          */
                         OperationMetadata.prototype.target = "";
@@ -2177,31 +2181,15 @@
                         /**
                          * OperationMetadata verb.
                          * @member {string} verb
-                         * @memberof google.cloud.workflows.v1alpha1.OperationMetadata
+                         * @memberof google.cloud.workflows.v1beta.OperationMetadata
                          * @instance
                          */
                         OperationMetadata.prototype.verb = "";
     
                         /**
-                         * OperationMetadata statusDetail.
-                         * @member {string} statusDetail
-                         * @memberof google.cloud.workflows.v1alpha1.OperationMetadata
-                         * @instance
-                         */
-                        OperationMetadata.prototype.statusDetail = "";
-    
-                        /**
-                         * OperationMetadata cancelRequested.
-                         * @member {boolean} cancelRequested
-                         * @memberof google.cloud.workflows.v1alpha1.OperationMetadata
-                         * @instance
-                         */
-                        OperationMetadata.prototype.cancelRequested = false;
-    
-                        /**
                          * OperationMetadata apiVersion.
                          * @member {string} apiVersion
-                         * @memberof google.cloud.workflows.v1alpha1.OperationMetadata
+                         * @memberof google.cloud.workflows.v1beta.OperationMetadata
                          * @instance
                          */
                         OperationMetadata.prototype.apiVersion = "";
@@ -2209,50 +2197,46 @@
                         /**
                          * Creates a new OperationMetadata instance using the specified properties.
                          * @function create
-                         * @memberof google.cloud.workflows.v1alpha1.OperationMetadata
+                         * @memberof google.cloud.workflows.v1beta.OperationMetadata
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.IOperationMetadata=} [properties] Properties to set
-                         * @returns {google.cloud.workflows.v1alpha1.OperationMetadata} OperationMetadata instance
+                         * @param {google.cloud.workflows.v1beta.IOperationMetadata=} [properties] Properties to set
+                         * @returns {google.cloud.workflows.v1beta.OperationMetadata} OperationMetadata instance
                          */
                         OperationMetadata.create = function create(properties) {
                             return new OperationMetadata(properties);
                         };
     
                         /**
-                         * Encodes the specified OperationMetadata message. Does not implicitly {@link google.cloud.workflows.v1alpha1.OperationMetadata.verify|verify} messages.
+                         * Encodes the specified OperationMetadata message. Does not implicitly {@link google.cloud.workflows.v1beta.OperationMetadata.verify|verify} messages.
                          * @function encode
-                         * @memberof google.cloud.workflows.v1alpha1.OperationMetadata
+                         * @memberof google.cloud.workflows.v1beta.OperationMetadata
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.IOperationMetadata} message OperationMetadata message or plain object to encode
+                         * @param {google.cloud.workflows.v1beta.IOperationMetadata} message OperationMetadata message or plain object to encode
                          * @param {$protobuf.Writer} [writer] Writer to encode to
                          * @returns {$protobuf.Writer} Writer
                          */
                         OperationMetadata.encode = function encode(message, writer) {
                             if (!writer)
                                 writer = $Writer.create();
-                            if (message.createTime != null && message.hasOwnProperty("createTime"))
+                            if (message.createTime != null && Object.hasOwnProperty.call(message, "createTime"))
                                 $root.google.protobuf.Timestamp.encode(message.createTime, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                            if (message.endTime != null && message.hasOwnProperty("endTime"))
+                            if (message.endTime != null && Object.hasOwnProperty.call(message, "endTime"))
                                 $root.google.protobuf.Timestamp.encode(message.endTime, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-                            if (message.target != null && message.hasOwnProperty("target"))
+                            if (message.target != null && Object.hasOwnProperty.call(message, "target"))
                                 writer.uint32(/* id 3, wireType 2 =*/26).string(message.target);
-                            if (message.verb != null && message.hasOwnProperty("verb"))
+                            if (message.verb != null && Object.hasOwnProperty.call(message, "verb"))
                                 writer.uint32(/* id 4, wireType 2 =*/34).string(message.verb);
-                            if (message.statusDetail != null && message.hasOwnProperty("statusDetail"))
-                                writer.uint32(/* id 5, wireType 2 =*/42).string(message.statusDetail);
-                            if (message.cancelRequested != null && message.hasOwnProperty("cancelRequested"))
-                                writer.uint32(/* id 6, wireType 0 =*/48).bool(message.cancelRequested);
-                            if (message.apiVersion != null && message.hasOwnProperty("apiVersion"))
-                                writer.uint32(/* id 7, wireType 2 =*/58).string(message.apiVersion);
+                            if (message.apiVersion != null && Object.hasOwnProperty.call(message, "apiVersion"))
+                                writer.uint32(/* id 5, wireType 2 =*/42).string(message.apiVersion);
                             return writer;
                         };
     
                         /**
-                         * Encodes the specified OperationMetadata message, length delimited. Does not implicitly {@link google.cloud.workflows.v1alpha1.OperationMetadata.verify|verify} messages.
+                         * Encodes the specified OperationMetadata message, length delimited. Does not implicitly {@link google.cloud.workflows.v1beta.OperationMetadata.verify|verify} messages.
                          * @function encodeDelimited
-                         * @memberof google.cloud.workflows.v1alpha1.OperationMetadata
+                         * @memberof google.cloud.workflows.v1beta.OperationMetadata
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.IOperationMetadata} message OperationMetadata message or plain object to encode
+                         * @param {google.cloud.workflows.v1beta.IOperationMetadata} message OperationMetadata message or plain object to encode
                          * @param {$protobuf.Writer} [writer] Writer to encode to
                          * @returns {$protobuf.Writer} Writer
                          */
@@ -2263,18 +2247,18 @@
                         /**
                          * Decodes an OperationMetadata message from the specified reader or buffer.
                          * @function decode
-                         * @memberof google.cloud.workflows.v1alpha1.OperationMetadata
+                         * @memberof google.cloud.workflows.v1beta.OperationMetadata
                          * @static
                          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                          * @param {number} [length] Message length if known beforehand
-                         * @returns {google.cloud.workflows.v1alpha1.OperationMetadata} OperationMetadata
+                         * @returns {google.cloud.workflows.v1beta.OperationMetadata} OperationMetadata
                          * @throws {Error} If the payload is not a reader or valid buffer
                          * @throws {$protobuf.util.ProtocolError} If required fields are missing
                          */
                         OperationMetadata.decode = function decode(reader, length) {
                             if (!(reader instanceof $Reader))
                                 reader = $Reader.create(reader);
-                            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.cloud.workflows.v1alpha1.OperationMetadata();
+                            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.cloud.workflows.v1beta.OperationMetadata();
                             while (reader.pos < end) {
                                 var tag = reader.uint32();
                                 switch (tag >>> 3) {
@@ -2291,12 +2275,6 @@
                                     message.verb = reader.string();
                                     break;
                                 case 5:
-                                    message.statusDetail = reader.string();
-                                    break;
-                                case 6:
-                                    message.cancelRequested = reader.bool();
-                                    break;
-                                case 7:
                                     message.apiVersion = reader.string();
                                     break;
                                 default:
@@ -2310,10 +2288,10 @@
                         /**
                          * Decodes an OperationMetadata message from the specified reader or buffer, length delimited.
                          * @function decodeDelimited
-                         * @memberof google.cloud.workflows.v1alpha1.OperationMetadata
+                         * @memberof google.cloud.workflows.v1beta.OperationMetadata
                          * @static
                          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                         * @returns {google.cloud.workflows.v1alpha1.OperationMetadata} OperationMetadata
+                         * @returns {google.cloud.workflows.v1beta.OperationMetadata} OperationMetadata
                          * @throws {Error} If the payload is not a reader or valid buffer
                          * @throws {$protobuf.util.ProtocolError} If required fields are missing
                          */
@@ -2326,7 +2304,7 @@
                         /**
                          * Verifies an OperationMetadata message.
                          * @function verify
-                         * @memberof google.cloud.workflows.v1alpha1.OperationMetadata
+                         * @memberof google.cloud.workflows.v1beta.OperationMetadata
                          * @static
                          * @param {Object.<string,*>} message Plain object to verify
                          * @returns {string|null} `null` if valid, otherwise the reason why it is not
@@ -2350,12 +2328,6 @@
                             if (message.verb != null && message.hasOwnProperty("verb"))
                                 if (!$util.isString(message.verb))
                                     return "verb: string expected";
-                            if (message.statusDetail != null && message.hasOwnProperty("statusDetail"))
-                                if (!$util.isString(message.statusDetail))
-                                    return "statusDetail: string expected";
-                            if (message.cancelRequested != null && message.hasOwnProperty("cancelRequested"))
-                                if (typeof message.cancelRequested !== "boolean")
-                                    return "cancelRequested: boolean expected";
                             if (message.apiVersion != null && message.hasOwnProperty("apiVersion"))
                                 if (!$util.isString(message.apiVersion))
                                     return "apiVersion: string expected";
@@ -2365,33 +2337,29 @@
                         /**
                          * Creates an OperationMetadata message from a plain object. Also converts values to their respective internal types.
                          * @function fromObject
-                         * @memberof google.cloud.workflows.v1alpha1.OperationMetadata
+                         * @memberof google.cloud.workflows.v1beta.OperationMetadata
                          * @static
                          * @param {Object.<string,*>} object Plain object
-                         * @returns {google.cloud.workflows.v1alpha1.OperationMetadata} OperationMetadata
+                         * @returns {google.cloud.workflows.v1beta.OperationMetadata} OperationMetadata
                          */
                         OperationMetadata.fromObject = function fromObject(object) {
-                            if (object instanceof $root.google.cloud.workflows.v1alpha1.OperationMetadata)
+                            if (object instanceof $root.google.cloud.workflows.v1beta.OperationMetadata)
                                 return object;
-                            var message = new $root.google.cloud.workflows.v1alpha1.OperationMetadata();
+                            var message = new $root.google.cloud.workflows.v1beta.OperationMetadata();
                             if (object.createTime != null) {
                                 if (typeof object.createTime !== "object")
-                                    throw TypeError(".google.cloud.workflows.v1alpha1.OperationMetadata.createTime: object expected");
+                                    throw TypeError(".google.cloud.workflows.v1beta.OperationMetadata.createTime: object expected");
                                 message.createTime = $root.google.protobuf.Timestamp.fromObject(object.createTime);
                             }
                             if (object.endTime != null) {
                                 if (typeof object.endTime !== "object")
-                                    throw TypeError(".google.cloud.workflows.v1alpha1.OperationMetadata.endTime: object expected");
+                                    throw TypeError(".google.cloud.workflows.v1beta.OperationMetadata.endTime: object expected");
                                 message.endTime = $root.google.protobuf.Timestamp.fromObject(object.endTime);
                             }
                             if (object.target != null)
                                 message.target = String(object.target);
                             if (object.verb != null)
                                 message.verb = String(object.verb);
-                            if (object.statusDetail != null)
-                                message.statusDetail = String(object.statusDetail);
-                            if (object.cancelRequested != null)
-                                message.cancelRequested = Boolean(object.cancelRequested);
                             if (object.apiVersion != null)
                                 message.apiVersion = String(object.apiVersion);
                             return message;
@@ -2400,9 +2368,9 @@
                         /**
                          * Creates a plain object from an OperationMetadata message. Also converts values to other types if specified.
                          * @function toObject
-                         * @memberof google.cloud.workflows.v1alpha1.OperationMetadata
+                         * @memberof google.cloud.workflows.v1beta.OperationMetadata
                          * @static
-                         * @param {google.cloud.workflows.v1alpha1.OperationMetadata} message OperationMetadata
+                         * @param {google.cloud.workflows.v1beta.OperationMetadata} message OperationMetadata
                          * @param {$protobuf.IConversionOptions} [options] Conversion options
                          * @returns {Object.<string,*>} Plain object
                          */
@@ -2415,8 +2383,6 @@
                                 object.endTime = null;
                                 object.target = "";
                                 object.verb = "";
-                                object.statusDetail = "";
-                                object.cancelRequested = false;
                                 object.apiVersion = "";
                             }
                             if (message.createTime != null && message.hasOwnProperty("createTime"))
@@ -2427,10 +2393,6 @@
                                 object.target = message.target;
                             if (message.verb != null && message.hasOwnProperty("verb"))
                                 object.verb = message.verb;
-                            if (message.statusDetail != null && message.hasOwnProperty("statusDetail"))
-                                object.statusDetail = message.statusDetail;
-                            if (message.cancelRequested != null && message.hasOwnProperty("cancelRequested"))
-                                object.cancelRequested = message.cancelRequested;
                             if (message.apiVersion != null && message.hasOwnProperty("apiVersion"))
                                 object.apiVersion = message.apiVersion;
                             return object;
@@ -2439,7 +2401,7 @@
                         /**
                          * Converts this OperationMetadata to JSON.
                          * @function toJSON
-                         * @memberof google.cloud.workflows.v1alpha1.OperationMetadata
+                         * @memberof google.cloud.workflows.v1beta.OperationMetadata
                          * @instance
                          * @returns {Object.<string,*>} JSON object
                          */
@@ -2450,7 +2412,7 @@
                         return OperationMetadata;
                     })();
     
-                    return v1alpha1;
+                    return v1beta;
                 })();
     
                 return workflows;
@@ -2537,7 +2499,7 @@
                     if (message.rules != null && message.rules.length)
                         for (var i = 0; i < message.rules.length; ++i)
                             $root.google.api.HttpRule.encode(message.rules[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                    if (message.fullyDecodeReservedExpansion != null && message.hasOwnProperty("fullyDecodeReservedExpansion"))
+                    if (message.fullyDecodeReservedExpansion != null && Object.hasOwnProperty.call(message, "fullyDecodeReservedExpansion"))
                         writer.uint32(/* id 2, wireType 0 =*/16).bool(message.fullyDecodeReservedExpansion);
                     return writer;
                 };
@@ -2851,26 +2813,26 @@
                 HttpRule.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.selector != null && message.hasOwnProperty("selector"))
+                    if (message.selector != null && Object.hasOwnProperty.call(message, "selector"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.selector);
-                    if (message.get != null && message.hasOwnProperty("get"))
+                    if (message.get != null && Object.hasOwnProperty.call(message, "get"))
                         writer.uint32(/* id 2, wireType 2 =*/18).string(message.get);
-                    if (message.put != null && message.hasOwnProperty("put"))
+                    if (message.put != null && Object.hasOwnProperty.call(message, "put"))
                         writer.uint32(/* id 3, wireType 2 =*/26).string(message.put);
-                    if (message.post != null && message.hasOwnProperty("post"))
+                    if (message.post != null && Object.hasOwnProperty.call(message, "post"))
                         writer.uint32(/* id 4, wireType 2 =*/34).string(message.post);
-                    if (message["delete"] != null && message.hasOwnProperty("delete"))
+                    if (message["delete"] != null && Object.hasOwnProperty.call(message, "delete"))
                         writer.uint32(/* id 5, wireType 2 =*/42).string(message["delete"]);
-                    if (message.patch != null && message.hasOwnProperty("patch"))
+                    if (message.patch != null && Object.hasOwnProperty.call(message, "patch"))
                         writer.uint32(/* id 6, wireType 2 =*/50).string(message.patch);
-                    if (message.body != null && message.hasOwnProperty("body"))
+                    if (message.body != null && Object.hasOwnProperty.call(message, "body"))
                         writer.uint32(/* id 7, wireType 2 =*/58).string(message.body);
-                    if (message.custom != null && message.hasOwnProperty("custom"))
+                    if (message.custom != null && Object.hasOwnProperty.call(message, "custom"))
                         $root.google.api.CustomHttpPattern.encode(message.custom, writer.uint32(/* id 8, wireType 2 =*/66).fork()).ldelim();
                     if (message.additionalBindings != null && message.additionalBindings.length)
                         for (var i = 0; i < message.additionalBindings.length; ++i)
                             $root.google.api.HttpRule.encode(message.additionalBindings[i], writer.uint32(/* id 11, wireType 2 =*/90).fork()).ldelim();
-                    if (message.responseBody != null && message.hasOwnProperty("responseBody"))
+                    if (message.responseBody != null && Object.hasOwnProperty.call(message, "responseBody"))
                         writer.uint32(/* id 12, wireType 2 =*/98).string(message.responseBody);
                     return writer;
                 };
@@ -3227,9 +3189,9 @@
                 CustomHttpPattern.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.kind != null && message.hasOwnProperty("kind"))
+                    if (message.kind != null && Object.hasOwnProperty.call(message, "kind"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.kind);
-                    if (message.path != null && message.hasOwnProperty("path"))
+                    if (message.path != null && Object.hasOwnProperty.call(message, "path"))
                         writer.uint32(/* id 2, wireType 2 =*/18).string(message.path);
                     return writer;
                 };
@@ -3375,7 +3337,7 @@
             /**
              * FieldBehavior enum.
              * @name google.api.FieldBehavior
-             * @enum {string}
+             * @enum {number}
              * @property {number} FIELD_BEHAVIOR_UNSPECIFIED=0 FIELD_BEHAVIOR_UNSPECIFIED value
              * @property {number} OPTIONAL=1 OPTIONAL value
              * @property {number} REQUIRED=2 REQUIRED value
@@ -3496,18 +3458,18 @@
                 ResourceDescriptor.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.type != null && message.hasOwnProperty("type"))
+                    if (message.type != null && Object.hasOwnProperty.call(message, "type"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.type);
                     if (message.pattern != null && message.pattern.length)
                         for (var i = 0; i < message.pattern.length; ++i)
                             writer.uint32(/* id 2, wireType 2 =*/18).string(message.pattern[i]);
-                    if (message.nameField != null && message.hasOwnProperty("nameField"))
+                    if (message.nameField != null && Object.hasOwnProperty.call(message, "nameField"))
                         writer.uint32(/* id 3, wireType 2 =*/26).string(message.nameField);
-                    if (message.history != null && message.hasOwnProperty("history"))
+                    if (message.history != null && Object.hasOwnProperty.call(message, "history"))
                         writer.uint32(/* id 4, wireType 0 =*/32).int32(message.history);
-                    if (message.plural != null && message.hasOwnProperty("plural"))
+                    if (message.plural != null && Object.hasOwnProperty.call(message, "plural"))
                         writer.uint32(/* id 5, wireType 2 =*/42).string(message.plural);
-                    if (message.singular != null && message.hasOwnProperty("singular"))
+                    if (message.singular != null && Object.hasOwnProperty.call(message, "singular"))
                         writer.uint32(/* id 6, wireType 2 =*/50).string(message.singular);
                     return writer;
                 };
@@ -3727,7 +3689,7 @@
                 /**
                  * History enum.
                  * @name google.api.ResourceDescriptor.History
-                 * @enum {string}
+                 * @enum {number}
                  * @property {number} HISTORY_UNSPECIFIED=0 HISTORY_UNSPECIFIED value
                  * @property {number} ORIGINALLY_SINGLE_PATTERN=1 ORIGINALLY_SINGLE_PATTERN value
                  * @property {number} FUTURE_MULTI_PATTERN=2 FUTURE_MULTI_PATTERN value
@@ -3808,9 +3770,9 @@
                 ResourceReference.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.type != null && message.hasOwnProperty("type"))
+                    if (message.type != null && Object.hasOwnProperty.call(message, "type"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.type);
-                    if (message.childType != null && message.hasOwnProperty("childType"))
+                    if (message.childType != null && Object.hasOwnProperty.call(message, "childType"))
                         writer.uint32(/* id 2, wireType 2 =*/18).string(message.childType);
                     return writer;
                 };
@@ -4335,9 +4297,9 @@
                 FileDescriptorProto.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.name != null && message.hasOwnProperty("name"))
+                    if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
-                    if (message["package"] != null && message.hasOwnProperty("package"))
+                    if (message["package"] != null && Object.hasOwnProperty.call(message, "package"))
                         writer.uint32(/* id 2, wireType 2 =*/18).string(message["package"]);
                     if (message.dependency != null && message.dependency.length)
                         for (var i = 0; i < message.dependency.length; ++i)
@@ -4354,9 +4316,9 @@
                     if (message.extension != null && message.extension.length)
                         for (var i = 0; i < message.extension.length; ++i)
                             $root.google.protobuf.FieldDescriptorProto.encode(message.extension[i], writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
-                    if (message.options != null && message.hasOwnProperty("options"))
+                    if (message.options != null && Object.hasOwnProperty.call(message, "options"))
                         $root.google.protobuf.FileOptions.encode(message.options, writer.uint32(/* id 8, wireType 2 =*/66).fork()).ldelim();
-                    if (message.sourceCodeInfo != null && message.hasOwnProperty("sourceCodeInfo"))
+                    if (message.sourceCodeInfo != null && Object.hasOwnProperty.call(message, "sourceCodeInfo"))
                         $root.google.protobuf.SourceCodeInfo.encode(message.sourceCodeInfo, writer.uint32(/* id 9, wireType 2 =*/74).fork()).ldelim();
                     if (message.publicDependency != null && message.publicDependency.length)
                         for (var i = 0; i < message.publicDependency.length; ++i)
@@ -4364,7 +4326,7 @@
                     if (message.weakDependency != null && message.weakDependency.length)
                         for (var i = 0; i < message.weakDependency.length; ++i)
                             writer.uint32(/* id 11, wireType 0 =*/88).int32(message.weakDependency[i]);
-                    if (message.syntax != null && message.hasOwnProperty("syntax"))
+                    if (message.syntax != null && Object.hasOwnProperty.call(message, "syntax"))
                         writer.uint32(/* id 12, wireType 2 =*/98).string(message.syntax);
                     return writer;
                 };
@@ -4902,7 +4864,7 @@
                 DescriptorProto.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.name != null && message.hasOwnProperty("name"))
+                    if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
                     if (message.field != null && message.field.length)
                         for (var i = 0; i < message.field.length; ++i)
@@ -4919,7 +4881,7 @@
                     if (message.extension != null && message.extension.length)
                         for (var i = 0; i < message.extension.length; ++i)
                             $root.google.protobuf.FieldDescriptorProto.encode(message.extension[i], writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
-                    if (message.options != null && message.hasOwnProperty("options"))
+                    if (message.options != null && Object.hasOwnProperty.call(message, "options"))
                         $root.google.protobuf.MessageOptions.encode(message.options, writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
                     if (message.oneofDecl != null && message.oneofDecl.length)
                         for (var i = 0; i < message.oneofDecl.length; ++i)
@@ -5384,11 +5346,11 @@
                     ExtensionRange.encode = function encode(message, writer) {
                         if (!writer)
                             writer = $Writer.create();
-                        if (message.start != null && message.hasOwnProperty("start"))
+                        if (message.start != null && Object.hasOwnProperty.call(message, "start"))
                             writer.uint32(/* id 1, wireType 0 =*/8).int32(message.start);
-                        if (message.end != null && message.hasOwnProperty("end"))
+                        if (message.end != null && Object.hasOwnProperty.call(message, "end"))
                             writer.uint32(/* id 2, wireType 0 =*/16).int32(message.end);
-                        if (message.options != null && message.hasOwnProperty("options"))
+                        if (message.options != null && Object.hasOwnProperty.call(message, "options"))
                             $root.google.protobuf.ExtensionRangeOptions.encode(message.options, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
                         return writer;
                     };
@@ -5612,9 +5574,9 @@
                     ReservedRange.encode = function encode(message, writer) {
                         if (!writer)
                             writer = $Writer.create();
-                        if (message.start != null && message.hasOwnProperty("start"))
+                        if (message.start != null && Object.hasOwnProperty.call(message, "start"))
                             writer.uint32(/* id 1, wireType 0 =*/8).int32(message.start);
-                        if (message.end != null && message.hasOwnProperty("end"))
+                        if (message.end != null && Object.hasOwnProperty.call(message, "end"))
                             writer.uint32(/* id 2, wireType 0 =*/16).int32(message.end);
                         return writer;
                     };
@@ -5984,6 +5946,7 @@
                  * @property {number|null} [oneofIndex] FieldDescriptorProto oneofIndex
                  * @property {string|null} [jsonName] FieldDescriptorProto jsonName
                  * @property {google.protobuf.IFieldOptions|null} [options] FieldDescriptorProto options
+                 * @property {boolean|null} [proto3Optional] FieldDescriptorProto proto3Optional
                  */
     
                 /**
@@ -6082,6 +6045,14 @@
                 FieldDescriptorProto.prototype.options = null;
     
                 /**
+                 * FieldDescriptorProto proto3Optional.
+                 * @member {boolean} proto3Optional
+                 * @memberof google.protobuf.FieldDescriptorProto
+                 * @instance
+                 */
+                FieldDescriptorProto.prototype.proto3Optional = false;
+    
+                /**
                  * Creates a new FieldDescriptorProto instance using the specified properties.
                  * @function create
                  * @memberof google.protobuf.FieldDescriptorProto
@@ -6105,26 +6076,28 @@
                 FieldDescriptorProto.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.name != null && message.hasOwnProperty("name"))
+                    if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
-                    if (message.extendee != null && message.hasOwnProperty("extendee"))
+                    if (message.extendee != null && Object.hasOwnProperty.call(message, "extendee"))
                         writer.uint32(/* id 2, wireType 2 =*/18).string(message.extendee);
-                    if (message.number != null && message.hasOwnProperty("number"))
+                    if (message.number != null && Object.hasOwnProperty.call(message, "number"))
                         writer.uint32(/* id 3, wireType 0 =*/24).int32(message.number);
-                    if (message.label != null && message.hasOwnProperty("label"))
+                    if (message.label != null && Object.hasOwnProperty.call(message, "label"))
                         writer.uint32(/* id 4, wireType 0 =*/32).int32(message.label);
-                    if (message.type != null && message.hasOwnProperty("type"))
+                    if (message.type != null && Object.hasOwnProperty.call(message, "type"))
                         writer.uint32(/* id 5, wireType 0 =*/40).int32(message.type);
-                    if (message.typeName != null && message.hasOwnProperty("typeName"))
+                    if (message.typeName != null && Object.hasOwnProperty.call(message, "typeName"))
                         writer.uint32(/* id 6, wireType 2 =*/50).string(message.typeName);
-                    if (message.defaultValue != null && message.hasOwnProperty("defaultValue"))
+                    if (message.defaultValue != null && Object.hasOwnProperty.call(message, "defaultValue"))
                         writer.uint32(/* id 7, wireType 2 =*/58).string(message.defaultValue);
-                    if (message.options != null && message.hasOwnProperty("options"))
+                    if (message.options != null && Object.hasOwnProperty.call(message, "options"))
                         $root.google.protobuf.FieldOptions.encode(message.options, writer.uint32(/* id 8, wireType 2 =*/66).fork()).ldelim();
-                    if (message.oneofIndex != null && message.hasOwnProperty("oneofIndex"))
+                    if (message.oneofIndex != null && Object.hasOwnProperty.call(message, "oneofIndex"))
                         writer.uint32(/* id 9, wireType 0 =*/72).int32(message.oneofIndex);
-                    if (message.jsonName != null && message.hasOwnProperty("jsonName"))
+                    if (message.jsonName != null && Object.hasOwnProperty.call(message, "jsonName"))
                         writer.uint32(/* id 10, wireType 2 =*/82).string(message.jsonName);
+                    if (message.proto3Optional != null && Object.hasOwnProperty.call(message, "proto3Optional"))
+                        writer.uint32(/* id 17, wireType 0 =*/136).bool(message.proto3Optional);
                     return writer;
                 };
     
@@ -6188,6 +6161,9 @@
                             break;
                         case 8:
                             message.options = $root.google.protobuf.FieldOptions.decode(reader, reader.uint32());
+                            break;
+                        case 17:
+                            message.proto3Optional = reader.bool();
                             break;
                         default:
                             reader.skipType(tag & 7);
@@ -6283,6 +6259,9 @@
                         if (error)
                             return "options." + error;
                     }
+                    if (message.proto3Optional != null && message.hasOwnProperty("proto3Optional"))
+                        if (typeof message.proto3Optional !== "boolean")
+                            return "proto3Optional: boolean expected";
                     return null;
                 };
     
@@ -6405,6 +6384,8 @@
                             throw TypeError(".google.protobuf.FieldDescriptorProto.options: object expected");
                         message.options = $root.google.protobuf.FieldOptions.fromObject(object.options);
                     }
+                    if (object.proto3Optional != null)
+                        message.proto3Optional = Boolean(object.proto3Optional);
                     return message;
                 };
     
@@ -6432,6 +6413,7 @@
                         object.options = null;
                         object.oneofIndex = 0;
                         object.jsonName = "";
+                        object.proto3Optional = false;
                     }
                     if (message.name != null && message.hasOwnProperty("name"))
                         object.name = message.name;
@@ -6453,6 +6435,8 @@
                         object.oneofIndex = message.oneofIndex;
                     if (message.jsonName != null && message.hasOwnProperty("jsonName"))
                         object.jsonName = message.jsonName;
+                    if (message.proto3Optional != null && message.hasOwnProperty("proto3Optional"))
+                        object.proto3Optional = message.proto3Optional;
                     return object;
                 };
     
@@ -6470,7 +6454,7 @@
                 /**
                  * Type enum.
                  * @name google.protobuf.FieldDescriptorProto.Type
-                 * @enum {string}
+                 * @enum {number}
                  * @property {number} TYPE_DOUBLE=1 TYPE_DOUBLE value
                  * @property {number} TYPE_FLOAT=2 TYPE_FLOAT value
                  * @property {number} TYPE_INT64=3 TYPE_INT64 value
@@ -6516,7 +6500,7 @@
                 /**
                  * Label enum.
                  * @name google.protobuf.FieldDescriptorProto.Label
-                 * @enum {string}
+                 * @enum {number}
                  * @property {number} LABEL_OPTIONAL=1 LABEL_OPTIONAL value
                  * @property {number} LABEL_REQUIRED=2 LABEL_REQUIRED value
                  * @property {number} LABEL_REPEATED=3 LABEL_REPEATED value
@@ -6597,9 +6581,9 @@
                 OneofDescriptorProto.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.name != null && message.hasOwnProperty("name"))
+                    if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
-                    if (message.options != null && message.hasOwnProperty("options"))
+                    if (message.options != null && Object.hasOwnProperty.call(message, "options"))
                         $root.google.protobuf.OneofOptions.encode(message.options, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
                     return writer;
                 };
@@ -6842,12 +6826,12 @@
                 EnumDescriptorProto.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.name != null && message.hasOwnProperty("name"))
+                    if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
                     if (message.value != null && message.value.length)
                         for (var i = 0; i < message.value.length; ++i)
                             $root.google.protobuf.EnumValueDescriptorProto.encode(message.value[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-                    if (message.options != null && message.hasOwnProperty("options"))
+                    if (message.options != null && Object.hasOwnProperty.call(message, "options"))
                         $root.google.protobuf.EnumOptions.encode(message.options, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
                     if (message.reservedRange != null && message.reservedRange.length)
                         for (var i = 0; i < message.reservedRange.length; ++i)
@@ -7150,9 +7134,9 @@
                     EnumReservedRange.encode = function encode(message, writer) {
                         if (!writer)
                             writer = $Writer.create();
-                        if (message.start != null && message.hasOwnProperty("start"))
+                        if (message.start != null && Object.hasOwnProperty.call(message, "start"))
                             writer.uint32(/* id 1, wireType 0 =*/8).int32(message.start);
-                        if (message.end != null && message.hasOwnProperty("end"))
+                        if (message.end != null && Object.hasOwnProperty.call(message, "end"))
                             writer.uint32(/* id 2, wireType 0 =*/16).int32(message.end);
                         return writer;
                     };
@@ -7372,11 +7356,11 @@
                 EnumValueDescriptorProto.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.name != null && message.hasOwnProperty("name"))
+                    if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
-                    if (message.number != null && message.hasOwnProperty("number"))
+                    if (message.number != null && Object.hasOwnProperty.call(message, "number"))
                         writer.uint32(/* id 2, wireType 0 =*/16).int32(message.number);
-                    if (message.options != null && message.hasOwnProperty("options"))
+                    if (message.options != null && Object.hasOwnProperty.call(message, "options"))
                         $root.google.protobuf.EnumValueOptions.encode(message.options, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
                     return writer;
                 };
@@ -7610,12 +7594,12 @@
                 ServiceDescriptorProto.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.name != null && message.hasOwnProperty("name"))
+                    if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
                     if (message.method != null && message.method.length)
                         for (var i = 0; i < message.method.length; ++i)
                             $root.google.protobuf.MethodDescriptorProto.encode(message.method[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-                    if (message.options != null && message.hasOwnProperty("options"))
+                    if (message.options != null && Object.hasOwnProperty.call(message, "options"))
                         $root.google.protobuf.ServiceOptions.encode(message.options, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
                     return writer;
                 };
@@ -7895,17 +7879,17 @@
                 MethodDescriptorProto.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.name != null && message.hasOwnProperty("name"))
+                    if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
-                    if (message.inputType != null && message.hasOwnProperty("inputType"))
+                    if (message.inputType != null && Object.hasOwnProperty.call(message, "inputType"))
                         writer.uint32(/* id 2, wireType 2 =*/18).string(message.inputType);
-                    if (message.outputType != null && message.hasOwnProperty("outputType"))
+                    if (message.outputType != null && Object.hasOwnProperty.call(message, "outputType"))
                         writer.uint32(/* id 3, wireType 2 =*/26).string(message.outputType);
-                    if (message.options != null && message.hasOwnProperty("options"))
+                    if (message.options != null && Object.hasOwnProperty.call(message, "options"))
                         $root.google.protobuf.MethodOptions.encode(message.options, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
-                    if (message.clientStreaming != null && message.hasOwnProperty("clientStreaming"))
+                    if (message.clientStreaming != null && Object.hasOwnProperty.call(message, "clientStreaming"))
                         writer.uint32(/* id 5, wireType 0 =*/40).bool(message.clientStreaming);
-                    if (message.serverStreaming != null && message.hasOwnProperty("serverStreaming"))
+                    if (message.serverStreaming != null && Object.hasOwnProperty.call(message, "serverStreaming"))
                         writer.uint32(/* id 6, wireType 0 =*/48).bool(message.serverStreaming);
                     return writer;
                 };
@@ -8246,7 +8230,7 @@
                  * @memberof google.protobuf.FileOptions
                  * @instance
                  */
-                FileOptions.prototype.ccEnableArenas = false;
+                FileOptions.prototype.ccEnableArenas = true;
     
                 /**
                  * FileOptions objcClassPrefix.
@@ -8344,45 +8328,45 @@
                 FileOptions.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.javaPackage != null && message.hasOwnProperty("javaPackage"))
+                    if (message.javaPackage != null && Object.hasOwnProperty.call(message, "javaPackage"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.javaPackage);
-                    if (message.javaOuterClassname != null && message.hasOwnProperty("javaOuterClassname"))
+                    if (message.javaOuterClassname != null && Object.hasOwnProperty.call(message, "javaOuterClassname"))
                         writer.uint32(/* id 8, wireType 2 =*/66).string(message.javaOuterClassname);
-                    if (message.optimizeFor != null && message.hasOwnProperty("optimizeFor"))
+                    if (message.optimizeFor != null && Object.hasOwnProperty.call(message, "optimizeFor"))
                         writer.uint32(/* id 9, wireType 0 =*/72).int32(message.optimizeFor);
-                    if (message.javaMultipleFiles != null && message.hasOwnProperty("javaMultipleFiles"))
+                    if (message.javaMultipleFiles != null && Object.hasOwnProperty.call(message, "javaMultipleFiles"))
                         writer.uint32(/* id 10, wireType 0 =*/80).bool(message.javaMultipleFiles);
-                    if (message.goPackage != null && message.hasOwnProperty("goPackage"))
+                    if (message.goPackage != null && Object.hasOwnProperty.call(message, "goPackage"))
                         writer.uint32(/* id 11, wireType 2 =*/90).string(message.goPackage);
-                    if (message.ccGenericServices != null && message.hasOwnProperty("ccGenericServices"))
+                    if (message.ccGenericServices != null && Object.hasOwnProperty.call(message, "ccGenericServices"))
                         writer.uint32(/* id 16, wireType 0 =*/128).bool(message.ccGenericServices);
-                    if (message.javaGenericServices != null && message.hasOwnProperty("javaGenericServices"))
+                    if (message.javaGenericServices != null && Object.hasOwnProperty.call(message, "javaGenericServices"))
                         writer.uint32(/* id 17, wireType 0 =*/136).bool(message.javaGenericServices);
-                    if (message.pyGenericServices != null && message.hasOwnProperty("pyGenericServices"))
+                    if (message.pyGenericServices != null && Object.hasOwnProperty.call(message, "pyGenericServices"))
                         writer.uint32(/* id 18, wireType 0 =*/144).bool(message.pyGenericServices);
-                    if (message.javaGenerateEqualsAndHash != null && message.hasOwnProperty("javaGenerateEqualsAndHash"))
+                    if (message.javaGenerateEqualsAndHash != null && Object.hasOwnProperty.call(message, "javaGenerateEqualsAndHash"))
                         writer.uint32(/* id 20, wireType 0 =*/160).bool(message.javaGenerateEqualsAndHash);
-                    if (message.deprecated != null && message.hasOwnProperty("deprecated"))
+                    if (message.deprecated != null && Object.hasOwnProperty.call(message, "deprecated"))
                         writer.uint32(/* id 23, wireType 0 =*/184).bool(message.deprecated);
-                    if (message.javaStringCheckUtf8 != null && message.hasOwnProperty("javaStringCheckUtf8"))
+                    if (message.javaStringCheckUtf8 != null && Object.hasOwnProperty.call(message, "javaStringCheckUtf8"))
                         writer.uint32(/* id 27, wireType 0 =*/216).bool(message.javaStringCheckUtf8);
-                    if (message.ccEnableArenas != null && message.hasOwnProperty("ccEnableArenas"))
+                    if (message.ccEnableArenas != null && Object.hasOwnProperty.call(message, "ccEnableArenas"))
                         writer.uint32(/* id 31, wireType 0 =*/248).bool(message.ccEnableArenas);
-                    if (message.objcClassPrefix != null && message.hasOwnProperty("objcClassPrefix"))
+                    if (message.objcClassPrefix != null && Object.hasOwnProperty.call(message, "objcClassPrefix"))
                         writer.uint32(/* id 36, wireType 2 =*/290).string(message.objcClassPrefix);
-                    if (message.csharpNamespace != null && message.hasOwnProperty("csharpNamespace"))
+                    if (message.csharpNamespace != null && Object.hasOwnProperty.call(message, "csharpNamespace"))
                         writer.uint32(/* id 37, wireType 2 =*/298).string(message.csharpNamespace);
-                    if (message.swiftPrefix != null && message.hasOwnProperty("swiftPrefix"))
+                    if (message.swiftPrefix != null && Object.hasOwnProperty.call(message, "swiftPrefix"))
                         writer.uint32(/* id 39, wireType 2 =*/314).string(message.swiftPrefix);
-                    if (message.phpClassPrefix != null && message.hasOwnProperty("phpClassPrefix"))
+                    if (message.phpClassPrefix != null && Object.hasOwnProperty.call(message, "phpClassPrefix"))
                         writer.uint32(/* id 40, wireType 2 =*/322).string(message.phpClassPrefix);
-                    if (message.phpNamespace != null && message.hasOwnProperty("phpNamespace"))
+                    if (message.phpNamespace != null && Object.hasOwnProperty.call(message, "phpNamespace"))
                         writer.uint32(/* id 41, wireType 2 =*/330).string(message.phpNamespace);
-                    if (message.phpGenericServices != null && message.hasOwnProperty("phpGenericServices"))
+                    if (message.phpGenericServices != null && Object.hasOwnProperty.call(message, "phpGenericServices"))
                         writer.uint32(/* id 42, wireType 0 =*/336).bool(message.phpGenericServices);
-                    if (message.phpMetadataNamespace != null && message.hasOwnProperty("phpMetadataNamespace"))
+                    if (message.phpMetadataNamespace != null && Object.hasOwnProperty.call(message, "phpMetadataNamespace"))
                         writer.uint32(/* id 44, wireType 2 =*/354).string(message.phpMetadataNamespace);
-                    if (message.rubyPackage != null && message.hasOwnProperty("rubyPackage"))
+                    if (message.rubyPackage != null && Object.hasOwnProperty.call(message, "rubyPackage"))
                         writer.uint32(/* id 45, wireType 2 =*/362).string(message.rubyPackage);
                     if (message.uninterpretedOption != null && message.uninterpretedOption.length)
                         for (var i = 0; i < message.uninterpretedOption.length; ++i)
@@ -8732,7 +8716,7 @@
                         object.javaGenerateEqualsAndHash = false;
                         object.deprecated = false;
                         object.javaStringCheckUtf8 = false;
-                        object.ccEnableArenas = false;
+                        object.ccEnableArenas = true;
                         object.objcClassPrefix = "";
                         object.csharpNamespace = "";
                         object.swiftPrefix = "";
@@ -8809,7 +8793,7 @@
                 /**
                  * OptimizeMode enum.
                  * @name google.protobuf.FileOptions.OptimizeMode
-                 * @enum {string}
+                 * @enum {number}
                  * @property {number} SPEED=1 SPEED value
                  * @property {number} CODE_SIZE=2 CODE_SIZE value
                  * @property {number} LITE_RUNTIME=3 LITE_RUNTIME value
@@ -8927,18 +8911,18 @@
                 MessageOptions.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.messageSetWireFormat != null && message.hasOwnProperty("messageSetWireFormat"))
+                    if (message.messageSetWireFormat != null && Object.hasOwnProperty.call(message, "messageSetWireFormat"))
                         writer.uint32(/* id 1, wireType 0 =*/8).bool(message.messageSetWireFormat);
-                    if (message.noStandardDescriptorAccessor != null && message.hasOwnProperty("noStandardDescriptorAccessor"))
+                    if (message.noStandardDescriptorAccessor != null && Object.hasOwnProperty.call(message, "noStandardDescriptorAccessor"))
                         writer.uint32(/* id 2, wireType 0 =*/16).bool(message.noStandardDescriptorAccessor);
-                    if (message.deprecated != null && message.hasOwnProperty("deprecated"))
+                    if (message.deprecated != null && Object.hasOwnProperty.call(message, "deprecated"))
                         writer.uint32(/* id 3, wireType 0 =*/24).bool(message.deprecated);
-                    if (message.mapEntry != null && message.hasOwnProperty("mapEntry"))
+                    if (message.mapEntry != null && Object.hasOwnProperty.call(message, "mapEntry"))
                         writer.uint32(/* id 7, wireType 0 =*/56).bool(message.mapEntry);
                     if (message.uninterpretedOption != null && message.uninterpretedOption.length)
                         for (var i = 0; i < message.uninterpretedOption.length; ++i)
                             $root.google.protobuf.UninterpretedOption.encode(message.uninterpretedOption[i], writer.uint32(/* id 999, wireType 2 =*/7994).fork()).ldelim();
-                    if (message[".google.api.resource"] != null && message.hasOwnProperty(".google.api.resource"))
+                    if (message[".google.api.resource"] != null && Object.hasOwnProperty.call(message, ".google.api.resource"))
                         $root.google.api.ResourceDescriptor.encode(message[".google.api.resource"], writer.uint32(/* id 1053, wireType 2 =*/8426).fork()).ldelim();
                     return writer;
                 };
@@ -9280,17 +9264,17 @@
                 FieldOptions.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.ctype != null && message.hasOwnProperty("ctype"))
+                    if (message.ctype != null && Object.hasOwnProperty.call(message, "ctype"))
                         writer.uint32(/* id 1, wireType 0 =*/8).int32(message.ctype);
-                    if (message.packed != null && message.hasOwnProperty("packed"))
+                    if (message.packed != null && Object.hasOwnProperty.call(message, "packed"))
                         writer.uint32(/* id 2, wireType 0 =*/16).bool(message.packed);
-                    if (message.deprecated != null && message.hasOwnProperty("deprecated"))
+                    if (message.deprecated != null && Object.hasOwnProperty.call(message, "deprecated"))
                         writer.uint32(/* id 3, wireType 0 =*/24).bool(message.deprecated);
-                    if (message.lazy != null && message.hasOwnProperty("lazy"))
+                    if (message.lazy != null && Object.hasOwnProperty.call(message, "lazy"))
                         writer.uint32(/* id 5, wireType 0 =*/40).bool(message.lazy);
-                    if (message.jstype != null && message.hasOwnProperty("jstype"))
+                    if (message.jstype != null && Object.hasOwnProperty.call(message, "jstype"))
                         writer.uint32(/* id 6, wireType 0 =*/48).int32(message.jstype);
-                    if (message.weak != null && message.hasOwnProperty("weak"))
+                    if (message.weak != null && Object.hasOwnProperty.call(message, "weak"))
                         writer.uint32(/* id 10, wireType 0 =*/80).bool(message.weak);
                     if (message.uninterpretedOption != null && message.uninterpretedOption.length)
                         for (var i = 0; i < message.uninterpretedOption.length; ++i)
@@ -9301,7 +9285,7 @@
                             writer.int32(message[".google.api.fieldBehavior"][i]);
                         writer.ldelim();
                     }
-                    if (message[".google.api.resourceReference"] != null && message.hasOwnProperty(".google.api.resourceReference"))
+                    if (message[".google.api.resourceReference"] != null && Object.hasOwnProperty.call(message, ".google.api.resourceReference"))
                         $root.google.api.ResourceReference.encode(message[".google.api.resourceReference"], writer.uint32(/* id 1055, wireType 2 =*/8442).fork()).ldelim();
                     return writer;
                 };
@@ -9637,7 +9621,7 @@
                 /**
                  * CType enum.
                  * @name google.protobuf.FieldOptions.CType
-                 * @enum {string}
+                 * @enum {number}
                  * @property {number} STRING=0 STRING value
                  * @property {number} CORD=1 CORD value
                  * @property {number} STRING_PIECE=2 STRING_PIECE value
@@ -9653,7 +9637,7 @@
                 /**
                  * JSType enum.
                  * @name google.protobuf.FieldOptions.JSType
-                 * @enum {string}
+                 * @enum {number}
                  * @property {number} JS_NORMAL=0 JS_NORMAL value
                  * @property {number} JS_STRING=1 JS_STRING value
                  * @property {number} JS_NUMBER=2 JS_NUMBER value
@@ -9952,9 +9936,9 @@
                 EnumOptions.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.allowAlias != null && message.hasOwnProperty("allowAlias"))
+                    if (message.allowAlias != null && Object.hasOwnProperty.call(message, "allowAlias"))
                         writer.uint32(/* id 2, wireType 0 =*/16).bool(message.allowAlias);
-                    if (message.deprecated != null && message.hasOwnProperty("deprecated"))
+                    if (message.deprecated != null && Object.hasOwnProperty.call(message, "deprecated"))
                         writer.uint32(/* id 3, wireType 0 =*/24).bool(message.deprecated);
                     if (message.uninterpretedOption != null && message.uninterpretedOption.length)
                         for (var i = 0; i < message.uninterpretedOption.length; ++i)
@@ -10197,7 +10181,7 @@
                 EnumValueOptions.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.deprecated != null && message.hasOwnProperty("deprecated"))
+                    if (message.deprecated != null && Object.hasOwnProperty.call(message, "deprecated"))
                         writer.uint32(/* id 1, wireType 0 =*/8).bool(message.deprecated);
                     if (message.uninterpretedOption != null && message.uninterpretedOption.length)
                         for (var i = 0; i < message.uninterpretedOption.length; ++i)
@@ -10446,14 +10430,14 @@
                 ServiceOptions.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.deprecated != null && message.hasOwnProperty("deprecated"))
+                    if (message.deprecated != null && Object.hasOwnProperty.call(message, "deprecated"))
                         writer.uint32(/* id 33, wireType 0 =*/264).bool(message.deprecated);
                     if (message.uninterpretedOption != null && message.uninterpretedOption.length)
                         for (var i = 0; i < message.uninterpretedOption.length; ++i)
                             $root.google.protobuf.UninterpretedOption.encode(message.uninterpretedOption[i], writer.uint32(/* id 999, wireType 2 =*/7994).fork()).ldelim();
-                    if (message[".google.api.defaultHost"] != null && message.hasOwnProperty(".google.api.defaultHost"))
+                    if (message[".google.api.defaultHost"] != null && Object.hasOwnProperty.call(message, ".google.api.defaultHost"))
                         writer.uint32(/* id 1049, wireType 2 =*/8394).string(message[".google.api.defaultHost"]);
-                    if (message[".google.api.oauthScopes"] != null && message.hasOwnProperty(".google.api.oauthScopes"))
+                    if (message[".google.api.oauthScopes"] != null && Object.hasOwnProperty.call(message, ".google.api.oauthScopes"))
                         writer.uint32(/* id 1050, wireType 2 =*/8402).string(message[".google.api.oauthScopes"]);
                     return writer;
                 };
@@ -10741,19 +10725,19 @@
                 MethodOptions.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.deprecated != null && message.hasOwnProperty("deprecated"))
+                    if (message.deprecated != null && Object.hasOwnProperty.call(message, "deprecated"))
                         writer.uint32(/* id 33, wireType 0 =*/264).bool(message.deprecated);
-                    if (message.idempotencyLevel != null && message.hasOwnProperty("idempotencyLevel"))
+                    if (message.idempotencyLevel != null && Object.hasOwnProperty.call(message, "idempotencyLevel"))
                         writer.uint32(/* id 34, wireType 0 =*/272).int32(message.idempotencyLevel);
                     if (message.uninterpretedOption != null && message.uninterpretedOption.length)
                         for (var i = 0; i < message.uninterpretedOption.length; ++i)
                             $root.google.protobuf.UninterpretedOption.encode(message.uninterpretedOption[i], writer.uint32(/* id 999, wireType 2 =*/7994).fork()).ldelim();
-                    if (message[".google.longrunning.operationInfo"] != null && message.hasOwnProperty(".google.longrunning.operationInfo"))
+                    if (message[".google.longrunning.operationInfo"] != null && Object.hasOwnProperty.call(message, ".google.longrunning.operationInfo"))
                         $root.google.longrunning.OperationInfo.encode(message[".google.longrunning.operationInfo"], writer.uint32(/* id 1049, wireType 2 =*/8394).fork()).ldelim();
                     if (message[".google.api.methodSignature"] != null && message[".google.api.methodSignature"].length)
                         for (var i = 0; i < message[".google.api.methodSignature"].length; ++i)
                             writer.uint32(/* id 1051, wireType 2 =*/8410).string(message[".google.api.methodSignature"][i]);
-                    if (message[".google.api.http"] != null && message.hasOwnProperty(".google.api.http"))
+                    if (message[".google.api.http"] != null && Object.hasOwnProperty.call(message, ".google.api.http"))
                         $root.google.api.HttpRule.encode(message[".google.api.http"], writer.uint32(/* id 72295728, wireType 2 =*/578365826).fork()).ldelim();
                     return writer;
                 };
@@ -11003,7 +10987,7 @@
                 /**
                  * IdempotencyLevel enum.
                  * @name google.protobuf.MethodOptions.IdempotencyLevel
-                 * @enum {string}
+                 * @enum {number}
                  * @property {number} IDEMPOTENCY_UNKNOWN=0 IDEMPOTENCY_UNKNOWN value
                  * @property {number} NO_SIDE_EFFECTS=1 NO_SIDE_EFFECTS value
                  * @property {number} IDEMPOTENT=2 IDEMPOTENT value
@@ -11133,17 +11117,17 @@
                     if (message.name != null && message.name.length)
                         for (var i = 0; i < message.name.length; ++i)
                             $root.google.protobuf.UninterpretedOption.NamePart.encode(message.name[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-                    if (message.identifierValue != null && message.hasOwnProperty("identifierValue"))
+                    if (message.identifierValue != null && Object.hasOwnProperty.call(message, "identifierValue"))
                         writer.uint32(/* id 3, wireType 2 =*/26).string(message.identifierValue);
-                    if (message.positiveIntValue != null && message.hasOwnProperty("positiveIntValue"))
+                    if (message.positiveIntValue != null && Object.hasOwnProperty.call(message, "positiveIntValue"))
                         writer.uint32(/* id 4, wireType 0 =*/32).uint64(message.positiveIntValue);
-                    if (message.negativeIntValue != null && message.hasOwnProperty("negativeIntValue"))
+                    if (message.negativeIntValue != null && Object.hasOwnProperty.call(message, "negativeIntValue"))
                         writer.uint32(/* id 5, wireType 0 =*/40).int64(message.negativeIntValue);
-                    if (message.doubleValue != null && message.hasOwnProperty("doubleValue"))
+                    if (message.doubleValue != null && Object.hasOwnProperty.call(message, "doubleValue"))
                         writer.uint32(/* id 6, wireType 1 =*/49).double(message.doubleValue);
-                    if (message.stringValue != null && message.hasOwnProperty("stringValue"))
+                    if (message.stringValue != null && Object.hasOwnProperty.call(message, "stringValue"))
                         writer.uint32(/* id 7, wireType 2 =*/58).bytes(message.stringValue);
-                    if (message.aggregateValue != null && message.hasOwnProperty("aggregateValue"))
+                    if (message.aggregateValue != null && Object.hasOwnProperty.call(message, "aggregateValue"))
                         writer.uint32(/* id 8, wireType 2 =*/66).string(message.aggregateValue);
                     return writer;
                 };
@@ -11920,9 +11904,9 @@
                                 writer.int32(message.span[i]);
                             writer.ldelim();
                         }
-                        if (message.leadingComments != null && message.hasOwnProperty("leadingComments"))
+                        if (message.leadingComments != null && Object.hasOwnProperty.call(message, "leadingComments"))
                             writer.uint32(/* id 3, wireType 2 =*/26).string(message.leadingComments);
-                        if (message.trailingComments != null && message.hasOwnProperty("trailingComments"))
+                        if (message.trailingComments != null && Object.hasOwnProperty.call(message, "trailingComments"))
                             writer.uint32(/* id 4, wireType 2 =*/34).string(message.trailingComments);
                         if (message.leadingDetachedComments != null && message.leadingDetachedComments.length)
                             for (var i = 0; i < message.leadingDetachedComments.length; ++i)
@@ -12453,11 +12437,11 @@
                                 writer.int32(message.path[i]);
                             writer.ldelim();
                         }
-                        if (message.sourceFile != null && message.hasOwnProperty("sourceFile"))
+                        if (message.sourceFile != null && Object.hasOwnProperty.call(message, "sourceFile"))
                             writer.uint32(/* id 2, wireType 2 =*/18).string(message.sourceFile);
-                        if (message.begin != null && message.hasOwnProperty("begin"))
+                        if (message.begin != null && Object.hasOwnProperty.call(message, "begin"))
                             writer.uint32(/* id 3, wireType 0 =*/24).int32(message.begin);
-                        if (message.end != null && message.hasOwnProperty("end"))
+                        if (message.end != null && Object.hasOwnProperty.call(message, "end"))
                             writer.uint32(/* id 4, wireType 0 =*/32).int32(message.end);
                         return writer;
                     };
@@ -12710,9 +12694,9 @@
                 Any.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.type_url != null && message.hasOwnProperty("type_url"))
+                    if (message.type_url != null && Object.hasOwnProperty.call(message, "type_url"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.type_url);
-                    if (message.value != null && message.hasOwnProperty("value"))
+                    if (message.value != null && Object.hasOwnProperty.call(message, "value"))
                         writer.uint32(/* id 2, wireType 2 =*/18).bytes(message.value);
                     return writer;
                 };
@@ -12929,9 +12913,9 @@
                 Duration.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.seconds != null && message.hasOwnProperty("seconds"))
+                    if (message.seconds != null && Object.hasOwnProperty.call(message, "seconds"))
                         writer.uint32(/* id 1, wireType 0 =*/8).int64(message.seconds);
-                    if (message.nanos != null && message.hasOwnProperty("nanos"))
+                    if (message.nanos != null && Object.hasOwnProperty.call(message, "nanos"))
                         writer.uint32(/* id 2, wireType 0 =*/16).int32(message.nanos);
                     return writer;
                 };
@@ -13516,9 +13500,9 @@
                 Timestamp.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.seconds != null && message.hasOwnProperty("seconds"))
+                    if (message.seconds != null && Object.hasOwnProperty.call(message, "seconds"))
                         writer.uint32(/* id 1, wireType 0 =*/8).int64(message.seconds);
-                    if (message.nanos != null && message.hasOwnProperty("nanos"))
+                    if (message.nanos != null && Object.hasOwnProperty.call(message, "nanos"))
                         writer.uint32(/* id 2, wireType 0 =*/16).int32(message.nanos);
                     return writer;
                 };
@@ -13993,15 +13977,15 @@
                 Operation.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.name != null && message.hasOwnProperty("name"))
+                    if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
-                    if (message.metadata != null && message.hasOwnProperty("metadata"))
+                    if (message.metadata != null && Object.hasOwnProperty.call(message, "metadata"))
                         $root.google.protobuf.Any.encode(message.metadata, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-                    if (message.done != null && message.hasOwnProperty("done"))
+                    if (message.done != null && Object.hasOwnProperty.call(message, "done"))
                         writer.uint32(/* id 3, wireType 0 =*/24).bool(message.done);
-                    if (message.error != null && message.hasOwnProperty("error"))
+                    if (message.error != null && Object.hasOwnProperty.call(message, "error"))
                         $root.google.rpc.Status.encode(message.error, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
-                    if (message.response != null && message.hasOwnProperty("response"))
+                    if (message.response != null && Object.hasOwnProperty.call(message, "response"))
                         $root.google.protobuf.Any.encode(message.response, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
                     return writer;
                 };
@@ -14261,7 +14245,7 @@
                 GetOperationRequest.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.name != null && message.hasOwnProperty("name"))
+                    if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
                     return writer;
                 };
@@ -14475,13 +14459,13 @@
                 ListOperationsRequest.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.filter != null && message.hasOwnProperty("filter"))
+                    if (message.filter != null && Object.hasOwnProperty.call(message, "filter"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.filter);
-                    if (message.pageSize != null && message.hasOwnProperty("pageSize"))
+                    if (message.pageSize != null && Object.hasOwnProperty.call(message, "pageSize"))
                         writer.uint32(/* id 2, wireType 0 =*/16).int32(message.pageSize);
-                    if (message.pageToken != null && message.hasOwnProperty("pageToken"))
+                    if (message.pageToken != null && Object.hasOwnProperty.call(message, "pageToken"))
                         writer.uint32(/* id 3, wireType 2 =*/26).string(message.pageToken);
-                    if (message.name != null && message.hasOwnProperty("name"))
+                    if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                         writer.uint32(/* id 4, wireType 2 =*/34).string(message.name);
                     return writer;
                 };
@@ -14715,7 +14699,7 @@
                     if (message.operations != null && message.operations.length)
                         for (var i = 0; i < message.operations.length; ++i)
                             $root.google.longrunning.Operation.encode(message.operations[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                    if (message.nextPageToken != null && message.hasOwnProperty("nextPageToken"))
+                    if (message.nextPageToken != null && Object.hasOwnProperty.call(message, "nextPageToken"))
                         writer.uint32(/* id 2, wireType 2 =*/18).string(message.nextPageToken);
                     return writer;
                 };
@@ -14933,7 +14917,7 @@
                 CancelOperationRequest.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.name != null && message.hasOwnProperty("name"))
+                    if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
                     return writer;
                 };
@@ -15120,7 +15104,7 @@
                 DeleteOperationRequest.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.name != null && message.hasOwnProperty("name"))
+                    if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
                     return writer;
                 };
@@ -15316,9 +15300,9 @@
                 WaitOperationRequest.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.name != null && message.hasOwnProperty("name"))
+                    if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
-                    if (message.timeout != null && message.hasOwnProperty("timeout"))
+                    if (message.timeout != null && Object.hasOwnProperty.call(message, "timeout"))
                         $root.google.protobuf.Duration.encode(message.timeout, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
                     return writer;
                 };
@@ -15531,9 +15515,9 @@
                 OperationInfo.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.responseType != null && message.hasOwnProperty("responseType"))
+                    if (message.responseType != null && Object.hasOwnProperty.call(message, "responseType"))
                         writer.uint32(/* id 1, wireType 2 =*/10).string(message.responseType);
-                    if (message.metadataType != null && message.hasOwnProperty("metadataType"))
+                    if (message.metadataType != null && Object.hasOwnProperty.call(message, "metadataType"))
                         writer.uint32(/* id 2, wireType 2 =*/18).string(message.metadataType);
                     return writer;
                 };
@@ -15763,9 +15747,9 @@
                 Status.encode = function encode(message, writer) {
                     if (!writer)
                         writer = $Writer.create();
-                    if (message.code != null && message.hasOwnProperty("code"))
+                    if (message.code != null && Object.hasOwnProperty.call(message, "code"))
                         writer.uint32(/* id 1, wireType 0 =*/8).int32(message.code);
-                    if (message.message != null && message.hasOwnProperty("message"))
+                    if (message.message != null && Object.hasOwnProperty.call(message, "message"))
                         writer.uint32(/* id 2, wireType 2 =*/18).string(message.message);
                     if (message.details != null && message.details.length)
                         for (var i = 0; i < message.details.length; ++i)

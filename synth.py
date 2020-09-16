@@ -33,7 +33,7 @@ for version in versions:
 execution_versions = ['v1beta']
 for version in execution_versions:
   library = gapic.node_library('workflow-executions', version, bazel_target=f"//google/cloud/workflows/executions/{version}:workflows-executions-{version}-nodejs")
-  s.copy(library, excludes=['src/index.ts', 'src/v1beta/index.ts', README.md', 'package.json'])
+  s.copy(library, excludes=['src/index.ts', 'src/v1beta/index.ts', 'README.md', 'package.json'])
 
 # Copy common templates
 common_templates = gcp.CommonTemplates()

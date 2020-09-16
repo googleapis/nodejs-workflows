@@ -22,4 +22,4 @@ const WorkflowsClient = v1beta.WorkflowsClient;
 export {v1beta, ExecutionsClient, WorkflowsClient};
 export default {v1beta, ExecutionsClient, WorkflowsClient};
 import * as protos from '../protos/protos';
-export {protos}
+export {protos};

@@ -4,15 +4,15 @@
       "git": {
         "name": ".",
         "remote": "git@github.com:googleapis/nodejs-workflows.git",
-        "sha": "e307a2d85bc3953afae5a9098db761fa908c1c7c"
+        "sha": "a57b2534c524bb3f44ad77ca260d92e52cdad6fa"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "f0d92d22e675c93125f8a7abd10dc01b891c3bcf",
-        "internalRef": "332061108"
+        "sha": "613f39ea611a075f6e274e4b842a03f7c4920982",
+        "internalRef": "332099670"
       }
     }
   ],
@@ -21,6 +21,15 @@
       "client": {
         "source": "googleapis",
         "apiName": "workflows",
+        "apiVersion": "v1beta",
+        "language": "nodejs",
+        "generator": "bazel"
+      }
+    },
+    {
+      "client": {
+        "source": "googleapis",
+        "apiName": "workflow-executions",
         "apiVersion": "v1beta",
         "language": "nodejs",
         "generator": "bazel"
@@ -78,13 +87,19 @@
     "README.md",
     "api-extractor.json",
     "linkinator.config.json",
-    "package.json",
+    "package-lock.json.3016065972",
+    "protos/google/cloud/workflows/executions/v1beta/executions.proto",
     "protos/google/cloud/workflows/v1beta/workflows.proto",
     "protos/protos.d.ts",
     "protos/protos.js",
     "protos/protos.json",
     "renovate.json",
+    "samples/README.md",
+    "samples/package-lock.json.973996052",
     "src/index.ts",
+    "src/v1beta/executions_client.ts",
+    "src/v1beta/executions_client_config.json",
+    "src/v1beta/executions_proto_list.json",
     "src/v1beta/index.ts",
     "src/v1beta/workflows_client.ts",
     "src/v1beta/workflows_client_config.json",
@@ -92,6 +107,7 @@
     "system-test/fixtures/sample/src/index.js",
     "system-test/fixtures/sample/src/index.ts",
     "system-test/install.ts",
+    "test/gapic_executions_v1beta.ts",
     "test/gapic_workflows_v1beta.ts",
     "tsconfig.json",
     "webpack.config.js"

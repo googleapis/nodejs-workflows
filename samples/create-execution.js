@@ -14,25 +14,24 @@
 
 'use strict';
 
-async function main(projectId, location) {
-  // [START workflows_quickstart]
+async function main(projectId, location, name) {
+  // [START workflows_create_execution]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   // const projectId = 'my-project';
   // const location = 'us-central1';
-  const {WorkflowsClient} = require('@google-cloud/workflows');
-  const client = new WorkflowsClient();
-  async function listWorkloads() {
-    const [workflows] = await client.listWorkflows({
-      parent: client.locationPath(projectId, location),
+  // const name = 'my-test-workflow';
+  const {ExecutionsClient} = require('@google-cloud/workflows');
+  const client = new ExecutionsClient();
+  async function createExecution() {
+    const [resp] = await client.createExecution({
+      parent: client.workflowPath(projectId, location, name),
     });
-    for (const workflow of workflows) {
-      console.info(`name: ${workflow.name}`);
-    }
+    console.info(`name: ${resp.name}`);
   }
-  listWorkloads();
-  // [END workflows_quickstart]
+  createExecution();
+  // [END workflows_create_execution]
 }
 
 main(...process.argv.slice(2));

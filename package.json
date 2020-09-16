@@ -34,9 +34,10 @@
     "lint": "gts check",
     "prelint": "cd samples; npm link ../; npm i",
     "prepare": "npm run compile-protos && npm run compile",
-    "system-test": "c8 mocha build/system-test",
+    "system-test": "c8 mocha --exit build/system-test",
     "samples-test": "cd samples/ && npm link ../ && npm test",
-    "test": "c8 mocha build/test"
+    "test": "c8 mocha build/test",
+    "pretest": "npm run prepare"
   },
   "dependencies": {
     "google-gax": "^2.7.0"

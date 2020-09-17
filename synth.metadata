@@ -4,15 +4,15 @@
       "git": {
         "name": ".",
         "remote": "git@github.com:googleapis/nodejs-workflows.git",
-        "sha": "292112fa5f56e13b33ca27b2561207798d2d2d15"
+        "sha": "7444fd0907e73f4bc546a56783c70cd396a8046f"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "613f39ea611a075f6e274e4b842a03f7c4920982",
-        "internalRef": "332099670"
+        "sha": "74bda5c755f36d6e2f82d6e18a702301582c9fab",
+        "internalRef": "332258539"
       }
     }
   ],
@@ -20,7 +20,7 @@
     {
       "client": {
         "source": "googleapis",
-        "apiName": "workflows",
+        "apiName": "workflow-executions",
         "apiVersion": "v1beta",
         "language": "nodejs",
         "generator": "bazel"
@@ -29,7 +29,7 @@
     {
       "client": {
         "source": "googleapis",
-        "apiName": "workflow-executions",
+        "apiName": "workflows",
         "apiVersion": "v1beta",
         "language": "nodejs",
         "generator": "bazel"

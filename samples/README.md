@@ -12,6 +12,7 @@
 
 * [Before you begin](#before-you-begin)
 * [Samples](#samples)
+  * [Create-execution](#create-execution)
   * [Quickstart](#quickstart)
 
 ## Before you begin
@@ -26,6 +27,23 @@ Before running the samples, make sure you've followed the steps outlined in
 `cd ..`
 
 ## Samples
+
+
+
+### Create-execution
+
+View the [source code](https://github.com/googleapis/nodejs-workflows/blob/master/samples/create-execution.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-workflows&page=editor&open_in_editor=samples/create-execution.js,samples/README.md)
+
+__Usage:__
+
+
+`node samples/create-execution.js`
+
+
+-----
+
 
 
 

@@ -62,13 +62,10 @@ npm install @google-cloud/workflows
  * TODO(developer): Uncomment these variables before running the sample.
  */
 // const projectId = 'my-project';
-// const location -= 'us-central1';
-
-// Imports the Google Cloud Some API library
+// const location = 'us-central1';
 const {WorkflowsClient} = require('@google-cloud/workflows');
 const client = new WorkflowsClient();
 async function listWorkloads() {
-  console.info(projectId, location);
   const [workflows] = await client.listWorkflows({
     parent: client.locationPath(projectId, location),
   });
@@ -89,6 +86,7 @@ has instructions for running the samples.
 
 | Sample                      | Source Code                       | Try it |
 | --------------------------- | --------------------------------- | ------ |
+| Create-execution | [source code](https://github.com/googleapis/nodejs-workflows/blob/master/samples/create-execution.js) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-workflows&page=editor&open_in_editor=samples/create-execution.js,samples/README.md) |
 | Quickstart | [source code](https://github.com/googleapis/nodejs-workflows/blob/master/samples/quickstart.js) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-workflows&page=editor&open_in_editor=samples/quickstart.js,samples/README.md) |
 
 

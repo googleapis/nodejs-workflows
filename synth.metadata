@@ -4,7 +4,7 @@
       "git": {
         "name": ".",
         "remote": "git@github.com:googleapis/nodejs-workflows.git",
-        "sha": "a57b2534c524bb3f44ad77ca260d92e52cdad6fa"
+        "sha": "401b4c159e8877303c88013fd2e351c841bb06b3"
       }
     },
     {
@@ -87,7 +87,6 @@
     "README.md",
     "api-extractor.json",
     "linkinator.config.json",
-    "package-lock.json.3016065972",
     "protos/google/cloud/workflows/executions/v1beta/executions.proto",
     "protos/google/cloud/workflows/v1beta/workflows.proto",
     "protos/protos.d.ts",
@@ -95,12 +94,9 @@
     "protos/protos.json",
     "renovate.json",
     "samples/README.md",
-    "samples/package-lock.json.973996052",
-    "src/index.ts",
     "src/v1beta/executions_client.ts",
     "src/v1beta/executions_client_config.json",
     "src/v1beta/executions_proto_list.json",
-    "src/v1beta/index.ts",
     "src/v1beta/workflows_client.ts",
     "src/v1beta/workflows_client_config.json",
     "src/v1beta/workflows_proto_list.json",

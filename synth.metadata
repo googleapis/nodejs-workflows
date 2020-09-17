@@ -4,7 +4,7 @@
       "git": {
         "name": ".",
         "remote": "git@github.com:googleapis/nodejs-workflows.git",
-        "sha": "401b4c159e8877303c88013fd2e351c841bb06b3"
+        "sha": "292112fa5f56e13b33ca27b2561207798d2d2d15"
       }
     },
     {

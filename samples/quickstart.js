@@ -23,7 +23,7 @@ async function main(projectId, location) {
   // const location = 'us-central1';
   const {WorkflowsClient} = require('@google-cloud/workflows');
   const client = new WorkflowsClient();
-  async function listWorkloads() {
+  async function listWorkflows() {
     const [workflows] = await client.listWorkflows({
       parent: client.locationPath(projectId, location),
     });
@@ -31,7 +31,7 @@ async function main(projectId, location) {
       console.info(`name: ${workflow.name}`);
     }
   }
-  listWorkloads();
+  listWorkflows();
   // [END workflows_quickstart]
 }
 

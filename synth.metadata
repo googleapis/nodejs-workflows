@@ -3,8 +3,8 @@
     {
       "git": {
         "name": ".",
-        "remote": "git@github.com:googleapis/nodejs-workflows.git",
-        "sha": "7444fd0907e73f4bc546a56783c70cd396a8046f"
+        "remote": "https://github.com/googleapis/nodejs-workflows.git",
+        "sha": "11a46636765b09cc68f52247c01c13162a047b61"
       }
     },
     {
@@ -13,6 +13,13 @@
         "remote": "https://github.com/googleapis/googleapis.git",
         "sha": "74bda5c755f36d6e2f82d6e18a702301582c9fab",
         "internalRef": "332258539"
+      }
+    },
+    {
+      "git": {
+        "name": "synthtool",
+        "remote": "https://github.com/googleapis/synthtool.git",
+        "sha": "538a68019eb4a36a0cdfa4021f324dd01b784395"
       }
     }
   ],

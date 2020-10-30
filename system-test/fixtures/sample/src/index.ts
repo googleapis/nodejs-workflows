@@ -16,10 +16,10 @@
 // ** https://github.com/googleapis/gapic-generator-typescript **
 // ** All changes to this file may be overwritten. **
 
-import {WorkflowsClient} from '@google-cloud/workflows';
+import {ExecutionsClient} from '@google-cloud/workflows';
 
 function main() {
-  new WorkflowsClient();
+  new ExecutionsClient();
 }
 
 main();

@@ -26,6 +26,851 @@ export namespace google {
             /** Namespace executions. */
             namespace executions {
 
+                /** Namespace v1. */
+                namespace v1 {
+
+                    /** Represents an Executions */
+                    class Executions extends $protobuf.rpc.Service {
+
+                        /**
+                         * Constructs a new Executions service.
+                         * @param rpcImpl RPC implementation
+                         * @param [requestDelimited=false] Whether requests are length-delimited
+                         * @param [responseDelimited=false] Whether responses are length-delimited
+                         */
+                        constructor(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean);
+
+                        /**
+                         * Creates new Executions service using the specified rpc implementation.
+                         * @param rpcImpl RPC implementation
+                         * @param [requestDelimited=false] Whether requests are length-delimited
+                         * @param [responseDelimited=false] Whether responses are length-delimited
+                         * @returns RPC service. Useful where requests and/or responses are streamed.
+                         */
+                        public static create(rpcImpl: $protobuf.RPCImpl, requestDelimited?: boolean, responseDelimited?: boolean): Executions;
+
+                        /**
+                         * Calls ListExecutions.
+                         * @param request ListExecutionsRequest message or plain object
+                         * @param callback Node-style callback called with the error, if any, and ListExecutionsResponse
+                         */
+                        public listExecutions(request: google.cloud.workflows.executions.v1.IListExecutionsRequest, callback: google.cloud.workflows.executions.v1.Executions.ListExecutionsCallback): void;
+
+                        /**
+                         * Calls ListExecutions.
+                         * @param request ListExecutionsRequest message or plain object
+                         * @returns Promise
+                         */
+                        public listExecutions(request: google.cloud.workflows.executions.v1.IListExecutionsRequest): Promise<google.cloud.workflows.executions.v1.ListExecutionsResponse>;
+
+                        /**
+                         * Calls CreateExecution.
+                         * @param request CreateExecutionRequest message or plain object
+                         * @param callback Node-style callback called with the error, if any, and Execution
+                         */
+                        public createExecution(request: google.cloud.workflows.executions.v1.ICreateExecutionRequest, callback: google.cloud.workflows.executions.v1.Executions.CreateExecutionCallback): void;
+
+                        /**
+                         * Calls CreateExecution.
+                         * @param request CreateExecutionRequest message or plain object
+                         * @returns Promise
+                         */
+                        public createExecution(request: google.cloud.workflows.executions.v1.ICreateExecutionRequest): Promise<google.cloud.workflows.executions.v1.Execution>;
+
+                        /**
+                         * Calls GetExecution.
+                         * @param request GetExecutionRequest message or plain object
+                         * @param callback Node-style callback called with the error, if any, and Execution
+                         */
+                        public getExecution(request: google.cloud.workflows.executions.v1.IGetExecutionRequest, callback: google.cloud.workflows.executions.v1.Executions.GetExecutionCallback): void;
+
+                        /**
+                         * Calls GetExecution.
+                         * @param request GetExecutionRequest message or plain object
+                         * @returns Promise
+                         */
+                        public getExecution(request: google.cloud.workflows.executions.v1.IGetExecutionRequest): Promise<google.cloud.workflows.executions.v1.Execution>;
+
+                        /**
+                         * Calls CancelExecution.
+                         * @param request CancelExecutionRequest message or plain object
+                         * @param callback Node-style callback called with the error, if any, and Execution
+                         */
+                        public cancelExecution(request: google.cloud.workflows.executions.v1.ICancelExecutionRequest, callback: google.cloud.workflows.executions.v1.Executions.CancelExecutionCallback): void;
+
+                        /**
+                         * Calls CancelExecution.
+                         * @param request CancelExecutionRequest message or plain object
+                         * @returns Promise
+                         */
+                        public cancelExecution(request: google.cloud.workflows.executions.v1.ICancelExecutionRequest): Promise<google.cloud.workflows.executions.v1.Execution>;
+                    }
+
+                    namespace Executions {
+
+                        /**
+                         * Callback as used by {@link google.cloud.workflows.executions.v1.Executions#listExecutions}.
+                         * @param error Error, if any
+                         * @param [response] ListExecutionsResponse
+                         */
+                        type ListExecutionsCallback = (error: (Error|null), response?: google.cloud.workflows.executions.v1.ListExecutionsResponse) => void;
+
+                        /**
+                         * Callback as used by {@link google.cloud.workflows.executions.v1.Executions#createExecution}.
+                         * @param error Error, if any
+                         * @param [response] Execution
+                         */
+                        type CreateExecutionCallback = (error: (Error|null), response?: google.cloud.workflows.executions.v1.Execution) => void;
+
+                        /**
+                         * Callback as used by {@link google.cloud.workflows.executions.v1.Executions#getExecution}.
+                         * @param error Error, if any
+                         * @param [response] Execution
+                         */
+                        type GetExecutionCallback = (error: (Error|null), response?: google.cloud.workflows.executions.v1.Execution) => void;
+
+                        /**
+                         * Callback as used by {@link google.cloud.workflows.executions.v1.Executions#cancelExecution}.
+                         * @param error Error, if any
+                         * @param [response] Execution
+                         */
+                        type CancelExecutionCallback = (error: (Error|null), response?: google.cloud.workflows.executions.v1.Execution) => void;
+                    }
+
+                    /** Properties of an Execution. */
+                    interface IExecution {
+
+                        /** Execution name */
+                        name?: (string|null);
+
+                        /** Execution startTime */
+                        startTime?: (google.protobuf.ITimestamp|null);
+
+                        /** Execution endTime */
+                        endTime?: (google.protobuf.ITimestamp|null);
+
+                        /** Execution state */
+                        state?: (google.cloud.workflows.executions.v1.Execution.State|keyof typeof google.cloud.workflows.executions.v1.Execution.State|null);
+
+                        /** Execution argument */
+                        argument?: (string|null);
+
+                        /** Execution result */
+                        result?: (string|null);
+
+                        /** Execution error */
+                        error?: (google.cloud.workflows.executions.v1.Execution.IError|null);
+
+                        /** Execution workflowRevisionId */
+                        workflowRevisionId?: (string|null);
+                    }
+
+                    /** Represents an Execution. */
+                    class Execution implements IExecution {
+
+                        /**
+                         * Constructs a new Execution.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: google.cloud.workflows.executions.v1.IExecution);
+
+                        /** Execution name. */
+                        public name: string;
+
+                        /** Execution startTime. */
+                        public startTime?: (google.protobuf.ITimestamp|null);
+
+                        /** Execution endTime. */
+                        public endTime?: (google.protobuf.ITimestamp|null);
+
+                        /** Execution state. */
+                        public state: (google.cloud.workflows.executions.v1.Execution.State|keyof typeof google.cloud.workflows.executions.v1.Execution.State);
+
+                        /** Execution argument. */
+                        public argument: string;
+
+                        /** Execution result. */
+                        public result: string;
+
+                        /** Execution error. */
+                        public error?: (google.cloud.workflows.executions.v1.Execution.IError|null);
+
+                        /** Execution workflowRevisionId. */
+                        public workflowRevisionId: string;
+
+                        /**
+                         * Creates a new Execution instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns Execution instance
+                         */
+                        public static create(properties?: google.cloud.workflows.executions.v1.IExecution): google.cloud.workflows.executions.v1.Execution;
+
+                        /**
+                         * Encodes the specified Execution message. Does not implicitly {@link google.cloud.workflows.executions.v1.Execution.verify|verify} messages.
+                         * @param message Execution message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: google.cloud.workflows.executions.v1.IExecution, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified Execution message, length delimited. Does not implicitly {@link google.cloud.workflows.executions.v1.Execution.verify|verify} messages.
+                         * @param message Execution message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: google.cloud.workflows.executions.v1.IExecution, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes an Execution message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns Execution
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.workflows.executions.v1.Execution;
+
+                        /**
+                         * Decodes an Execution message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns Execution
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.workflows.executions.v1.Execution;
+
+                        /**
+                         * Verifies an Execution message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates an Execution message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns Execution
+                         */
+                        public static fromObject(object: { [k: string]: any }): google.cloud.workflows.executions.v1.Execution;
+
+                        /**
+                         * Creates a plain object from an Execution message. Also converts values to other types if specified.
+                         * @param message Execution
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: google.cloud.workflows.executions.v1.Execution, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this Execution to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+                    }
+
+                    namespace Execution {
+
+                        /** Properties of an Error. */
+                        interface IError {
+
+                            /** Error payload */
+                            payload?: (string|null);
+
+                            /** Error context */
+                            context?: (string|null);
+                        }
+
+                        /** Represents an Error. */
+                        class Error implements IError {
+
+                            /**
+                             * Constructs a new Error.
+                             * @param [properties] Properties to set
+                             */
+                            constructor(properties?: google.cloud.workflows.executions.v1.Execution.IError);
+
+                            /** Error payload. */
+                            public payload: string;
+
+                            /** Error context. */
+                            public context: string;
+
+                            /**
+                             * Creates a new Error instance using the specified properties.
+                             * @param [properties] Properties to set
+                             * @returns Error instance
+                             */
+                            public static create(properties?: google.cloud.workflows.executions.v1.Execution.IError): google.cloud.workflows.executions.v1.Execution.Error;
+
+                            /**
+                             * Encodes the specified Error message. Does not implicitly {@link google.cloud.workflows.executions.v1.Execution.Error.verify|verify} messages.
+                             * @param message Error message or plain object to encode
+                             * @param [writer] Writer to encode to
+                             * @returns Writer
+                             */
+                            public static encode(message: google.cloud.workflows.executions.v1.Execution.IError, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                            /**
+                             * Encodes the specified Error message, length delimited. Does not implicitly {@link google.cloud.workflows.executions.v1.Execution.Error.verify|verify} messages.
+                             * @param message Error message or plain object to encode
+                             * @param [writer] Writer to encode to
+                             * @returns Writer
+                             */
+                            public static encodeDelimited(message: google.cloud.workflows.executions.v1.Execution.IError, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                            /**
+                             * Decodes an Error message from the specified reader or buffer.
+                             * @param reader Reader or buffer to decode from
+                             * @param [length] Message length if known beforehand
+                             * @returns Error
+                             * @throws {Error} If the payload is not a reader or valid buffer
+                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                             */
+                            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.workflows.executions.v1.Execution.Error;
+
+                            /**
+                             * Decodes an Error message from the specified reader or buffer, length delimited.
+                             * @param reader Reader or buffer to decode from
+                             * @returns Error
+                             * @throws {Error} If the payload is not a reader or valid buffer
+                             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                             */
+                            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.workflows.executions.v1.Execution.Error;
+
+                            /**
+                             * Verifies an Error message.
+                             * @param message Plain object to verify
+                             * @returns `null` if valid, otherwise the reason why it is not
+                             */
+                            public static verify(message: { [k: string]: any }): (string|null);
+
+                            /**
+                             * Creates an Error message from a plain object. Also converts values to their respective internal types.
+                             * @param object Plain object
+                             * @returns Error
+                             */
+                            public static fromObject(object: { [k: string]: any }): google.cloud.workflows.executions.v1.Execution.Error;
+
+                            /**
+                             * Creates a plain object from an Error message. Also converts values to other types if specified.
+                             * @param message Error
+                             * @param [options] Conversion options
+                             * @returns Plain object
+                             */
+                            public static toObject(message: google.cloud.workflows.executions.v1.Execution.Error, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                            /**
+                             * Converts this Error to JSON.
+                             * @returns JSON object
+                             */
+                            public toJSON(): { [k: string]: any };
+                        }
+
+                        /** State enum. */
+                        enum State {
+                            STATE_UNSPECIFIED = 0,
+                            ACTIVE = 1,
+                            SUCCEEDED = 2,
+                            FAILED = 3,
+                            CANCELLED = 4
+                        }
+                    }
+
+                    /** Properties of a ListExecutionsRequest. */
+                    interface IListExecutionsRequest {
+
+                        /** ListExecutionsRequest parent */
+                        parent?: (string|null);
+
+                        /** ListExecutionsRequest pageSize */
+                        pageSize?: (number|null);
+
+                        /** ListExecutionsRequest pageToken */
+                        pageToken?: (string|null);
+
+                        /** ListExecutionsRequest view */
+                        view?: (google.cloud.workflows.executions.v1.ExecutionView|keyof typeof google.cloud.workflows.executions.v1.ExecutionView|null);
+                    }
+
+                    /** Represents a ListExecutionsRequest. */
+                    class ListExecutionsRequest implements IListExecutionsRequest {
+
+                        /**
+                         * Constructs a new ListExecutionsRequest.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: google.cloud.workflows.executions.v1.IListExecutionsRequest);
+
+                        /** ListExecutionsRequest parent. */
+                        public parent: string;
+
+                        /** ListExecutionsRequest pageSize. */
+                        public pageSize: number;
+
+                        /** ListExecutionsRequest pageToken. */
+                        public pageToken: string;
+
+                        /** ListExecutionsRequest view. */
+                        public view: (google.cloud.workflows.executions.v1.ExecutionView|keyof typeof google.cloud.workflows.executions.v1.ExecutionView);
+
+                        /**
+                         * Creates a new ListExecutionsRequest instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns ListExecutionsRequest instance
+                         */
+                        public static create(properties?: google.cloud.workflows.executions.v1.IListExecutionsRequest): google.cloud.workflows.executions.v1.ListExecutionsRequest;
+
+                        /**
+                         * Encodes the specified ListExecutionsRequest message. Does not implicitly {@link google.cloud.workflows.executions.v1.ListExecutionsRequest.verify|verify} messages.
+                         * @param message ListExecutionsRequest message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: google.cloud.workflows.executions.v1.IListExecutionsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified ListExecutionsRequest message, length delimited. Does not implicitly {@link google.cloud.workflows.executions.v1.ListExecutionsRequest.verify|verify} messages.
+                         * @param message ListExecutionsRequest message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: google.cloud.workflows.executions.v1.IListExecutionsRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a ListExecutionsRequest message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns ListExecutionsRequest
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.workflows.executions.v1.ListExecutionsRequest;
+
+                        /**
+                         * Decodes a ListExecutionsRequest message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns ListExecutionsRequest
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.workflows.executions.v1.ListExecutionsRequest;
+
+                        /**
+                         * Verifies a ListExecutionsRequest message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a ListExecutionsRequest message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns ListExecutionsRequest
+                         */
+                        public static fromObject(object: { [k: string]: any }): google.cloud.workflows.executions.v1.ListExecutionsRequest;
+
+                        /**
+                         * Creates a plain object from a ListExecutionsRequest message. Also converts values to other types if specified.
+                         * @param message ListExecutionsRequest
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: google.cloud.workflows.executions.v1.ListExecutionsRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this ListExecutionsRequest to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+                    }
+
+                    /** Properties of a ListExecutionsResponse. */
+                    interface IListExecutionsResponse {
+
+                        /** ListExecutionsResponse executions */
+                        executions?: (google.cloud.workflows.executions.v1.IExecution[]|null);
+
+                        /** ListExecutionsResponse nextPageToken */
+                        nextPageToken?: (string|null);
+                    }
+
+                    /** Represents a ListExecutionsResponse. */
+                    class ListExecutionsResponse implements IListExecutionsResponse {
+
+                        /**
+                         * Constructs a new ListExecutionsResponse.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: google.cloud.workflows.executions.v1.IListExecutionsResponse);
+
+                        /** ListExecutionsResponse executions. */
+                        public executions: google.cloud.workflows.executions.v1.IExecution[];
+
+                        /** ListExecutionsResponse nextPageToken. */
+                        public nextPageToken: string;
+
+                        /**
+                         * Creates a new ListExecutionsResponse instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns ListExecutionsResponse instance
+                         */
+                        public static create(properties?: google.cloud.workflows.executions.v1.IListExecutionsResponse): google.cloud.workflows.executions.v1.ListExecutionsResponse;
+
+                        /**
+                         * Encodes the specified ListExecutionsResponse message. Does not implicitly {@link google.cloud.workflows.executions.v1.ListExecutionsResponse.verify|verify} messages.
+                         * @param message ListExecutionsResponse message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: google.cloud.workflows.executions.v1.IListExecutionsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified ListExecutionsResponse message, length delimited. Does not implicitly {@link google.cloud.workflows.executions.v1.ListExecutionsResponse.verify|verify} messages.
+                         * @param message ListExecutionsResponse message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: google.cloud.workflows.executions.v1.IListExecutionsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a ListExecutionsResponse message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns ListExecutionsResponse
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.workflows.executions.v1.ListExecutionsResponse;
+
+                        /**
+                         * Decodes a ListExecutionsResponse message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns ListExecutionsResponse
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.workflows.executions.v1.ListExecutionsResponse;
+
+                        /**
+                         * Verifies a ListExecutionsResponse message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a ListExecutionsResponse message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns ListExecutionsResponse
+                         */
+                        public static fromObject(object: { [k: string]: any }): google.cloud.workflows.executions.v1.ListExecutionsResponse;
+
+                        /**
+                         * Creates a plain object from a ListExecutionsResponse message. Also converts values to other types if specified.
+                         * @param message ListExecutionsResponse
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: google.cloud.workflows.executions.v1.ListExecutionsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this ListExecutionsResponse to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+                    }
+
+                    /** Properties of a CreateExecutionRequest. */
+                    interface ICreateExecutionRequest {
+
+                        /** CreateExecutionRequest parent */
+                        parent?: (string|null);
+
+                        /** CreateExecutionRequest execution */
+                        execution?: (google.cloud.workflows.executions.v1.IExecution|null);
+                    }
+
+                    /** Represents a CreateExecutionRequest. */
+                    class CreateExecutionRequest implements ICreateExecutionRequest {
+
+                        /**
+                         * Constructs a new CreateExecutionRequest.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: google.cloud.workflows.executions.v1.ICreateExecutionRequest);
+
+                        /** CreateExecutionRequest parent. */
+                        public parent: string;
+
+                        /** CreateExecutionRequest execution. */
+                        public execution?: (google.cloud.workflows.executions.v1.IExecution|null);
+
+                        /**
+                         * Creates a new CreateExecutionRequest instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns CreateExecutionRequest instance
+                         */
+                        public static create(properties?: google.cloud.workflows.executions.v1.ICreateExecutionRequest): google.cloud.workflows.executions.v1.CreateExecutionRequest;
+
+                        /**
+                         * Encodes the specified CreateExecutionRequest message. Does not implicitly {@link google.cloud.workflows.executions.v1.CreateExecutionRequest.verify|verify} messages.
+                         * @param message CreateExecutionRequest message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: google.cloud.workflows.executions.v1.ICreateExecutionRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified CreateExecutionRequest message, length delimited. Does not implicitly {@link google.cloud.workflows.executions.v1.CreateExecutionRequest.verify|verify} messages.
+                         * @param message CreateExecutionRequest message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: google.cloud.workflows.executions.v1.ICreateExecutionRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a CreateExecutionRequest message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns CreateExecutionRequest
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.workflows.executions.v1.CreateExecutionRequest;
+
+                        /**
+                         * Decodes a CreateExecutionRequest message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns CreateExecutionRequest
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.workflows.executions.v1.CreateExecutionRequest;
+
+                        /**
+                         * Verifies a CreateExecutionRequest message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a CreateExecutionRequest message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns CreateExecutionRequest
+                         */
+                        public static fromObject(object: { [k: string]: any }): google.cloud.workflows.executions.v1.CreateExecutionRequest;
+
+                        /**
+                         * Creates a plain object from a CreateExecutionRequest message. Also converts values to other types if specified.
+                         * @param message CreateExecutionRequest
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: google.cloud.workflows.executions.v1.CreateExecutionRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this CreateExecutionRequest to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+                    }
+
+                    /** Properties of a GetExecutionRequest. */
+                    interface IGetExecutionRequest {
+
+                        /** GetExecutionRequest name */
+                        name?: (string|null);
+
+                        /** GetExecutionRequest view */
+                        view?: (google.cloud.workflows.executions.v1.ExecutionView|keyof typeof google.cloud.workflows.executions.v1.ExecutionView|null);
+                    }
+
+                    /** Represents a GetExecutionRequest. */
+                    class GetExecutionRequest implements IGetExecutionRequest {
+
+                        /**
+                         * Constructs a new GetExecutionRequest.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: google.cloud.workflows.executions.v1.IGetExecutionRequest);
+
+                        /** GetExecutionRequest name. */
+                        public name: string;
+
+                        /** GetExecutionRequest view. */
+                        public view: (google.cloud.workflows.executions.v1.ExecutionView|keyof typeof google.cloud.workflows.executions.v1.ExecutionView);
+
+                        /**
+                         * Creates a new GetExecutionRequest instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns GetExecutionRequest instance
+                         */
+                        public static create(properties?: google.cloud.workflows.executions.v1.IGetExecutionRequest): google.cloud.workflows.executions.v1.GetExecutionRequest;
+
+                        /**
+                         * Encodes the specified GetExecutionRequest message. Does not implicitly {@link google.cloud.workflows.executions.v1.GetExecutionRequest.verify|verify} messages.
+                         * @param message GetExecutionRequest message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: google.cloud.workflows.executions.v1.IGetExecutionRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified GetExecutionRequest message, length delimited. Does not implicitly {@link google.cloud.workflows.executions.v1.GetExecutionRequest.verify|verify} messages.
+                         * @param message GetExecutionRequest message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: google.cloud.workflows.executions.v1.IGetExecutionRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a GetExecutionRequest message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns GetExecutionRequest
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.workflows.executions.v1.GetExecutionRequest;
+
+                        /**
+                         * Decodes a GetExecutionRequest message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns GetExecutionRequest
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.workflows.executions.v1.GetExecutionRequest;
+
+                        /**
+                         * Verifies a GetExecutionRequest message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a GetExecutionRequest message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns GetExecutionRequest
+                         */
+                        public static fromObject(object: { [k: string]: any }): google.cloud.workflows.executions.v1.GetExecutionRequest;
+
+                        /**
+                         * Creates a plain object from a GetExecutionRequest message. Also converts values to other types if specified.
+                         * @param message GetExecutionRequest
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: google.cloud.workflows.executions.v1.GetExecutionRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this GetExecutionRequest to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+                    }
+
+                    /** Properties of a CancelExecutionRequest. */
+                    interface ICancelExecutionRequest {
+
+                        /** CancelExecutionRequest name */
+                        name?: (string|null);
+                    }
+
+                    /** Represents a CancelExecutionRequest. */
+                    class CancelExecutionRequest implements ICancelExecutionRequest {
+
+                        /**
+                         * Constructs a new CancelExecutionRequest.
+                         * @param [properties] Properties to set
+                         */
+                        constructor(properties?: google.cloud.workflows.executions.v1.ICancelExecutionRequest);
+
+                        /** CancelExecutionRequest name. */
+                        public name: string;
+
+                        /**
+                         * Creates a new CancelExecutionRequest instance using the specified properties.
+                         * @param [properties] Properties to set
+                         * @returns CancelExecutionRequest instance
+                         */
+                        public static create(properties?: google.cloud.workflows.executions.v1.ICancelExecutionRequest): google.cloud.workflows.executions.v1.CancelExecutionRequest;
+
+                        /**
+                         * Encodes the specified CancelExecutionRequest message. Does not implicitly {@link google.cloud.workflows.executions.v1.CancelExecutionRequest.verify|verify} messages.
+                         * @param message CancelExecutionRequest message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encode(message: google.cloud.workflows.executions.v1.ICancelExecutionRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Encodes the specified CancelExecutionRequest message, length delimited. Does not implicitly {@link google.cloud.workflows.executions.v1.CancelExecutionRequest.verify|verify} messages.
+                         * @param message CancelExecutionRequest message or plain object to encode
+                         * @param [writer] Writer to encode to
+                         * @returns Writer
+                         */
+                        public static encodeDelimited(message: google.cloud.workflows.executions.v1.ICancelExecutionRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                        /**
+                         * Decodes a CancelExecutionRequest message from the specified reader or buffer.
+                         * @param reader Reader or buffer to decode from
+                         * @param [length] Message length if known beforehand
+                         * @returns CancelExecutionRequest
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): google.cloud.workflows.executions.v1.CancelExecutionRequest;
+
+                        /**
+                         * Decodes a CancelExecutionRequest message from the specified reader or buffer, length delimited.
+                         * @param reader Reader or buffer to decode from
+                         * @returns CancelExecutionRequest
+                         * @throws {Error} If the payload is not a reader or valid buffer
+                         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                         */
+                        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): google.cloud.workflows.executions.v1.CancelExecutionRequest;
+
+                        /**
+                         * Verifies a CancelExecutionRequest message.
+                         * @param message Plain object to verify
+                         * @returns `null` if valid, otherwise the reason why it is not
+                         */
+                        public static verify(message: { [k: string]: any }): (string|null);
+
+                        /**
+                         * Creates a CancelExecutionRequest message from a plain object. Also converts values to their respective internal types.
+                         * @param object Plain object
+                         * @returns CancelExecutionRequest
+                         */
+                        public static fromObject(object: { [k: string]: any }): google.cloud.workflows.executions.v1.CancelExecutionRequest;
+
+                        /**
+                         * Creates a plain object from a CancelExecutionRequest message. Also converts values to other types if specified.
+                         * @param message CancelExecutionRequest
+                         * @param [options] Conversion options
+                         * @returns Plain object
+                         */
+                        public static toObject(message: google.cloud.workflows.executions.v1.CancelExecutionRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                        /**
+                         * Converts this CancelExecutionRequest to JSON.
+                         * @returns JSON object
+                         */
+                        public toJSON(): { [k: string]: any };
+                    }
+
+                    /** ExecutionView enum. */
+                    enum ExecutionView {
+                        EXECUTION_VIEW_UNSPECIFIED = 0,
+                        BASIC = 1,
+                        FULL = 2
+                    }
+                }
+
                 /** Namespace v1beta. */
                 namespace v1beta {
 

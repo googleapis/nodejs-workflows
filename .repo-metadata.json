@@ -1,13 +1,14 @@
 {
-  "name": "workflows",
-  "name_pretty": "Workflows",
-  "product_documentation": "https://cloud.google.com/workflows/docs/",
-  "client_documentation": "https://googleapis.dev/nodejs/workflows/latest/index.html",
-  "issue_tracker": "",
-  "release_level": "alpha",
-  "language": "nodejs",
-  "repo": "googleapis/nodejs-workflows",
-  "distribution_name": "@google-cloud/workflows",
   "api_id": "workflows.googleapis.com",
+  "name": "workflows",
+  "language": "nodejs",
+  "product_documentation": "https://cloud.google.com/workflows/docs/",
+  "distribution_name": "@google-cloud/workflows",
+  "issue_tracker": "",
+  "name_pretty": "Workflows",
+  "default_version": "v1beta",
+  "release_level": "alpha",
+  "repo": "googleapis/nodejs-workflows",
+  "client_documentation": "https://googleapis.dev/nodejs/workflows/latest/index.html",
   "requires_billing": true
 }

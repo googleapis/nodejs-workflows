@@ -18,8 +18,10 @@ deep-remove-regex:
   - /owl-bot-staging
 
 deep-copy-regex:
-  - source: /google/cloud/workflows/executions/(.*)/.*-nodejs/(.*)
-    dest: /owl-bot-staging/$1/$2
+  - source: /google/cloud/workflows/executions/(.*)/.*-nodejs/protos/(.*)
+    dest: /owl-bot-staging/protos/$1/$2
+  - source: /google/cloud/workflows/executions/(.*)/.*-nodejs/src/(.*)
+    dest: /owl-bot-staging/src/$1/$2
   - source: /google/cloud/workflows/(.*)/.*-nodejs/(.*)
     dest: /owl-bot-staging/$1/$2
 

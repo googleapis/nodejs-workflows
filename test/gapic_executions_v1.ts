@@ -28,10 +28,9 @@ import {PassThrough} from 'stream';
 import {protobuf} from 'google-gax';
 
 function generateSampleMessage<T extends object>(instance: T) {
-  const filledObject = (instance.constructor as typeof protobuf.Message).toObject(
-    instance as protobuf.Message<T>,
-    {defaults: true}
-  );
+  const filledObject = (
+    instance.constructor as typeof protobuf.Message
+  ).toObject(instance as protobuf.Message<T>, {defaults: true});
   return (instance.constructor as typeof protobuf.Message).fromObject(
     filledObject
   ) as T;
@@ -247,9 +246,8 @@ describe('v1.ExecutionsClient', () => {
       const expectedResponse = generateSampleMessage(
         new protos.google.cloud.workflows.executions.v1.Execution()
       );
-      client.innerApiCalls.createExecution = stubSimpleCallWithCallback(
-        expectedResponse
-      );
+      client.innerApiCalls.createExecution =
+        stubSimpleCallWithCallback(expectedResponse);
       const promise = new Promise((resolve, reject) => {
         client.createExecution(
           request,
@@ -359,9 +357,8 @@ describe('v1.ExecutionsClient', () => {
       const expectedResponse = generateSampleMessage(
         new protos.google.cloud.workflows.executions.v1.Execution()
       );
-      client.innerApiCalls.getExecution = stubSimpleCallWithCallback(
-        expectedResponse
-      );
+      client.innerApiCalls.getExecution =
+        stubSimpleCallWithCallback(expectedResponse);
       const promise = new Promise((resolve, reject) => {
         client.getExecution(
           request,
@@ -471,9 +468,8 @@ describe('v1.ExecutionsClient', () => {
       const expectedResponse = generateSampleMessage(
         new protos.google.cloud.workflows.executions.v1.Execution()
       );
-      client.innerApiCalls.cancelExecution = stubSimpleCallWithCallback(
-        expectedResponse
-      );
+      client.innerApiCalls.cancelExecution =
+        stubSimpleCallWithCallback(expectedResponse);
       const promise = new Promise((resolve, reject) => {
         client.cancelExecution(
           request,
@@ -599,9 +595,8 @@ describe('v1.ExecutionsClient', () => {
           new protos.google.cloud.workflows.executions.v1.Execution()
         ),
       ];
-      client.innerApiCalls.listExecutions = stubSimpleCallWithCallback(
-        expectedResponse
-      );
+      client.innerApiCalls.listExecutions =
+        stubSimpleCallWithCallback(expectedResponse);
       const promise = new Promise((resolve, reject) => {
         client.listExecutions(
           request,
@@ -681,12 +676,12 @@ describe('v1.ExecutionsClient', () => {
           new protos.google.cloud.workflows.executions.v1.Execution()
         ),
       ];
-      client.descriptors.page.listExecutions.createStream = stubPageStreamingCall(
-        expectedResponse
-      );
+      client.descriptors.page.listExecutions.createStream =
+        stubPageStreamingCall(expectedResponse);
       const stream = client.listExecutionsStream(request);
       const promise = new Promise((resolve, reject) => {
-        const responses: protos.google.cloud.workflows.executions.v1.Execution[] = [];
+        const responses: protos.google.cloud.workflows.executions.v1.Execution[] =
+          [];
         stream.on(
           'data',
           (response: protos.google.cloud.workflows.executions.v1.Execution) => {
@@ -708,10 +703,9 @@ describe('v1.ExecutionsClient', () => {
           .calledWith(client.innerApiCalls.listExecutions, request)
       );
       assert.strictEqual(
-        (client.descriptors.page.listExecutions
-          .createStream as SinonStub).getCall(0).args[2].otherArgs.headers[
-          'x-goog-request-params'
-        ],
+        (
+          client.descriptors.page.listExecutions.createStream as SinonStub
+        ).getCall(0).args[2].otherArgs.headers['x-goog-request-params'],
         expectedHeaderRequestParams
       );
     });
@@ -728,13 +722,12 @@ describe('v1.ExecutionsClient', () => {
       request.parent = '';
       const expectedHeaderRequestParams = 'parent=';
       const expectedError = new Error('expected');
-      client.descriptors.page.listExecutions.createStream = stubPageStreamingCall(
-        undefined,
-        expectedError
-      );
+      client.descriptors.page.listExecutions.createStream =
+        stubPageStreamingCall(undefined, expectedError);
       const stream = client.listExecutionsStream(request);
       const promise = new Promise((resolve, reject) => {
-        const responses: protos.google.cloud.workflows.executions.v1.Execution[] = [];
+        const responses: protos.google.cloud.workflows.executions.v1.Execution[] =
+          [];
         stream.on(
           'data',
           (response: protos.google.cloud.workflows.executions.v1.Execution) => {
@@ -755,10 +748,9 @@ describe('v1.ExecutionsClient', () => {
           .calledWith(client.innerApiCalls.listExecutions, request)
       );
       assert.strictEqual(
-        (client.descriptors.page.listExecutions
-          .createStream as SinonStub).getCall(0).args[2].otherArgs.headers[
-          'x-goog-request-params'
-        ],
+        (
+          client.descriptors.page.listExecutions.createStream as SinonStub
+        ).getCall(0).args[2].otherArgs.headers['x-goog-request-params'],
         expectedHeaderRequestParams
       );
     });
@@ -785,25 +777,25 @@ describe('v1.ExecutionsClient', () => {
           new protos.google.cloud.workflows.executions.v1.Execution()
         ),
       ];
-      client.descriptors.page.listExecutions.asyncIterate = stubAsyncIterationCall(
-        expectedResponse
-      );
-      const responses: protos.google.cloud.workflows.executions.v1.IExecution[] = [];
+      client.descriptors.page.listExecutions.asyncIterate =
+        stubAsyncIterationCall(expectedResponse);
+      const responses: protos.google.cloud.workflows.executions.v1.IExecution[] =
+        [];
       const iterable = client.listExecutionsAsync(request);
       for await (const resource of iterable) {
         responses.push(resource!);
       }
       assert.deepStrictEqual(responses, expectedResponse);
       assert.deepStrictEqual(
-        (client.descriptors.page.listExecutions
-          .asyncIterate as SinonStub).getCall(0).args[1],
+        (
+          client.descriptors.page.listExecutions.asyncIterate as SinonStub
+        ).getCall(0).args[1],
         request
       );
       assert.strictEqual(
-        (client.descriptors.page.listExecutions
-          .asyncIterate as SinonStub).getCall(0).args[2].otherArgs.headers[
-          'x-goog-request-params'
-        ],
+        (
+          client.descriptors.page.listExecutions.asyncIterate as SinonStub
+        ).getCall(0).args[2].otherArgs.headers['x-goog-request-params'],
         expectedHeaderRequestParams
       );
     });
@@ -820,27 +812,26 @@ describe('v1.ExecutionsClient', () => {
       request.parent = '';
       const expectedHeaderRequestParams = 'parent=';
       const expectedError = new Error('expected');
-      client.descriptors.page.listExecutions.asyncIterate = stubAsyncIterationCall(
-        undefined,
-        expectedError
-      );
+      client.descriptors.page.listExecutions.asyncIterate =
+        stubAsyncIterationCall(undefined, expectedError);
       const iterable = client.listExecutionsAsync(request);
       await assert.rejects(async () => {
-        const responses: protos.google.cloud.workflows.executions.v1.IExecution[] = [];
+        const responses: protos.google.cloud.workflows.executions.v1.IExecution[] =
+          [];
         for await (const resource of iterable) {
           responses.push(resource!);
         }
       });
       assert.deepStrictEqual(
-        (client.descriptors.page.listExecutions
-          .asyncIterate as SinonStub).getCall(0).args[1],
+        (
+          client.descriptors.page.listExecutions.asyncIterate as SinonStub
+        ).getCall(0).args[1],
         request
       );
       assert.strictEqual(
-        (client.descriptors.page.listExecutions
-          .asyncIterate as SinonStub).getCall(0).args[2].otherArgs.headers[
-          'x-goog-request-params'
-        ],
+        (
+          client.descriptors.page.listExecutions.asyncIterate as SinonStub
+        ).getCall(0).args[2].otherArgs.headers['x-goog-request-params'],
         expectedHeaderRequestParams
       );
     });

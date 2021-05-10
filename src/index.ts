@@ -26,4 +26,3 @@ export {v1, v1beta, ExecutionsClient, WorkflowsClient};
 export default {v1, v1beta, ExecutionsClient, WorkflowsClient};
 import * as protos from '../protos/protos';
 export {protos};
-

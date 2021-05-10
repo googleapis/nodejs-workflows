@@ -20,4 +20,8 @@ import synthtool.languages.node as node
 import json
 import logging
 from pathlib import Path
-node.owlbot_main(templates_excludes=["src/index.ts", "src/v1/index.ts", "src/v1beta/index.ts"])
+import shutil
+node.owlbot_main(templates_excludes=["src/index.ts"], staging_excludes=["src/v1/index.ts", "src/v1beta/index.ts", "src/index.ts", "README.md", "package.json"])
+shutil.rmtree('v1', ignore_errors=True)
+shutil.rmtree('v1beta', ignore_errors=True)
+

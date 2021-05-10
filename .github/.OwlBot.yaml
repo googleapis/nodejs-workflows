@@ -16,8 +16,6 @@ docker:
 
 deep-remove-regex:
   - /owl-bot-staging
-  - /v1
-  - /v1beta
 
 deep-copy-regex:
   - source: /google/cloud/workflows/executions/(.*)/.*-nodejs/protos/(.*)

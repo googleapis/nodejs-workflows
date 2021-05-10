@@ -28,10 +28,9 @@ import {PassThrough} from 'stream';
 import {protobuf, LROperation, operationsProtos} from 'google-gax';
 
 function generateSampleMessage<T extends object>(instance: T) {
-  const filledObject = (instance.constructor as typeof protobuf.Message).toObject(
-    instance as protobuf.Message<T>,
-    {defaults: true}
-  );
+  const filledObject = (
+    instance.constructor as typeof protobuf.Message
+  ).toObject(instance as protobuf.Message<T>, {defaults: true});
   return (instance.constructor as typeof protobuf.Message).fromObject(
     filledObject
   ) as T;
@@ -279,9 +278,8 @@ describe('v1beta.WorkflowsClient', () => {
       const expectedResponse = generateSampleMessage(
         new protos.google.cloud.workflows.v1beta.Workflow()
       );
-      client.innerApiCalls.getWorkflow = stubSimpleCallWithCallback(
-        expectedResponse
-      );
+      client.innerApiCalls.getWorkflow =
+        stubSimpleCallWithCallback(expectedResponse);
       const promise = new Promise((resolve, reject) => {
         client.getWorkflow(
           request,
@@ -360,9 +358,8 @@ describe('v1beta.WorkflowsClient', () => {
       const expectedResponse = generateSampleMessage(
         new protos.google.longrunning.Operation()
       );
-      client.innerApiCalls.createWorkflow = stubLongRunningCall(
-        expectedResponse
-      );
+      client.innerApiCalls.createWorkflow =
+        stubLongRunningCall(expectedResponse);
       const [operation] = await client.createWorkflow(request);
       const [response] = await operation.promise();
       assert.deepStrictEqual(response, expectedResponse);
@@ -394,9 +391,8 @@ describe('v1beta.WorkflowsClient', () => {
       const expectedResponse = generateSampleMessage(
         new protos.google.longrunning.Operation()
       );
-      client.innerApiCalls.createWorkflow = stubLongRunningCallWithCallback(
-        expectedResponse
-      );
+      client.innerApiCalls.createWorkflow =
+        stubLongRunningCallWithCallback(expectedResponse);
       const promise = new Promise((resolve, reject) => {
         client.createWorkflow(
           request,
@@ -556,9 +552,8 @@ describe('v1beta.WorkflowsClient', () => {
       const expectedResponse = generateSampleMessage(
         new protos.google.longrunning.Operation()
       );
-      client.innerApiCalls.deleteWorkflow = stubLongRunningCall(
-        expectedResponse
-      );
+      client.innerApiCalls.deleteWorkflow =
+        stubLongRunningCall(expectedResponse);
       const [operation] = await client.deleteWorkflow(request);
       const [response] = await operation.promise();
       assert.deepStrictEqual(response, expectedResponse);
@@ -590,9 +585,8 @@ describe('v1beta.WorkflowsClient', () => {
       const expectedResponse = generateSampleMessage(
         new protos.google.longrunning.Operation()
       );
-      client.innerApiCalls.deleteWorkflow = stubLongRunningCallWithCallback(
-        expectedResponse
-      );
+      client.innerApiCalls.deleteWorkflow =
+        stubLongRunningCallWithCallback(expectedResponse);
       const promise = new Promise((resolve, reject) => {
         client.deleteWorkflow(
           request,
@@ -753,9 +747,8 @@ describe('v1beta.WorkflowsClient', () => {
       const expectedResponse = generateSampleMessage(
         new protos.google.longrunning.Operation()
       );
-      client.innerApiCalls.updateWorkflow = stubLongRunningCall(
-        expectedResponse
-      );
+      client.innerApiCalls.updateWorkflow =
+        stubLongRunningCall(expectedResponse);
       const [operation] = await client.updateWorkflow(request);
       const [response] = await operation.promise();
       assert.deepStrictEqual(response, expectedResponse);
@@ -788,9 +781,8 @@ describe('v1beta.WorkflowsClient', () => {
       const expectedResponse = generateSampleMessage(
         new protos.google.longrunning.Operation()
       );
-      client.innerApiCalls.updateWorkflow = stubLongRunningCallWithCallback(
-        expectedResponse
-      );
+      client.innerApiCalls.updateWorkflow =
+        stubLongRunningCallWithCallback(expectedResponse);
       const promise = new Promise((resolve, reject) => {
         client.updateWorkflow(
           request,
@@ -999,9 +991,8 @@ describe('v1beta.WorkflowsClient', () => {
           new protos.google.cloud.workflows.v1beta.Workflow()
         ),
       ];
-      client.innerApiCalls.listWorkflows = stubSimpleCallWithCallback(
-        expectedResponse
-      );
+      client.innerApiCalls.listWorkflows =
+        stubSimpleCallWithCallback(expectedResponse);
       const promise = new Promise((resolve, reject) => {
         client.listWorkflows(
           request,
@@ -1079,9 +1070,8 @@ describe('v1beta.WorkflowsClient', () => {
           new protos.google.cloud.workflows.v1beta.Workflow()
         ),
       ];
-      client.descriptors.page.listWorkflows.createStream = stubPageStreamingCall(
-        expectedResponse
-      );
+      client.descriptors.page.listWorkflows.createStream =
+        stubPageStreamingCall(expectedResponse);
       const stream = client.listWorkflowsStream(request);
       const promise = new Promise((resolve, reject) => {
         const responses: protos.google.cloud.workflows.v1beta.Workflow[] = [];
@@ -1106,10 +1096,9 @@ describe('v1beta.WorkflowsClient', () => {
           .calledWith(client.innerApiCalls.listWorkflows, request)
       );
       assert.strictEqual(
-        (client.descriptors.page.listWorkflows
-          .createStream as SinonStub).getCall(0).args[2].otherArgs.headers[
-          'x-goog-request-params'
-        ],
+        (
+          client.descriptors.page.listWorkflows.createStream as SinonStub
+        ).getCall(0).args[2].otherArgs.headers['x-goog-request-params'],
         expectedHeaderRequestParams
       );
     });
@@ -1126,10 +1115,8 @@ describe('v1beta.WorkflowsClient', () => {
       request.parent = '';
       const expectedHeaderRequestParams = 'parent=';
       const expectedError = new Error('expected');
-      client.descriptors.page.listWorkflows.createStream = stubPageStreamingCall(
-        undefined,
-        expectedError
-      );
+      client.descriptors.page.listWorkflows.createStream =
+        stubPageStreamingCall(undefined, expectedError);
       const stream = client.listWorkflowsStream(request);
       const promise = new Promise((resolve, reject) => {
         const responses: protos.google.cloud.workflows.v1beta.Workflow[] = [];
@@ -1153,10 +1140,9 @@ describe('v1beta.WorkflowsClient', () => {
           .calledWith(client.innerApiCalls.listWorkflows, request)
       );
       assert.strictEqual(
-        (client.descriptors.page.listWorkflows
-          .createStream as SinonStub).getCall(0).args[2].otherArgs.headers[
-          'x-goog-request-params'
-        ],
+        (
+          client.descriptors.page.listWorkflows.createStream as SinonStub
+        ).getCall(0).args[2].otherArgs.headers['x-goog-request-params'],
         expectedHeaderRequestParams
       );
     });
@@ -1183,9 +1169,8 @@ describe('v1beta.WorkflowsClient', () => {
           new protos.google.cloud.workflows.v1beta.Workflow()
         ),
       ];
-      client.descriptors.page.listWorkflows.asyncIterate = stubAsyncIterationCall(
-        expectedResponse
-      );
+      client.descriptors.page.listWorkflows.asyncIterate =
+        stubAsyncIterationCall(expectedResponse);
       const responses: protos.google.cloud.workflows.v1beta.IWorkflow[] = [];
       const iterable = client.listWorkflowsAsync(request);
       for await (const resource of iterable) {
@@ -1193,15 +1178,15 @@ describe('v1beta.WorkflowsClient', () => {
       }
       assert.deepStrictEqual(responses, expectedResponse);
       assert.deepStrictEqual(
-        (client.descriptors.page.listWorkflows
-          .asyncIterate as SinonStub).getCall(0).args[1],
+        (
+          client.descriptors.page.listWorkflows.asyncIterate as SinonStub
+        ).getCall(0).args[1],
         request
       );
       assert.strictEqual(
-        (client.descriptors.page.listWorkflows
-          .asyncIterate as SinonStub).getCall(0).args[2].otherArgs.headers[
-          'x-goog-request-params'
-        ],
+        (
+          client.descriptors.page.listWorkflows.asyncIterate as SinonStub
+        ).getCall(0).args[2].otherArgs.headers['x-goog-request-params'],
         expectedHeaderRequestParams
       );
     });
@@ -1218,10 +1203,8 @@ describe('v1beta.WorkflowsClient', () => {
       request.parent = '';
       const expectedHeaderRequestParams = 'parent=';
       const expectedError = new Error('expected');
-      client.descriptors.page.listWorkflows.asyncIterate = stubAsyncIterationCall(
-        undefined,
-        expectedError
-      );
+      client.descriptors.page.listWorkflows.asyncIterate =
+        stubAsyncIterationCall(undefined, expectedError);
       const iterable = client.listWorkflowsAsync(request);
       await assert.rejects(async () => {
         const responses: protos.google.cloud.workflows.v1beta.IWorkflow[] = [];
@@ -1230,15 +1213,15 @@ describe('v1beta.WorkflowsClient', () => {
         }
       });
       assert.deepStrictEqual(
-        (client.descriptors.page.listWorkflows
-          .asyncIterate as SinonStub).getCall(0).args[1],
+        (
+          client.descriptors.page.listWorkflows.asyncIterate as SinonStub
+        ).getCall(0).args[1],
         request
       );
       assert.strictEqual(
-        (client.descriptors.page.listWorkflows
-          .asyncIterate as SinonStub).getCall(0).args[2].otherArgs.headers[
-          'x-goog-request-params'
-        ],
+        (
+          client.descriptors.page.listWorkflows.asyncIterate as SinonStub
+        ).getCall(0).args[2].otherArgs.headers['x-goog-request-params'],
         expectedHeaderRequestParams
       );
     });

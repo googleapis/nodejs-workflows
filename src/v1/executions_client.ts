@@ -374,6 +374,10 @@ export class ExecutionsClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.createExecution(request);
+   *
+   * @example <caption>include:samples/generated/v1/executions.create_execution.js</caption>
+   * region_tag:executions_create_execution_sample
+   *
    */
   createExecution(
     request?: protos.google.cloud.workflows.executions.v1.ICreateExecutionRequest,
@@ -476,6 +480,10 @@ export class ExecutionsClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.getExecution(request);
+   *
+   * @example <caption>include:samples/generated/v1/executions.get_execution.js</caption>
+   * region_tag:executions_get_execution_sample
+   *
    */
   getExecution(
     request?: protos.google.cloud.workflows.executions.v1.IGetExecutionRequest,
@@ -575,6 +583,10 @@ export class ExecutionsClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.cancelExecution(request);
+   *
+   * @example <caption>include:samples/generated/v1/executions.cancel_execution.js</caption>
+   * region_tag:executions_cancel_execution_sample
+   *
    */
   cancelExecution(
     request?: protos.google.cloud.workflows.executions.v1.ICancelExecutionRequest,
@@ -692,6 +704,10 @@ export class ExecutionsClient {
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
    *   for more details and examples.
+   *
+   * @example <caption>include:samples/generated/v1/executions.list_executions.js</caption>
+   * region_tag:executions_list_executions_sample
+   *
    */
   listExecutions(
     request?: protos.google.cloud.workflows.executions.v1.IListExecutionsRequest,
@@ -770,6 +786,10 @@ export class ExecutionsClient {
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
    *   for more details and examples.
+   *
+   * @example <caption>include:samples/generated/v1/executions.list_executions.js</caption>
+   * region_tag:executions_list_executions_sample
+   *
    */
   listExecutionsStream(
     request?: protos.google.cloud.workflows.executions.v1.IListExecutionsRequest,
@@ -783,7 +803,8 @@ export class ExecutionsClient {
       gax.routingHeader.fromParams({
         parent: request.parent || '',
       });
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['listExecutions'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listExecutions.createStream(
       this.innerApiCalls.listExecutions as gax.GaxCall,
@@ -831,6 +852,10 @@ export class ExecutionsClient {
    * for await (const response of iterable) {
    *   // process response
    * }
+   *
+   * @example <caption>include:samples/generated/v1/executions.list_executions.js</caption>
+   * region_tag:executions_list_executions_sample
+   *
    */
   listExecutionsAsync(
     request?: protos.google.cloud.workflows.executions.v1.IListExecutionsRequest,
@@ -845,7 +870,8 @@ export class ExecutionsClient {
         parent: request.parent || '',
       });
     options = options || {};
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['listExecutions'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listExecutions.asyncIterate(
       this.innerApiCalls['listExecutions'] as GaxCall,

@@ -6,7 +6,6 @@
 
 
 [![npm version](https://img.shields.io/npm/v/@google-cloud/workflows.svg)](https://www.npmjs.org/package/@google-cloud/workflows)
-[![codecov](https://img.shields.io/codecov/c/github/googleapis/nodejs-workflows/main.svg?style=flat)](https://codecov.io/gh/googleapis/nodejs-workflows)
 
 
 

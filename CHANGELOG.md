@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.4.1](https://github.com/googleapis/nodejs-workflows/compare/v1.4.0...v1.4.1) (2022-05-09)
+
+
+### Bug Fixes
+
+* **workflows:** add ancillary service bindings to service_yaml ([#116](https://github.com/googleapis/nodejs-workflows/issues/116)) ([e6b432f](https://github.com/googleapis/nodejs-workflows/commit/e6b432f51dfcff0249ac80f368705340218124f6))
+
 ## [1.4.0](https://www.github.com/googleapis/nodejs-workflows/compare/v1.3.1...v1.4.0) (2021-11-08)
 
 

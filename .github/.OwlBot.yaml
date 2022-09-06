@@ -26,6 +26,8 @@ deep-copy-regex:
     dest: /owl-bot-staging/$1/test/$2
   - source: /google/cloud/workflows/executions/(.*)/.*-nodejs/system-test/(.*)
     dest: /owl-bot-staging/$1/system-test/$2
+  - source: /google/cloud/workflows/executions/(.*)/.*-nodejs/samples/(.*)
+    dest: /owl-bot-staging/$1/system-test/$2
   - source: /google/cloud/workflows/(.*)/.*-nodejs/src/(.*)
     dest: /owl-bot-staging/$1/src/$2
   - source: /google/cloud/workflows/(.*)/.*-nodejs/protos/(.*)
@@ -33,4 +35,6 @@ deep-copy-regex:
   - source: /google/cloud/workflows/(.*)/.*-nodejs/test/(.*)
     dest: /owl-bot-staging/$1/test/$2
   - source: /google/cloud/workflows/(.*)/.*-nodejs/system-test/(.*)
+    dest: /owl-bot-staging/$1/system-test/$2
+  - source: /google/cloud/workflows/(.*)/.*-nodejs/samples/(.*)
     dest: /owl-bot-staging/$1/system-test/$2

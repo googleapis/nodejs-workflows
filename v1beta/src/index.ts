@@ -16,12 +16,10 @@
 // ** https://github.com/googleapis/gapic-generator-typescript **
 // ** All changes to this file may be overwritten. **
 
-
-/* eslint-disable node/no-missing-require, no-unused-vars */
-const workflows = require('@google-cloud/workflows');
-
-function main() {
-  const workflowsClient = new workflows.WorkflowsClient();
-}
-
-main();
+import * as v1beta from './v1beta';
+const ExecutionsClient = v1beta.ExecutionsClient;
+type ExecutionsClient = v1beta.ExecutionsClient;
+export {v1beta, ExecutionsClient};
+export default {v1beta, ExecutionsClient};
+import * as protos from '../protos/protos';
+export {protos}

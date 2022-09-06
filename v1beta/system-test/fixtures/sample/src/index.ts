@@ -16,12 +16,17 @@
 // ** https://github.com/googleapis/gapic-generator-typescript **
 // ** All changes to this file may be overwritten. **
 
+import {ExecutionsClient} from '@google-cloud/workflows-executions';
 
-/* eslint-disable node/no-missing-require, no-unused-vars */
-const workflows = require('@google-cloud/workflows');
+// check that the client class type name can be used
+function doStuffWithExecutionsClient(client: ExecutionsClient) {
+  client.close();
+}
 
 function main() {
-  const workflowsClient = new workflows.WorkflowsClient();
+  // check that the client instance can be created
+  const executionsClient = new ExecutionsClient();
+  doStuffWithExecutionsClient(executionsClient);
 }
 
 main();
